@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundial 2026 — Simulacion con IA y Agentes</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:#0a0e1a; --bg2:#111827; --bg3:#1a2035; --bg4:#0f172a;
+  --accent:#00d4aa; --accent2:#ffd700; --accent3:#6366f1;
+  --text:#e2e8f0; --muted:#94a3b8; --border:#1e293b;
+  --sw:260px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{width:var(--sw);background:var(--bg2);border-right:1px solid var(--border);position:fixed;height:100vh;overflow-y:auto;z-index:100;display:flex;flex-direction:column}
+.sb-logo{padding:22px 20px;border-bottom:1px solid var(--border)}
+.sb-logo .ball{font-size:1.8rem;margin-bottom:6px}
+.sb-logo h2{font-size:0.9rem;font-weight:800;color:var(--accent);line-height:1.2}
+.sb-logo span{font-size:0.7rem;color:var(--muted)}
+.sb-nav{padding:12px 0;flex:1}
+.sb-sect{padding:10px 18px 4px;font-size:0.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sb-link{display:flex;align-items:center;gap:10px;padding:9px 18px;color:var(--muted);text-decoration:none;font-size:0.82rem;transition:all .2s;border-left:3px solid transparent;cursor:pointer}
+.sb-link:hover,.sb-link.active{color:var(--accent);background:rgba(0,212,170,.06);border-left-color:var(--accent)}
+.sb-link .ic{font-size:1rem;width:18px;text-align:center}
+.sb-footer{padding:16px 18px;border-top:1px solid var(--border);font-size:0.7rem;color:var(--muted)}
+.sb-footer span{color:var(--accent)}
+
+/* MAIN */
+.main{margin-left:var(--sw);flex:1;min-width:0}
+section{padding:60px 48px;border-bottom:1px solid var(--border)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#0a0e1a 0%,#0c1a2e 60%,#0a1628 100%);position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,var(--accent) 59px,var(--accent) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,var(--accent) 59px,var(--accent) 60px)}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,.08) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.hero-content{position:relative;z-index:1;max-width:960px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.3);color:var(--accent);padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:700;margin-bottom:24px}
+.hero h1{font-size:3.8rem;font-weight:900;line-height:1.05;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero h1 .year{color:var(--accent2)}
+.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:700px;margin-bottom:36px}
+.hero-stats{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--border);border-radius:12px;background:var(--bg2);overflow:hidden;width:fit-content}
+.hs{padding:20px 28px;border-right:1px solid var(--border);text-align:center}
+.hs:last-child{border-right:none}
+.hs-val{font-size:1.8rem;font-weight:900;color:var(--accent);display:block}
+.hs-lbl{font-size:.7rem;color:var(--muted);margin-top:3px}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.75rem;text-align:center;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* SECTION HEADER */
+.sh{margin-bottom:36px}
+.sh-tag{display:inline-block;background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.2);color:var(--accent);padding:3px 10px;border-radius:4px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.sh h2{font-size:1.9rem;font-weight:800}
+.sh p{color:var(--muted);margin-top:8px;font-size:.92rem;line-height:1.7;max-width:720px}
+
+/* PHASES TIMELINE */
+.phases{position:relative;padding-left:56px}
+.phases::before{content:'';position:absolute;left:21px;top:24px;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),rgba(0,212,170,.1))}
+.phase{margin-bottom:36px;position:relative}
+.phase-dot{position:absolute;left:-56px;width:44px;height:44px;border-radius:50%;background:var(--bg3);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.1rem;z-index:1}
+.phase-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 24px;transition:border-color .2s}
+.phase-box:hover{border-color:rgba(0,212,170,.4)}
+.phase-num{font-size:.65rem;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.phase-box h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.phase-box p{font-size:.83rem;color:var(--muted);line-height:1.65}
+.phase-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.ptag{background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:3px 8px;border-radius:4px;font-size:.7rem;font-family:monospace}
+.ptag.green{border-color:rgba(0,212,170,.3);color:var(--accent)}
+
+/* AGENT CARDS */
+.agents-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.agent-card{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:20px}
+.agent-id{font-size:.65rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.agent-card h3{font-size:.95rem;font-weight:700;margin-bottom:8px}
+.agent-card p{font-size:.8rem;color:var(--muted);line-height:1.6}
+.agent-out{margin-top:12px;border-top:1px solid var(--border);padding-top:10px}
+.agent-out-item{font-size:.75rem;color:var(--muted);padding:3px 0;display:flex;align-items:center;gap:6px}
+.agent-out-item::before{content:'↳';color:var(--accent);font-size:.7rem}
+
+/* GROUPS */
+.groups-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.gcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .2s,border-color .2s}
+.gcard:hover{transform:translateY(-3px);border-color:rgba(0,212,170,.4)}
+.gc-head{padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:linear-gradient(90deg,rgba(0,212,170,.1),transparent)}
+.gc-head h3{font-size:.85rem;font-weight:700;color:var(--accent)}
+.gc-head .glabel{font-size:1.6rem;font-weight:900;color:rgba(0,212,170,.2);line-height:1}
+.gc-body{padding:6px 0}
+.team-row{display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid rgba(30,41,59,.6)}
+.team-row:last-child{border-bottom:none}
+.tf{font-size:1.2rem}
+.ti{flex:1}
+.tn{font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:4px}
+.host-badge{font-size:.58rem;background:rgba(255,215,0,.15);color:var(--accent2);padding:1px 5px;border-radius:3px;font-weight:700}
+.tc{display:inline-block;font-size:.65rem;padding:1px 5px;border-radius:3px;font-weight:700;margin-top:2px}
+.UEFA{background:rgba(0,51,153,.35);color:#7799ff}
+.CONMEBOL{background:rgba(255,215,0,.2);color:#ffd700}
+.CONCACAF{background:rgba(34,139,34,.3);color:#5cb85c}
+.CAF{background:rgba(255,107,53,.3);color:#ff8c6a}
+.AFC{background:rgba(220,20,60,.3);color:#ff7090}
+.OFC{background:rgba(106,13,173,.3);color:#b06ee8}
+.tr{font-size:.72rem;color:var(--muted);background:var(--bg3);padding:2px 6px;border-radius:4px;flex-shrink:0}
+
+/* FAVORITOS / CHAMPION PROBS */
+.champ-chart-wrap{margin-bottom:32px}
+.champ-list{display:flex;flex-direction:column;gap:8px}
+.ci{display:flex;align-items:center;gap:10px}
+.ci-rank{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0}
+.r1{background:linear-gradient(135deg,#ffd700,#e6a800);color:#000}
+.r2{background:linear-gradient(135deg,#c0c0c0,#909090);color:#000}
+.r3{background:linear-gradient(135deg,#cd7f32,#9e5b18);color:#fff}
+.ro{background:var(--bg3);color:var(--muted)}
+.ci-flag{font-size:1.15rem;flex-shrink:0}
+.ci-name{width:110px;font-size:.83rem;font-weight:600;flex-shrink:0}
+.ci-bar-wrap{flex:1}
+.ci-bar-bg{height:18px;background:var(--bg3);border-radius:4px;overflow:hidden}
+.ci-bar{height:100%;border-radius:4px;display:flex;align-items:center;padding:0 6px;font-size:.68rem;font-weight:700;color:#000;transition:width 1.2s ease}
+.ci-pct{width:52px;font-size:.83rem;font-weight:700;color:var(--accent);text-align:right;flex-shrink:0}
+.ci-ic{font-size:.65rem;color:var(--muted);width:110px;flex-shrink:0}
+
+/* MATRICES */
+.matrix-section{margin-bottom:40px}
+.matrix-section h3{font-size:.88rem;font-weight:700;color:var(--accent);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.mrow{display:grid;grid-template-columns:1fr 160px 1fr;gap:10px;align-items:center;padding:10px;background:var(--bg2);border-radius:8px;margin-bottom:8px;border:1px solid var(--border);transition:border-color .15s}
+.mrow:hover{border-color:rgba(0,212,170,.3)}
+.mt{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600}
+.mt.away{flex-direction:row-reverse;text-align:right;justify-content:flex-start}
+.mprobs{text-align:center}
+.pbars{display:flex;height:8px;border-radius:4px;overflow:hidden;gap:1px;margin-bottom:3px}
+.pw{background:#22c55e}
+.pd{background:#eab308}
+.pl{background:#ef4444}
+.pnums{display:flex;justify-content:space-between;font-size:.6rem;color:var(--muted);padding:0 1px}
+.plbl{font-size:.58rem;color:var(--muted);text-align:center;margin-top:1px}
+
+/* COMPARATIVA */
+.comp-header{display:grid;grid-template-columns:160px 1fr 70px 70px 70px;gap:10px;padding:8px 0;border-bottom:2px solid var(--border);margin-bottom:4px}
+.comp-header span{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.comp-header span:not(:first-child){text-align:right}
+.comp-row{display:grid;grid-template-columns:160px 1fr 70px 70px 70px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+.comp-row:last-child{border-bottom:none}
+.comp-name{display:flex;align-items:center;gap:6px;font-size:.83rem;font-weight:600}
+.comp-bars{display:flex;flex-direction:column;gap:3px}
+.v1b{height:7px;border-radius:2px;background:#6366f1;opacity:.75}
+.v2b{height:7px;border-radius:2px;background:var(--accent)}
+.cv1{font-size:.78rem;color:#6366f1;text-align:right}
+.cv2{font-size:.78rem;color:var(--accent);text-align:right;font-weight:700}
+.cdelta{font-size:.78rem;font-weight:700;text-align:right}
+.pos{color:#22c55e}
+.neg{color:#ef4444}
+
+/* FUENTES */
+.source-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.src-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px}
+.src-card h3{font-size:.95rem;font-weight:700;margin-bottom:4px}
+.src-url{font-size:.72rem;color:var(--accent);font-family:monospace;margin-bottom:14px;word-break:break-all}
+.src-stat{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:.8rem}
+.src-stat:last-child{border-bottom:none}
+.src-stat .sl{color:var(--muted)}
+.src-stat .sv{font-weight:700;color:var(--accent)}
+.tournament-list{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.tl-item{background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:3px 7px;border-radius:4px;font-size:.7rem}
+
+/* FORMULA BOX */
+.formula{background:var(--bg3);border:1px solid rgba(0,212,170,.2);border-radius:8px;padding:16px;font-family:monospace;font-size:.85rem;color:var(--accent);margin:16px 0;line-height:1.8}
+
+/* TABS */
+.tabs{display:flex;gap:4px;background:var(--bg2);padding:4px;border-radius:8px;width:fit-content;margin-bottom:24px}
+.tab{padding:7px 16px;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:600;color:var(--muted);transition:all .2s;border:none;background:transparent}
+.tab.active{background:var(--accent);color:#000}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* INFO BOXES */
+.info-box{background:rgba(0,212,170,.05);border:1px solid rgba(0,212,170,.15);border-radius:8px;padding:16px}
+.info-box h4{color:var(--accent);font-size:.85rem;margin-bottom:6px}
+.info-box p{font-size:.82rem;color:var(--muted);line-height:1.65}
+.warn-box{background:rgba(255,215,0,.05);border:1px solid rgba(255,215,0,.2);border-radius:8px;padding:16px}
+.warn-box h4{color:var(--accent2);font-size:.85rem;margin-bottom:6px}
+.warn-box p{font-size:.82rem;color:var(--muted);line-height:1.65}
+
+/* CONFED SUMMARY */
+.confed-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-top:20px}
+.confed-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.confed-name{font-size:.75rem;font-weight:700;margin-bottom:4px}
+.confed-pct{font-size:1.5rem;font-weight:900;color:var(--accent)}
+.confed-teams{font-size:.68rem;color:var(--muted)}
+
+/* ELO TABLE */
+.elo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.elo-item{display:flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px}
+.elo-flag{font-size:1.1rem}
+.elo-info{flex:1}
+.elo-name{font-size:.82rem;font-weight:600}
+.elo-vals{font-size:.72rem;color:var(--muted);margin-top:2px}
+.elo-delta{font-size:.85rem;font-weight:800;flex-shrink:0;padding:4px 8px;border-radius:6px}
+.ed-pos{background:rgba(34,197,94,.1);color:#22c55e}
+.ed-neg{background:rgba(239,68,68,.1);color:#ef4444}
+
+/* MISC */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px}
+.stat-big{font-size:2rem;font-weight:900;color:var(--accent)}
+.stat-lbl{font-size:.75rem;color:var(--muted);margin-top:4px}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:.7rem;font-weight:700}
+.tag-green{background:rgba(34,197,94,.1);color:#22c55e;border:1px solid rgba(34,197,94,.2)}
+.tag-blue{background:rgba(99,102,241,.1);color:#818cf8;border:1px solid rgba(99,102,241,.2)}
+.tag-yellow{background:rgba(255,215,0,.1);color:#ffd700;border:1px solid rgba(255,215,0,.2)}
+.separator{height:1px;background:var(--border);margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{text-align:left;padding:9px 12px;background:var(--bg3);color:var(--muted);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--border)}
+td{padding:9px 12px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(0,212,170,.02)}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+@media(max-width:900px){
+  .sidebar{display:none}
+  .main{margin-left:0}
+  section{padding:40px 20px}
+  .hero h1{font-size:2.2rem}
+  .grid2,.grid3,.grid4{grid-template-columns:1fr}
+  .mrow{grid-template-columns:1fr;gap:6px}
+  .mt.away{flex-direction:row;text-align:left}
+  .comp-row,.comp-header{grid-template-columns:120px 1fr 55px 55px 55px;gap:6px}
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sb-logo">
+    <div class="ball">&#9917;</div>
+    <h2>Mundial 2026<br>Simulacion IA</h2>
+    <span>UCB &mdash; Inteligencia Artificial</span>
+  </div>
+  <div class="sb-nav">
+    <div class="sb-sect">General</div>
+    <a class="sb-link active" onclick="scrollTo('inicio')"><span class="ic">&#127968;</span> Inicio</a>
+    <a class="sb-link" onclick="scrollTo('metodologia')"><span class="ic">&#128300;</span> Metodologia</a>
+    <a class="sb-link" onclick="scrollTo('agentes')"><span class="ic">&#129302;</span> Agentes IA</a>
+    <a class="sb-link" onclick="scrollTo('datos')"><span class="ic">&#128202;</span> Fuentes de Datos</a>
+    <div class="sb-sect">Torneo</div>
+    <a class="sb-link" onclick="scrollTo('grupos')"><span class="ic">&#127947;</span> Grupos (A &mdash; L)</a>
+    <a class="sb-link" onclick="scrollTo('matrices')"><span class="ic">&#128203;</span> Matrices de Prob.</a>
+    <div class="sb-sect">Resultados</div>
+    <a class="sb-link" onclick="scrollTo('favoritos')"><span class="ic">&#127942;</span> Favoritos (v2)</a>
+    <a class="sb-link" onclick="scrollTo('comparativa')"><span class="ic">&#9889;</span> Comparativa v1 vs v2</a>
+    <a class="sb-link" onclick="scrollTo('elo')"><span class="ic">&#128200;</span> Ajustes ELO</a>
+    <a class="sb-link" onclick="scrollTo('confederaciones')"><span class="ic">&#127757;</span> Confederaciones</a>
+  </div>
+  <div class="sb-footer">
+    N = <span>50,000</span> simulaciones<br>
+    Seed: <span>2026</span> &bull; Modelo: <span>v2.0</span><br>
+    Convergencia: <span>&#10003; 0.38%</span>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#127937; UCB &mdash; Inteligencia Artificial con Agentes &mdash; 2026</div>
+    <h1>Simulacion del<br><em>Mundial</em> <span class="year">2026</span><br>con Agentes IA</h1>
+    <p class="hero-sub">
+      Sistema multi-agente que predice el torneo FIFA World Cup 2026 usando Monte Carlo
+      con N=50,000 simulaciones. El modelo combina rankings ELO ajustados, historial
+      oficial 2018&ndash;2026 y forma reciente de los 48 equipos clasificados.
+      Desarrollado con metodologia de agentes autonomos en cadena.
+    </p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-val">48</span><div class="hs-lbl">Equipos clasificados</div></div>
+      <div class="hs"><span class="hs-val">50K</span><div class="hs-lbl">Simulaciones Monte Carlo</div></div>
+      <div class="hs"><span class="hs-val">2,540</span><div class="hs-lbl">Partidos oficiales analizados</div></div>
+      <div class="hs"><span class="hs-val">5</span><div class="hs-lbl">Agentes IA en cadena</div></div>
+      <div class="hs"><span class="hs-val">0.38%</span><div class="hs-lbl">Max variacion (convergencia)</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">&#8595; scroll para explorar</div>
+</section>
+
+<!-- ===== METODOLOGIA ===== -->
+<section id="metodologia">
+  <div class="sh">
+    <div class="sh-tag">Metodologia</div>
+    <h2>Como se construyo el sistema</h2>
+    <p>El proyecto implementa un pipeline de 5 fases con agentes IA especializados. Cada agente recibe
+    el output del anterior, aplica su logica y genera artefactos para el siguiente. La arquitectura sigue
+    el patron <strong>Agente Encadenado</strong> (chain-of-agents), donde cada nodo tiene una responsabilidad unica.</p>
+  </div>
+
+  <div class="phases">
+    <div class="phase">
+      <div class="phase-dot">&#128190;</div>
+      <div class="phase-box">
+        <div class="phase-num">Fase 1 &mdash; Recoleccion de Datos</div>
+        <h3>Descarga y filtrado del dataset historico</h3>
+        <p>Se descargo el dataset <strong>martj42/international_results</strong> de GitHub, con 49,330 partidos
+        internacionales desde 1872 hasta 2026. Se filtro para incluir solo torneos oficiales (excluidos
+        amistosos, torneos juveniles y competencias no reconocidas por FIFA). Se generaron los archivos
+        de grupos, fixtures, sedes, rankings FIFA y ELOs base para los 48 clasificados.</p>
+        <div class="phase-tags">
+          <span class="ptag">results.csv (49,330 partidos)</span>
+          <span class="ptag">shootouts.csv (678 penales)</span>
+          <span class="ptag green">&#10003; 2,540 partidos oficiales 2018-2026</span>
+          <span class="ptag green">&#10003; 48/48 equipos cubiertos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-dot">&#129302;</div>
+      <div class="phase-box">
+        <div class="phase-num">Fase 2 &mdash; Calculo de Probabilidades v1</div>
+        <h3>Modelo ELO-Historial-Combinado v1.0</h3>
+        <p>Se calcularon matrices de probabilidad para los 72 partidos de fase de grupos usando una formula
+        logistica ponderada. Los pesos fueron: <strong>ELO = 55%</strong>, <strong>Historial = 35%</strong>,
+        <strong>Forma reciente = 10%</strong>. Se asignaron ajustes de confederacion (+50 UEFA, +35 CONMEBOL,
+        +20 CONCACAF, +5 CAF/AFC, -10 OFC). Se genero <code>probabilidades_partidos.json</code> con 104 partidos.</p>
+        <div class="phase-tags">
+          <span class="ptag">P(A) = 1 / (1 + 10^((ELO_B - ELO_A)/400))</span>
+          <span class="ptag green">&#10003; 72 partidos de grupos + 32 eliminatorias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-dot">&#127922;</div>
+      <div class="phase-box">
+        <div class="phase-num">Fase 3 &mdash; Simulacion Monte Carlo v1</div>
+        <h3>50,000 torneos simulados con semilla fija</h3>
+        <p>El agente simulador ejecuto 50,000 torneos completos con semilla <code>2026</code>. En cada
+        simulacion se jugo la fase de grupos completa (72 partidos), se clasificaron los 32 mejores
+        (primeros y segundos de cada grupo + 8 mejores terceros) y se simulo la fase eliminatoria
+        hasta la final. La convergencia se verifico midiendo la variacion entre pasos de N.</p>
+        <div class="phase-tags">
+          <span class="ptag">N = 50,000 | seed = 2026</span>
+          <span class="ptag">Tiempo: 22.71 segundos</span>
+          <span class="ptag green">&#10003; Convergencia: max_var = 0.348% &lt; 0.5%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-dot">&#128200;</div>
+      <div class="phase-box">
+        <div class="phase-num">Fase 4 &mdash; Analisis de Anomalias ELO</div>
+        <h3>Agente ELO-Analyst detecta sesgos sistematicos</h3>
+        <p>El agente <strong>World-Cup-ELO-Analyst v1.0</strong> analizo los resultados de v1 e identifico
+        anomalias en los ELOs base. Detecto 3 tipos de sesgo: (1) brecha confederacion CAF/AFC vs UEFA
+        injustificada para equipos de elite, (2) sobreestimacion por reputacion historica en declive
+        (Croacia, Belgica), (3) factor anfitrion y campeon vigente no modelado. Se ajustaron <strong>25 equipos</strong>
+        con evidencia en 3 dimensiones: forma reciente, historial mundialista y contexto especifico.</p>
+        <div class="phase-tags">
+          <span class="ptag">25 equipos ajustados</span>
+          <span class="ptag">Delta max: +55 (Marruecos) / -55 (Nueva Zelanda)</span>
+          <span class="ptag green">&#10003; Genera elos_ajustados.json + anomalias_elo.md</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-dot">&#127942;</div>
+      <div class="phase-box">
+        <div class="phase-num">Fase 5 &mdash; Simulacion Monte Carlo v2 + Reporte Final</div>
+        <h3>Re-simulacion con ELOs corregidos y analisis estadistico</h3>
+        <p>Se re-ejecutaron 50,000 simulaciones con los ELOs ajustados (misma semilla para comparabilidad).
+        Argentina emerge como favorito claro con 12.56% vs el cuarteto indistinguible de v1.
+        El agente estadistico genero intervalos de confianza IC95%, analisis por confederacion,
+        identificacion de grupos de la muerte y reporte comparativo detallado.</p>
+        <div class="phase-tags">
+          <span class="ptag">N = 50,000 | seed = 2026</span>
+          <span class="ptag">Tiempo: 13.35 segundos</span>
+          <span class="ptag green">&#10003; Convergencia: max_var = 0.38% &lt; 0.5%</span>
+          <span class="ptag green">&#10003; Argentina favorito: 12.56% (IC95: 12.27-12.85)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px">
+    <div class="sh-tag">Modelo</div>
+    <h3 style="font-size:1rem;margin:10px 0 8px">Formula de probabilidad combinada</h3>
+    <div class="formula">
+P_combinada(A gana B) =<br>
+&nbsp;&nbsp;0.55 * P_elo(A) + 0.35 * P_historial(A) + 0.10 * P_forma(A)<br><br>
+P_elo(A) = 1 / (1 + 10^((ELO_B + adj_conf_B - ELO_A - adj_conf_A) / 400))<br><br>
+Ajustes confederacion: UEFA +50 | CONMEBOL +35 | CONCACAF +20 | CAF +5 | AFC +5 | OFC -10
+    </div>
+  </div>
+</section>
+
+<!-- ===== AGENTES ===== -->
+<section id="agentes">
+  <div class="sh">
+    <div class="sh-tag">Agentes IA</div>
+    <h2>Agentes autonomos del sistema</h2>
+    <p>Cada agente es un modulo especializado con instrucciones de sistema propias, contexto inyectado
+    y outputs estructurados. Se comunican mediante archivos JSON y Markdown, sin acceso compartido a estado global.</p>
+  </div>
+  <div class="agents-grid">
+    <div class="agent-card">
+      <div class="agent-id">Agente 1 &mdash; Data Collector</div>
+      <h3>Recolector y Procesador de Datos</h3>
+      <p>Descarga y filtra el dataset historico. Genera los archivos base del torneo: grupos, fixtures,
+      sedes, rankings FIFA y resumen historico por equipo.</p>
+      <div class="agent-out">
+        <div class="agent-out-item">grupos.json &mdash; 12 grupos con 48 equipos</div>
+        <div class="agent-out-item">partidos_oficiales_2018_2026.json &mdash; 2,540 partidos</div>
+        <div class="agent-out-item">resumen_por_equipo.json &mdash; stats por equipo</div>
+        <div class="agent-out-item">rankings_fifa.json &mdash; rankings oficiales</div>
+        <div class="agent-out-item">penales_2018_2026.json &mdash; 94 tandas de penales</div>
+      </div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-id">Agente 2 &mdash; Probability Calculator</div>
+      <h3>Calculador de Probabilidades</h3>
+      <p>Aplica el modelo ELO-Historial-Combinado sobre los 48 equipos para generar matrices de
+      probabilidad de los 104 partidos del torneo. Calcula P(A gana), P(empate), P(B gana).</p>
+      <div class="agent-out">
+        <div class="agent-out-item">probabilidades_partidos.json &mdash; v1 (104 partidos)</div>
+        <div class="agent-out-item">probabilidades_partidos_v2.json &mdash; con ELOs ajustados</div>
+        <div class="agent-out-item">elos_equipos.json &mdash; ELOs base de 48 equipos</div>
+      </div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-id">Agente 3 &mdash; Monte Carlo Simulator</div>
+      <h3>Simulador Monte Carlo</h3>
+      <p>Ejecuta N=50,000 torneos completos usando NumPy con seed fija. Simula fase de grupos,
+      clasificacion de los 32 mejores y fase eliminatoria completa hasta la gran final.
+      Implementa empates y penales con historial real por equipo.</p>
+      <div class="agent-out">
+        <div class="agent-out-item">simulation_results.json &mdash; resultados v1</div>
+        <div class="agent-out-item">simulation_results_v2.json &mdash; resultados v2</div>
+        <div class="agent-out-item">Convergencia verificada en pasos N: 1K, 5K, 10K, 50K</div>
+      </div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-id">Agente 4 &mdash; ELO Analyst v1.0</div>
+      <h3>World-Cup-ELO-Analyst</h3>
+      <p>Analiza los resultados de v1 y detecta anomalias en los ELOs base. Evalua cada equipo
+      en 3 dimensiones: forma reciente, historial mundialista y contexto especifico. Genera
+      los ajustes para 25 equipos con justificacion documentada.</p>
+      <div class="agent-out">
+        <div class="agent-out-item">elos_ajustados.json &mdash; 25 equipos corregidos</div>
+        <div class="agent-out-item">anomalias_elo.md &mdash; reporte de 25 anomalias</div>
+        <div class="agent-out-item">Detecta: sesgo CAF/AFC, reputacion historica, factor anfitrion</div>
+      </div>
+    </div>
+    <div class="agent-card">
+      <div class="agent-id">Agente 5 &mdash; Statistical Analyst v1.0</div>
+      <h3>Analista Estadistico</h3>
+      <p>Procesa los 50,000 resultados de ambas versiones. Genera IC95% por equipo, analisis
+      comparativo v1 vs v2, identificacion de grupos de la muerte, analisis por confederacion
+      y reporte ejecutivo con hallazgos principales.</p>
+      <div class="agent-out">
+        <div class="agent-out-item">reporte_final.md &mdash; analisis estadistico completo</div>
+        <div class="agent-out-item">reporte_comparativo_v1_v2.md &mdash; diferencias clave</div>
+        <div class="agent-out-item">IC95% para los 48 equipos | Analisis de confederaciones</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FUENTES DE DATOS ===== -->
+<section id="datos">
+  <div class="sh">
+    <div class="sh-tag">Fuentes de Datos</div>
+    <h2>De donde vienen los datos</h2>
+    <p>El proyecto usa datos completamente reales y publicos. El dataset principal cubre 49,330 partidos
+    internacionales desde 1872. Se filtro para el periodo 2018&ndash;2026 con torneos oficiales unicamente.</p>
+  </div>
+  <div class="source-grid">
+    <div class="src-card">
+      <h3>Dataset Principal</h3>
+      <div class="src-url">github.com/martj42/international_results</div>
+      <div class="src-stat"><span class="sl">Total de partidos</span><span class="sv">49,330</span></div>
+      <div class="src-stat"><span class="sl">Periodo cubierto</span><span class="sv">1872 &mdash; 2026</span></div>
+      <div class="src-stat"><span class="sl">Partidos filtrados (2018-2026)</span><span class="sv">2,540</span></div>
+      <div class="src-stat"><span class="sl">Tandas de penales</span><span class="sv">94</span></div>
+      <div class="src-stat"><span class="sl">Equipos cubiertos</span><span class="sv">48 / 48</span></div>
+      <div class="src-stat"><span class="sl">Licencia</span><span class="sv">PDDL (Open Data)</span></div>
+      <div class="src-stat"><span class="sl">Actualizacion</span><span class="sv">Abril 2026</span></div>
+    </div>
+    <div class="src-card">
+      <h3>Fixture y Grupos Oficiales</h3>
+      <div class="src-url">fifa.com / worldcupwiki.com / skysports.com</div>
+      <div class="src-stat"><span class="sl">Sorteo</span><span class="sv">05 Dic 2025</span></div>
+      <div class="src-stat"><span class="sl">Lugar</span><span class="sv">Kennedy Center, Washington D.C.</span></div>
+      <div class="src-stat"><span class="sl">Sedes</span><span class="sv">USA / Mexico / Canada</span></div>
+      <div class="src-stat"><span class="sl">Grupos</span><span class="sv">12 grupos de 4 equipos</span></div>
+      <div class="src-stat"><span class="sl">Total equipos</span><span class="sv">48</span></div>
+      <div class="src-stat"><span class="sl">Partidos en grupos</span><span class="sv">72</span></div>
+    </div>
+    <div class="src-card">
+      <h3>Rankings FIFA (Referencia)</h3>
+      <div class="src-url">fifa.com/rankings</div>
+      <div class="src-stat"><span class="sl">France</span><span class="sv">#1</span></div>
+      <div class="src-stat"><span class="sl">Spain</span><span class="sv">#2</span></div>
+      <div class="src-stat"><span class="sl">Argentina</span><span class="sv">#3</span></div>
+      <div class="src-stat"><span class="sl">England</span><span class="sv">#4</span></div>
+      <div class="src-stat"><span class="sl">Portugal</span><span class="sv">#5</span></div>
+      <div class="src-stat"><span class="sl">Brazil</span><span class="sv">#6</span></div>
+      <div class="src-stat"><span class="sl">Morocco</span><span class="sv">#8 (subestimado por ELO)</span></div>
+    </div>
+    <div class="src-card">
+      <h3>Torneos Oficiales Incluidos</h3>
+      <div class="src-url">Filtrado de amistosos y torneos menores</div>
+      <div class="tournament-list">
+        <span class="tl-item">FIFA World Cup</span>
+        <span class="tl-item">WC Qualification</span>
+        <span class="tl-item">UEFA Euro</span>
+        <span class="tl-item">UEFA Nations League</span>
+        <span class="tl-item">Copa America</span>
+        <span class="tl-item">CONMEBOL-UEFA Cup</span>
+        <span class="tl-item">Gold Cup</span>
+        <span class="tl-item">CONCACAF Nations League</span>
+        <span class="tl-item">African Cup of Nations</span>
+        <span class="tl-item">AFC Asian Cup</span>
+        <span class="tl-item">Oceania Nations Cup</span>
+        <span class="tl-item">Arab Cup</span>
+        <span class="tl-item">Gulf Cup</span>
+        <span class="tl-item">EAFF Championship</span>
+      </div>
+      <div style="margin-top:10px;font-size:.75rem;color:var(--muted)">Excluidos: 2,139 amistosos + FIFA Series + torneos olimpicos + Sub-20/Sub-17</div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:20px">
+    <div class="info-box">
+      <h4>Equipo con mas partidos oficiales</h4>
+      <p><strong style="color:var(--text)">France y England</strong> con 84 partidos cada uno en el periodo 2018-2026. El equipo con menos partidos es <strong style="color:var(--text)">New Zealand</strong> con solo 18, principalmente contra rivales de la OFC (Oceania Football Confederation), lo que inflaba artificialmente su win rate al 88.89%.</p>
+    </div>
+    <div class="warn-box">
+      <h4>Limitaciones conocidas del dataset</h4>
+      <p>Los datos de penales solo indican el ganador de la tanda, sin detalle tiro-a-tiro. No se distingue entre goles en tiempo regular vs. tiempo extra. Curacao tiene 46 partidos en niveles inferiores de CONCACAF Nations League. 3 equipos usan nombres distintos: Czechia (Czech Republic), Turkiye (Turkey), Curacao (con cedilla).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GRUPOS ===== -->
+<section id="grupos">
+  <div class="sh">
+    <div class="sh-tag">Fase de Grupos</div>
+    <h2>Los 12 grupos del Mundial 2026</h2>
+    <p>48 equipos en 12 grupos de 4. Clasifican los 2 primeros de cada grupo y los 8 mejores terceros = 32 equipos a la fase eliminatoria. Sede: USA, Mexico y Canada.</p>
+  </div>
+  <div class="groups-grid" id="groups-container"></div>
+</section>
+
+<!-- ===== MATRICES ===== -->
+<section id="matrices">
+  <div class="sh">
+    <div class="sh-tag">Matrices de Probabilidad</div>
+    <h2>Probabilidades por partido (Modelo v2)</h2>
+    <p>Cada partido tiene probabilidades calculadas con el modelo ELO-Historial-Combinado v2.0.
+    Las barras muestran: <span style="color:#22c55e">&#9632;</span> victoria local &nbsp;
+    <span style="color:#eab308">&#9632;</span> empate &nbsp;
+    <span style="color:#ef4444">&#9632;</span> victoria visitante.</p>
+  </div>
+  <div id="matrices-container"></div>
+</section>
+
+<!-- ===== FAVORITOS ===== -->
+<section id="favoritos">
+  <div class="sh">
+    <div class="sh-tag">Resultados &mdash; Modelo v2.0</div>
+    <h2>Probabilidades de campeonato</h2>
+    <p>Basado en 50,000 simulaciones Monte Carlo con ELOs ajustados. Argentina emerge como favorito
+    claro con 12.56%, rompiendo el empate tecnico del modelo v1. IC95% calculado con distribucion binomial.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('top10')">Top 10</button>
+    <button class="tab" onclick="showTab('top20')">Top 20</button>
+    <button class="tab" onclick="showTab('todos')">Todos</button>
+  </div>
+
+  <div id="top10" class="tab-content active">
+    <div class="champ-list" id="champ-top10"></div>
+  </div>
+  <div id="top20" class="tab-content">
+    <div class="champ-list" id="champ-top20"></div>
+  </div>
+  <div id="todos" class="tab-content">
+    <div class="champ-list" id="champ-todos"></div>
+  </div>
+
+  <div class="separator"></div>
+  <div class="info-box" style="margin-top:0">
+    <h4>Hallazgo principal: Argentina rompe el empate tecnico</h4>
+    <p>En v1, los 4 primeros (England 10.76%, Spain 10.67%, France 10.58%, Argentina 10.38%) estaban
+    estadisticamente empatados dentro del margen de error. En v2, Argentina se separa con 12.56%
+    y un IC95 que no solapa con ningun rival. <strong style="color:var(--text)">Morocco es la gran sorpresa</strong>:
+    sube de 4.39% a 8.25% (+87.9% relativo), superando a Brazil y Alemania.</p>
+  </div>
+</section>
+
+<!-- ===== COMPARATIVA v1 vs v2 ===== -->
+<section id="comparativa">
+  <div class="sh">
+    <div class="sh-tag">Comparativa</div>
+    <h2>Modelo v1 vs Modelo v2</h2>
+    <p>La corrección de ELOs cambia significativamente la distribucion de probabilidades. Las barras azules
+    son v1, las verdes son v2. Los deltas muestran la diferencia en puntos porcentuales.</p>
+  </div>
+
+  <div class="grid2" style="margin-bottom:24px">
+    <div class="card">
+      <div class="stat-big">+3.23pp</div>
+      <div class="stat-lbl">Ventaja de Argentina sobre Spain en v2 (estadisticamente significativa)</div>
+    </div>
+    <div class="card">
+      <div class="stat-big">25 equipos</div>
+      <div class="stat-lbl">ELOs ajustados por el agente ELO-Analyst (52% del campo)</div>
+    </div>
+  </div>
+
+  <div class="comp-header">
+    <span>Equipo</span><span>Barras v1 / v2</span><span>v1 %</span><span>v2 %</span><span>Delta</span>
+  </div>
+  <div id="comparativa-container"></div>
+</section>
+
+<!-- ===== AJUSTES ELO ===== -->
+<section id="elo">
+  <div class="sh">
+    <div class="sh-tag">Ajustes ELO</div>
+    <h2>Los 25 equipos ajustados por el agente</h2>
+    <p>El agente World-Cup-ELO-Analyst evaluo cada equipo en 3 dimensiones y documento ajustes
+    con evidencia. Los ajustes corrigen 3 sesgos: brecha confederacion CAF/AFC, sobreestimacion
+    por reputacion historica, y factor anfitrion/campeon vigente no modelado.</p>
+  </div>
+
+  <div class="grid2" style="margin-bottom:24px">
+    <div class="warn-box">
+      <h4>Sesgo sistematico: Brecha de confederacion</h4>
+      <p>El diferencial de 45 puntos (CAF=+5 vs UEFA=+50) es injusto para equipos de elite africanos
+      y asiaticos. Morocco (#8 FIFA), Senegal (#14), Ivory Coast (campeon AFCON), Iran (69% win rate)
+      y Japan (elimino a Alemania y Espana en Qatar 2022) fueron penalizados injustamente.</p>
+    </div>
+    <div class="warn-box">
+      <h4>Sesgo sistematico: Reputacion historica en declive</h4>
+      <p>Croacia (Modric tiene 40 anos en 2026, relegados de Nations League Liga A), Belgium
+      (generacion dorada en fin de ciclo, De Bruyne 35 anos) y Brazil (forma irregular LDWWL,
+      penales 33.33%) tienen ELOs que reflejan el pasado, no la realidad 2026.</p>
+    </div>
+  </div>
+
+  <div class="elo-grid" id="elo-container"></div>
+</section>
+
+<!-- ===== CONFEDERACIONES ===== -->
+<section id="confederaciones">
+  <div class="sh">
+    <div class="sh-tag">Analisis</div>
+    <h2>Distribucion por confederacion</h2>
+    <p>Europa (UEFA) domina abrumadoramente, concentrando el 52.6% de la probabilidad acumulada
+    de campeonato en el modelo v2. CONMEBOL suma el 28.1%, liderada por Argentina (12.56%).</p>
+  </div>
+
+  <div class="confed-grid">
+    <div class="confed-card">
+      <div class="confed-name" style="color:#7799ff">UEFA</div>
+      <div class="confed-pct">52.6%</div>
+      <div class="confed-teams">England, Spain, France, Portugal, Germany, Netherlands, Croatia, Belgium, Senegal...no, Senegal=CAF</div>
+      <div class="confed-teams">13 equipos europeos</div>
+    </div>
+    <div class="confed-card">
+      <div class="confed-name" style="color:#ffd700">CONMEBOL</div>
+      <div class="confed-pct">28.1%</div>
+      <div class="confed-teams">Argentina, Brazil, Colombia, Uruguay, Ecuador, Paraguay</div>
+      <div class="confed-teams">6 equipos sudamericanos</div>
+    </div>
+    <div class="confed-card">
+      <div class="confed-name" style="color:#ff8c6a">CAF</div>
+      <div class="confed-pct">11.2%</div>
+      <div class="confed-teams">Morocco 8.25%, Senegal 2.89%, otros</div>
+      <div class="confed-teams">9 equipos africanos</div>
+    </div>
+    <div class="confed-card">
+      <div class="confed-name" style="color:#5cb85c">CONCACAF</div>
+      <div class="confed-pct">4.8%</div>
+      <div class="confed-teams">Mexico 2.68%, United States 1.86%, Canada 0.17%</div>
+      <div class="confed-teams">6 equipos (3 anfitriones)</div>
+    </div>
+    <div class="confed-card">
+      <div class="confed-name" style="color:#ff7090">AFC</div>
+      <div class="confed-pct">3.3%</div>
+      <div class="confed-teams">Turkiye 1.05%, Japan 0.91%, South Korea 0.61%</div>
+      <div class="confed-teams">8 equipos asiaticos</div>
+    </div>
+    <div class="confed-card">
+      <div class="confed-name" style="color:#b06ee8">OFC</div>
+      <div class="confed-pct">0.0%</div>
+      <div class="confed-teams">New Zealand: ELO ajustado a 1595 (-55 puntos)</div>
+      <div class="confed-teams">1 equipo oceanico</div>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+  <div class="sh-tag">Grupos de la Muerte</div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="card">
+      <h3 style="font-size:.95rem;margin-bottom:10px;color:var(--accent)">&#128293; Grupo I &mdash; El Grupo de la Muerte</h3>
+      <p style="font-size:.83rem;color:var(--muted);line-height:1.65">
+        France (ELO 2535), Senegal (ELO 2415), Norway (ELO 2275), Iraq (ELO 1945).
+        Mayor suma ELO del torneo: <strong style="color:var(--text)">9,170</strong>. France lidera con 44.6%
+        de probabilidad de primer lugar, pero Senegal puede terminar segundo en el <strong style="color:var(--text)">31.1%</strong> de las simulaciones.
+        Norway con Haaland es sorpresa real del grupo.
+      </p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:.95rem;margin-bottom:10px;color:var(--accent)">&#128293; Grupo C &mdash; El Partido Mas Parejo</h3>
+      <p style="font-size:.83rem;color:var(--muted);line-height:1.65">
+        Brazil (ELO 2478) vs Morocco (ELO 2490). Con ELOs casi identicos tras los ajustes,
+        el duelo Brazil-Morocco es el partido mas parejo de la fase de grupos: Morocco tiene
+        <strong style="color:var(--text)">46.6%</strong> de ganar vs 41.8% de Brazil. Scotland y Haiti completan el grupo.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// ========== DATA ==========
+const GROUPS = {
+  A:{name:"Grupo A",teams:[
+    {n:"Mexico",f:"&#127474;&#127485;",c:"CONCACAF",r:15,host:true},
+    {n:"South Africa",f:"&#127487;&#127462;",c:"CAF",r:60},
+    {n:"South Korea",f:"&#127472;&#127479;",c:"AFC",r:25},
+    {n:"Czechia",f:"&#127464;&#127487;",c:"UEFA",r:41}
+  ]},
+  B:{name:"Grupo B",teams:[
+    {n:"Canada",f:"&#127464;&#127462;",c:"CONCACAF",r:30,host:true},
+    {n:"Bosnia and Herzegovina",f:"&#127463;&#127462;",c:"UEFA",r:65},
+    {n:"Qatar",f:"&#127478;&#127462;",c:"AFC",r:55},
+    {n:"Switzerland",f:"&#127464;&#127469;",c:"UEFA",r:19}
+  ]},
+  C:{name:"Grupo C",teams:[
+    {n:"Brazil",f:"&#127463;&#127479;",c:"CONMEBOL",r:6},
+    {n:"Morocco",f:"&#127474;&#127462;",c:"CAF",r:8},
+    {n:"Haiti",f:"&#127469;&#127481;",c:"CONCACAF",r:83},
+    {n:"Scotland",f:"&#127988;&#917607;&#917602;&#917619;&#917588;&#917620;&#917631;",c:"UEFA",r:43}
+  ]},
+  D:{name:"Grupo D",teams:[
+    {n:"United States",f:"&#127482;&#127480;",c:"CONCACAF",r:16,host:true},
+    {n:"Paraguay",f:"&#127477;&#127486;",c:"CONMEBOL",r:40},
+    {n:"Australia",f:"&#127462;&#127482;",c:"AFC",r:27},
+    {n:"Turkiye",f:"&#127481;&#127479;",c:"UEFA",r:22}
+  ]},
+  E:{name:"Grupo E",teams:[
+    {n:"Germany",f:"&#127465;&#127466;",c:"UEFA",r:10},
+    {n:"Curacao",f:"&#127464;&#127484;",c:"CONCACAF",r:82},
+    {n:"Ivory Coast",f:"&#127464;&#127470;",c:"CAF",r:34},
+    {n:"Ecuador",f:"&#127466;&#127464;",c:"CONMEBOL",r:23}
+  ]},
+  F:{name:"Grupo F",teams:[
+    {n:"Netherlands",f:"&#127475;&#127473;",c:"UEFA",r:7},
+    {n:"Japan",f:"&#127471;&#127477;",c:"AFC",r:18},
+    {n:"Sweden",f:"&#127480;&#127466;",c:"UEFA",r:38},
+    {n:"Tunisia",f:"&#127481;&#127475;",c:"CAF",r:44}
+  ]},
+  G:{name:"Grupo G",teams:[
+    {n:"Belgium",f:"&#127463;&#127466;",c:"UEFA",r:9},
+    {n:"Egypt",f:"&#127466;&#127468;",c:"CAF",r:29},
+    {n:"Iran",f:"&#127470;&#127479;",c:"AFC",r:21},
+    {n:"New Zealand",f:"&#127475;&#127487;",c:"OFC",r:85}
+  ]},
+  H:{name:"Grupo H",teams:[
+    {n:"Spain",f:"&#127466;&#127480;",c:"UEFA",r:2},
+    {n:"Cape Verde",f:"&#127464;&#127483;",c:"CAF",r:69},
+    {n:"Saudi Arabia",f:"&#127480;&#127462;",c:"AFC",r:61},
+    {n:"Uruguay",f:"&#127482;&#127486;",c:"CONMEBOL",r:17}
+  ]},
+  I:{name:"Grupo I",teams:[
+    {n:"France",f:"&#127467;&#127479;",c:"UEFA",r:1},
+    {n:"Senegal",f:"&#127480;&#127475;",c:"CAF",r:14},
+    {n:"Iraq",f:"&#127470;&#127478;",c:"AFC",r:57},
+    {n:"Norway",f:"&#127475;&#127476;",c:"UEFA",r:31}
+  ]},
+  J:{name:"Grupo J",teams:[
+    {n:"Argentina",f:"&#127462;&#127479;",c:"CONMEBOL",r:3},
+    {n:"Algeria",f:"&#127465;&#127487;",c:"CAF",r:28},
+    {n:"Austria",f:"&#127462;&#127481;",c:"UEFA",r:24},
+    {n:"Jordan",f:"&#127471;&#127476;",c:"AFC",r:63}
+  ]},
+  K:{name:"Grupo K",teams:[
+    {n:"Portugal",f:"&#127477;&#127481;",c:"UEFA",r:5},
+    {n:"DR Congo",f:"&#127464;&#127465;",c:"CAF",r:46},
+    {n:"Uzbekistan",f:"&#127482;&#127487;",c:"AFC",r:50},
+    {n:"Colombia",f:"&#127464;&#127476;",c:"CONMEBOL",r:13}
+  ]},
+  L:{name:"Grupo L",teams:[
+    {n:"England",f:"&#127988;&#917607;&#917602;&#917605;&#917614;&#917607;&#917631;",c:"UEFA",r:4},
+    {n:"Croatia",f:"&#127469;&#127479;",c:"UEFA",r:11},
+    {n:"Ghana",f:"&#127468;&#127469;",c:"CAF",r:74},
+    {n:"Panama",f:"&#127477;&#127462;",c:"CONCACAF",r:33}
+  ]}
+};
+
+const CHAMP_V2 = [
+  {n:"Argentina",f:"&#127462;&#127479;",p:12.558,ic:[12.268,12.848],v1:10.382},
+  {n:"Spain",f:"&#127466;&#127480;",p:9.328,ic:[9.073,9.583],v1:10.672},
+  {n:"England",f:"&#127988;&#917607;&#917602;&#917605;&#917614;&#917607;&#917631;",p:9.224,ic:[8.97,9.478],v1:10.762},
+  {n:"France",f:"&#127467;&#127479;",p:9.002,ic:[8.751,9.253],v1:10.582},
+  {n:"Portugal",f:"&#127477;&#127481;",p:8.916,ic:[8.666,9.166],v1:9.062},
+  {n:"Morocco",f:"&#127474;&#127462;",p:8.254,ic:[8.013,8.495],v1:4.392},
+  {n:"Brazil",f:"&#127463;&#127479;",p:6.490,ic:[6.274,6.706],v1:6.994},
+  {n:"Germany",f:"&#127465;&#127466;",p:6.434,ic:[6.219,6.649],v1:5.684},
+  {n:"Netherlands",f:"&#127475;&#127473;",p:5.084,ic:[4.891,5.277],v1:5.662},
+  {n:"Croatia",f:"&#127469;&#127479;",p:3.958,ic:[3.787,4.129],v1:4.918},
+  {n:"Senegal",f:"&#127480;&#127475;",p:2.894,ic:[2.747,3.041],v1:1.874},
+  {n:"Belgium",f:"&#127463;&#127466;",p:2.852,ic:[2.706,2.998],v1:3.826},
+  {n:"Mexico",f:"&#127474;&#127485;",p:2.676,ic:[2.535,2.817],v1:2.556},
+  {n:"Colombia",f:"&#127464;&#127476;",p:1.910,ic:[1.79,2.03],v1:2.514},
+  {n:"United States",f:"&#127482;&#127480;",p:1.864,ic:[1.745,1.983],v1:1.590},
+  {n:"Uruguay",f:"&#127482;&#127486;",p:1.686,ic:[1.573,1.799],v1:1.970},
+  {n:"Switzerland",f:"&#127464;&#127469;",p:1.400,ic:[1.297,1.503],v1:1.546},
+  {n:"Turkiye",f:"&#127481;&#127479;",p:1.052,ic:[0.963,1.141],v1:0.0},
+  {n:"Japan",f:"&#127471;&#127477;",p:0.910,ic:[0.827,0.993],v1:0.614},
+  {n:"Austria",f:"&#127462;&#127481;",p:0.662,ic:[0.591,0.733],v1:0.0},
+  {n:"South Korea",f:"&#127472;&#127479;",p:0.612,ic:[0.544,0.680],v1:0.456},
+  {n:"Iran",f:"&#127470;&#127479;",p:0.556,ic:[0.491,0.621],v1:0.446},
+  {n:"Norway",f:"&#127475;&#127476;",p:0.308,ic:[0.259,0.357],v1:0.224},
+  {n:"Algeria",f:"&#127465;&#127487;",p:0.282,ic:[0.236,0.328],v1:0.186},
+  {n:"Australia",f:"&#127462;&#127482;",p:0.280,ic:[0.234,0.326],v1:0.250},
+  {n:"Ecuador",f:"&#127466;&#127464;",p:0.204,ic:[0.164,0.244],v1:0.424},
+  {n:"Canada",f:"&#127464;&#127462;",p:0.172,ic:[0.136,0.208],v1:0.164},
+  {n:"Egypt",f:"&#127466;&#127468;",p:0.106,ic:[0.077,0.135],v1:0.0},
+  {n:"Ivory Coast",f:"&#127464;&#127470;",p:0.094,ic:[0.067,0.121],v1:0.058},
+  {n:"Panama",f:"&#127477;&#127462;",p:0.074,ic:[0.050,0.098],v1:0.0},
+  {n:"Sweden",f:"&#127480;&#127466;",p:0.070,ic:[0.047,0.093],v1:0.0},
+  {n:"Czechia",f:"&#127464;&#127487;",p:0.038,ic:[0.021,0.055],v1:0.0},
+  {n:"Scotland",f:"&#127988;&#917607;&#917602;&#917619;&#917588;&#917620;&#917631;",p:0.024,ic:[0.010,0.038],v1:0.0},
+  {n:"Paraguay",f:"&#127477;&#127486;",p:0.012,ic:[0.002,0.022],v1:0.0},
+  {n:"DR Congo",f:"&#127464;&#127465;",p:0.008,ic:[0.0,0.016],v1:0.0},
+  {n:"Tunisia",f:"&#127481;&#127475;",p:0.004,ic:[0,0.010],v1:0.0},
+  {n:"Qatar",f:"&#127478;&#127462;",p:0.002,ic:[0,0.006],v1:0.0},
+  {n:"Uzbekistan",f:"&#127482;&#127487;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Iraq",f:"&#127470;&#127478;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"South Africa",f:"&#127487;&#127462;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Bosnia and Herzegovina",f:"&#127463;&#127462;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Saudi Arabia",f:"&#127480;&#127462;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Jordan",f:"&#127471;&#127476;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Cape Verde",f:"&#127464;&#127483;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Ghana",f:"&#127468;&#127469;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Haiti",f:"&#127469;&#127481;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"New Zealand",f:"&#127475;&#127487;",p:0.0,ic:[0,0],v1:0.0},
+  {n:"Curacao",f:"&#127464;&#127484;",p:0.0,ic:[0,0],v1:0.0}
+];
+
+const MATCHES = {
+  "Grupo A":[
+    {a:"Mexico",b:"South Africa",pa:0.6962,pe:0.1038,pb:0.2},
+    {a:"South Korea",b:"Czechia",pa:0.5216,pe:0.1787,pb:0.2997},
+    {a:"Mexico",b:"South Korea",pa:0.4852,pe:0.1588,pb:0.356},
+    {a:"Czechia",b:"South Africa",pa:0.5598,pe:0.1551,pb:0.2851},
+    {a:"Mexico",b:"Czechia",pa:0.5838,pe:0.1613,pb:0.2549,inv:true},
+    {a:"South Africa",b:"South Korea",pa:0.2229,pe:0.1067,pb:0.6704}
+  ],
+  "Grupo B":[
+    {a:"Canada",b:"Bosnia and Herzegovina",pa:0.6429,pe:0.1146,pb:0.2426},
+    {a:"Qatar",b:"Switzerland",pa:0.2427,pe:0.1295,pb:0.6278},
+    {a:"Canada",b:"Qatar",pa:0.6358,pe:0.0906,pb:0.2736},
+    {a:"Switzerland",b:"Bosnia and Herzegovina",pa:0.6259,pe:0.1509,pb:0.2231},
+    {a:"Switzerland",b:"Canada",pa:0.4698,pe:0.1901,pb:0.3402},
+    {a:"Bosnia and Herzegovina",b:"Qatar",pa:0.3844,pe:0.1512,pb:0.4644}
+  ],
+  "Grupo C":[
+    {a:"Brazil",b:"Morocco",pa:0.4184,pe:0.1152,pb:0.4663},
+    {a:"Haiti",b:"Scotland",pa:0.1938,pe:0.1238,pb:0.6824},
+    {a:"Brazil",b:"Haiti",pa:0.7875,pe:0.0693,pb:0.1432},
+    {a:"Scotland",b:"Morocco",pa:0.2059,pe:0.1207,pb:0.6733},
+    {a:"Morocco",b:"Haiti",pa:0.8024,pe:0.069,pb:0.1286},
+    {a:"Scotland",b:"Brazil",pa:0.2241,pe:0.1223,pb:0.6535}
+  ],
+  "Grupo D":[
+    {a:"United States",b:"Paraguay",pa:0.5919,pe:0.1633,pb:0.2448},
+    {a:"Australia",b:"Turkiye",pa:0.3738,pe:0.1683,pb:0.4579},
+    {a:"United States",b:"Australia",pa:0.515,pe:0.136,pb:0.3491},
+    {a:"Turkiye",b:"Paraguay",pa:0.5389,pe:0.1926,pb:0.2685},
+    {a:"Turkiye",b:"United States",pa:0.372,pe:0.178,pb:0.45},
+    {a:"Paraguay",b:"Australia",pa:0.2988,pe:0.2008,pb:0.5003}
+  ],
+  "Grupo E":[
+    {a:"Germany",b:"Curacao",pa:0.7543,pe:0.1013,pb:0.1444},
+    {a:"Ivory Coast",b:"Ecuador",pa:0.3811,pe:0.2532,pb:0.3656},
+    {a:"Germany",b:"Ivory Coast",pa:0.599,pe:0.1239,pb:0.2771},
+    {a:"Ecuador",b:"Curacao",pa:0.6245,pe:0.1612,pb:0.2143},
+    {a:"Curacao",b:"Ivory Coast",pa:0.1676,pe:0.1094,pb:0.723},
+    {a:"Ecuador",b:"Germany",pa:0.2246,pe:0.2187,pb:0.5568}
+  ],
+  "Grupo F":[
+    {a:"Netherlands",b:"Japan",pa:0.5247,pe:0.111,pb:0.3644},
+    {a:"Sweden",b:"Tunisia",pa:0.488,pe:0.2076,pb:0.3044},
+    {a:"Netherlands",b:"Sweden",pa:0.6216,pe:0.1302,pb:0.2482},
+    {a:"Tunisia",b:"Japan",pa:0.2251,pe:0.1168,pb:0.6581},
+    {a:"Japan",b:"Sweden",pa:0.5744,pe:0.1248,pb:0.3008},
+    {a:"Tunisia",b:"Netherlands",pa:0.1902,pe:0.1252,pb:0.6846}
+  ],
+  "Grupo G":[
+    {a:"Belgium",b:"Egypt",pa:0.5849,pe:0.1255,pb:0.2896},
+    {a:"Iran",b:"New Zealand",pa:0.9011,pe:0.0598,pb:0.0391},
+    {a:"Belgium",b:"Iran",pa:0.5327,pe:0.1589,pb:0.3084},
+    {a:"Egypt",b:"New Zealand",pa:0.7843,pe:0.112,pb:0.1037},
+    {a:"Iran",b:"Egypt",pa:0.4803,pe:0.2264,pb:0.2933},
+    {a:"New Zealand",b:"Belgium",pa:0.0845,pe:0.1092,pb:0.8063}
+  ],
+  "Grupo H":[
+    {a:"Spain",b:"Cape Verde",pa:0.8752,pe:0.0685,pb:0.0563},
+    {a:"Saudi Arabia",b:"Uruguay",pa:0.2287,pe:0.1699,pb:0.6014},
+    {a:"Spain",b:"Saudi Arabia",pa:0.8199,pe:0.0876,pb:0.0925},
+    {a:"Uruguay",b:"Cape Verde",pa:0.7612,pe:0.116,pb:0.1228},
+    {a:"Uruguay",b:"Spain",pa:0.1388,pe:0.1346,pb:0.7267},
+    {a:"Cape Verde",b:"Saudi Arabia",pa:0.4239,pe:0.2003,pb:0.3758}
+  ],
+  "Grupo I":[
+    {a:"France",b:"Senegal",pa:0.5512,pe:0.1367,pb:0.3121},
+    {a:"Iraq",b:"Norway",pa:0.2263,pe:0.1784,pb:0.5953},
+    {a:"France",b:"Iraq",pa:0.8634,pe:0.0749,pb:0.0617},
+    {a:"Senegal",b:"Norway",pa:0.4892,pe:0.2143,pb:0.2965},
+    {a:"Norway",b:"France",pa:0.1903,pe:0.1582,pb:0.6515},
+    {a:"Senegal",b:"Iraq",pa:0.7285,pe:0.1312,pb:0.1403}
+  ],
+  "Grupo J":[
+    {a:"Argentina",b:"Algeria",pa:0.7823,pe:0.095,pb:0.1227},
+    {a:"Austria",b:"Jordan",pa:0.6724,pe:0.1487,pb:0.1789},
+    {a:"Argentina",b:"Austria",pa:0.7186,pe:0.1128,pb:0.1686},
+    {a:"Algeria",b:"Jordan",pa:0.5671,pe:0.1968,pb:0.2361},
+    {a:"Argentina",b:"Jordan",pa:0.8614,pe:0.0793,pb:0.0593},
+    {a:"Algeria",b:"Austria",pa:0.3198,pe:0.2152,pb:0.465}
+  ],
+  "Grupo K":[
+    {a:"Portugal",b:"DR Congo",pa:0.8321,pe:0.0841,pb:0.0838},
+    {a:"Uzbekistan",b:"Colombia",pa:0.2164,pe:0.1884,pb:0.5952},
+    {a:"Portugal",b:"Uzbekistan",pa:0.8056,pe:0.089,pb:0.1054},
+    {a:"Colombia",b:"DR Congo",pa:0.6287,pe:0.1694,pb:0.2019},
+    {a:"Portugal",b:"Colombia",pa:0.5982,pe:0.1432,pb:0.2586},
+    {a:"DR Congo",b:"Uzbekistan",pa:0.4317,pe:0.2154,pb:0.3529}
+  ],
+  "Grupo L":[
+    {a:"England",b:"Croatia",pa:0.5124,pe:0.1768,pb:0.3108},
+    {a:"Ghana",b:"Panama",pa:0.3618,pe:0.2104,pb:0.4278},
+    {a:"England",b:"Ghana",pa:0.8023,pe:0.0924,pb:0.1053},
+    {a:"Croatia",b:"Panama",pa:0.6584,pe:0.1613,pb:0.1803},
+    {a:"England",b:"Panama",pa:0.8147,pe:0.0884,pb:0.0969},
+    {a:"Croatia",b:"Ghana",pa:0.6391,pe:0.1753,pb:0.1856}
+  ]
+};
+
+const ELO_ADJUSTMENTS = [
+  {n:"Morocco",f:"&#127474;&#127462;",v1:2435,v2:2490,d:55,reason:"Sesgo CAF + Campeon AFCON 2026"},
+  {n:"Senegal",f:"&#127480;&#127475;",v1:2375,v2:2415,d:40,reason:"Sesgo CAF + Campeon AFCON 2022"},
+  {n:"Ivory Coast",f:"&#127464;&#127470;",v1:2175,v2:2210,d:35,reason:"Campeon AFCON 2024, sesgo CAF"},
+  {n:"Algeria",f:"&#127465;&#127487;",v1:2235,v2:2265,d:30,reason:"Win rate 65%, sesgo CAF"},
+  {n:"Norway",f:"&#127475;&#127476;",v1:2250,v2:2275,d:25,reason:"Haaland + 10 victorias consecutivas"},
+  {n:"Japan",f:"&#127471;&#127477;",v1:2335,v2:2360,d:25,reason:"Elimino a Alemania y Espana en Qatar 2022"},
+  {n:"Iran",f:"&#127470;&#127479;",v1:2305,v2:2325,d:20,reason:"Win rate 69%, sesgo AFC"},
+  {n:"South Korea",f:"&#127472;&#127479;",v1:2265,v2:2285,d:20,reason:"Cuartos Qatar 2022, sesgo AFC"},
+  {n:"Argentina",f:"&#127462;&#127479;",v1:2520,v2:2535,d:15,reason:"Campeon Qatar 2022 + Copa America 2024, penales 4/4"},
+  {n:"Germany",f:"&#127465;&#127466;",v1:2460,v2:2475,d:15,reason:"Forma actual excelente, 5W consecutivas"},
+  {n:"United States",f:"&#127482;&#127480;",v1:2360,v2:2370,d:10,reason:"Factor anfitrion no modelado"},
+  {n:"Mexico",f:"&#127474;&#127485;",v1:2370,v2:2380,d:10,reason:"Factor anfitrion, Azteca"},
+  {n:"Canada",f:"&#127464;&#127462;",v1:2220,v2:2230,d:10,reason:"Factor anfitrion + Davies/David"},
+  {n:"Australia",f:"&#127462;&#127482;",v1:2245,v2:2250,d:5,reason:"Ajuste menor AFC"},
+  {n:"Switzerland",f:"&#127464;&#127469;",v1:2370,v2:2375,d:5,reason:"Especialistas en penales"},
+  {n:"Netherlands",f:"&#127475;&#127473;",v1:2490,v2:2485,d:-5,reason:"Dependencia De Jong"},
+  {n:"France",f:"&#127467;&#127479;",v1:2550,v2:2535,d:-15,reason:"Penales 33%, dependencia Mbappe"},
+  {n:"Spain",f:"&#127466;&#127480;",v1:2540,v2:2530,d:-10,reason:"40% win rate en penales 2018-2026"},
+  {n:"Uruguay",f:"&#127482;&#127486;",v1:2380,v2:2370,d:-10,reason:"Forma debil DLWWD"},
+  {n:"England",f:"&#127988;&#917607;&#917602;&#917605;&#917614;&#917607;&#917631;",v1:2520,v2:2500,d:-20,reason:"60 anos sin campeonato, patron penales"},
+  {n:"Brazil",f:"&#127463;&#127479;",v1:2490,v2:2478,d:-12,reason:"Penales 33%, forma irregular LDWWL"},
+  {n:"Colombia",f:"&#127464;&#127476;",v1:2420,v2:2405,d:-15,reason:"Win rate 40%, 21 empates en 57 partidos"},
+  {n:"Ecuador",f:"&#127466;&#127464;",v1:2320,v2:2295,d:-25,reason:"Win rate 33%, DDDDW ultimos 5"},
+  {n:"Croatia",f:"&#127469;&#127479;",v1:2450,v2:2425,d:-25,reason:"Modric 40 anos, relegados Nations League"},
+  {n:"Belgium",f:"&#127463;&#127466;",v1:2470,v2:2445,d:-25,reason:"Generacion dorada en fin de ciclo"},
+  {n:"New Zealand",f:"&#127475;&#127487;",v1:1650,v2:1595,d:-55,reason:"Win rate ficticio vs rivales OFC irrelevantes"}
+];
+
+// ========== RENDER FUNCTIONS ==========
+
+function renderGroups() {
+  const c = document.getElementById('groups-container');
+  Object.entries(GROUPS).forEach(([key,g]) => {
+    const card = document.createElement('div');
+    card.className = 'gcard';
+    card.innerHTML = `
+      <div class="gc-head">
+        <h3>${g.name}</h3>
+        <span class="glabel">${key}</span>
+      </div>
+      <div class="gc-body">
+        ${g.teams.map(t => `
+          <div class="team-row">
+            <span class="tf">${t.f}</span>
+            <div class="ti">
+              <div class="tn">${t.n}${t.host?'<span class="host-badge">SEDE</span>':''}</div>
+              <span class="tc ${t.c}">${t.c}</span>
+            </div>
+            <span class="tr">FIFA #${t.r}</span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    c.appendChild(card);
+  });
+}
+
+function renderMatrices() {
+  const c = document.getElementById('matrices-container');
+  Object.entries(MATCHES).forEach(([gname, matches]) => {
+    const sec = document.createElement('div');
+    sec.className = 'matrix-section';
+    sec.innerHTML = `<h3>&#127947; ${gname}</h3>`;
+    matches.forEach(m => {
+      const pa = m.inv ? m.pb : m.pa;
+      const pb = m.inv ? m.pa : m.pb;
+      const row = document.createElement('div');
+      row.className = 'mrow';
+      row.innerHTML = `
+        <div class="mt">${getFlag(m.a)} ${m.a}</div>
+        <div class="mprobs">
+          <div class="pbars">
+            <div class="pw" style="width:${pa*100}%"></div>
+            <div class="pd" style="width:${m.pe*100}%"></div>
+            <div class="pl" style="width:${pb*100}%"></div>
+          </div>
+          <div class="pnums">
+            <span>${(pa*100).toFixed(1)}%</span>
+            <span>${(m.pe*100).toFixed(1)}%</span>
+            <span>${(pb*100).toFixed(1)}%</span>
+          </div>
+          <div class="plbl">G &nbsp;&mdash;&nbsp; E &nbsp;&mdash;&nbsp; G</div>
+        </div>
+        <div class="mt away">${getFlag(m.b)} ${m.b}</div>
+      `;
+      sec.appendChild(row);
+    });
+    c.appendChild(sec);
+  });
+}
+
+function getFlag(name) {
+  const flags = {
+    "Mexico":"&#127474;&#127485;","South Africa":"&#127487;&#127462;","South Korea":"&#127472;&#127479;",
+    "Czechia":"&#127464;&#127487;","Canada":"&#127464;&#127462;","Bosnia and Herzegovina":"&#127463;&#127462;",
+    "Qatar":"&#127478;&#127462;","Switzerland":"&#127464;&#127469;","Brazil":"&#127463;&#127479;",
+    "Morocco":"&#127474;&#127462;","Haiti":"&#127469;&#127481;","Scotland":"&#127988;&#917607;&#917602;&#917619;&#917588;&#917620;&#917631;",
+    "United States":"&#127482;&#127480;","Paraguay":"&#127477;&#127486;","Australia":"&#127462;&#127482;",
+    "Turkiye":"&#127481;&#127479;","Germany":"&#127465;&#127466;","Curacao":"&#127464;&#127484;",
+    "Ivory Coast":"&#127464;&#127470;","Ecuador":"&#127466;&#127464;","Netherlands":"&#127475;&#127473;",
+    "Japan":"&#127471;&#127477;","Sweden":"&#127480;&#127466;","Tunisia":"&#127481;&#127475;",
+    "Belgium":"&#127463;&#127466;","Egypt":"&#127466;&#127468;","Iran":"&#127470;&#127479;",
+    "New Zealand":"&#127475;&#127487;","Spain":"&#127466;&#127480;","Cape Verde":"&#127464;&#127483;",
+    "Saudi Arabia":"&#127480;&#127462;","Uruguay":"&#127482;&#127486;","France":"&#127467;&#127479;",
+    "Senegal":"&#127480;&#127475;","Iraq":"&#127470;&#127478;","Norway":"&#127475;&#127476;",
+    "Argentina":"&#127462;&#127479;","Algeria":"&#127465;&#127487;","Austria":"&#127462;&#127481;",
+    "Jordan":"&#127471;&#127476;","Portugal":"&#127477;&#127481;","DR Congo":"&#127464;&#127465;",
+    "Uzbekistan":"&#127482;&#127487;","Colombia":"&#127464;&#127476;","England":"&#127988;&#917607;&#917602;&#917605;&#917614;&#917607;&#917631;",
+    "Croatia":"&#127469;&#127479;","Ghana":"&#127468;&#127469;","Panama":"&#127477;&#127462;"
+  };
+  return flags[name] || '';
+}
+
+function barColor(rank) {
+  if(rank===1) return 'linear-gradient(90deg,#ffd700,#ffb300)';
+  if(rank===2) return 'linear-gradient(90deg,#00d4aa,#00b89a)';
+  if(rank<=5) return 'linear-gradient(90deg,#6366f1,#4f46e5)';
+  if(rank<=10) return 'linear-gradient(90deg,#0ea5e9,#0284c7)';
+  return 'linear-gradient(90deg,#475569,#334155)';
+}
+
+function rankClass(i) {
+  if(i===0) return 'r1';
+  if(i===1) return 'r2';
+  if(i===2) return 'r3';
+  return 'ro';
+}
+
+function renderChampList(containerId, data) {
+  const c = document.getElementById(containerId);
+  const maxP = data[0].p;
+  data.forEach((d,i) => {
+    const el = document.createElement('div');
+    el.className = 'ci';
+    const w = Math.max((d.p/maxP)*100, d.p>0?1:0);
+    el.innerHTML = `
+      <div class="ci-rank ${rankClass(i)}">${i+1}</div>
+      <div class="ci-flag">${d.f}</div>
+      <div class="ci-name">${d.n}</div>
+      <div class="ci-bar-wrap">
+        <div class="ci-bar-bg">
+          <div class="ci-bar" style="width:${w}%;background:${barColor(i+1)}">${d.p>=1?d.p.toFixed(2)+'%':''}</div>
+        </div>
+      </div>
+      <div class="ci-pct">${d.p.toFixed(3)}%</div>
+      <div class="ci-ic">IC95: [${d.ic[0].toFixed(2)}, ${d.ic[1].toFixed(2)}]</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+function renderComparativa() {
+  const c = document.getElementById('comparativa-container');
+  const top = CHAMP_V2.filter(d => d.v1>0 || d.p>0.5).slice(0,18);
+  const maxV2 = top[0].p;
+  top.forEach(d => {
+    const delta = d.p - d.v1;
+    const w1 = (d.v1/maxV2)*100;
+    const w2 = (d.p/maxV2)*100;
+    const row = document.createElement('div');
+    row.className = 'comp-row';
+    row.innerHTML = `
+      <div class="comp-name">${d.f} ${d.n}</div>
+      <div class="comp-bars">
+        <div class="v1b" style="width:${w1}%"></div>
+        <div class="v2b" style="width:${w2}%"></div>
+      </div>
+      <div class="cv1">${d.v1.toFixed(2)}%</div>
+      <div class="cv2">${d.p.toFixed(3)}%</div>
+      <div class="cdelta ${delta>=0?'pos':'neg'}">${delta>=0?'+':''}${delta.toFixed(2)}pp</div>
+    `;
+    c.appendChild(row);
+  });
+}
+
+function renderELO() {
+  const c = document.getElementById('elo-container');
+  ELO_ADJUSTMENTS.sort((a,b) => Math.abs(b.d)-Math.abs(a.d));
+  ELO_ADJUSTMENTS.forEach(e => {
+    const el = document.createElement('div');
+    el.className = 'elo-item';
+    el.innerHTML = `
+      <div class="elo-flag">${e.f}</div>
+      <div class="elo-info">
+        <div class="elo-name">${e.n}</div>
+        <div class="elo-vals">${e.v1} &rarr; ${e.v2} &nbsp;&bull;&nbsp; ${e.reason}</div>
+      </div>
+      <div class="elo-delta ${e.d>=0?'ed-pos':'ed-neg'}">${e.d>=0?'+':''}${e.d}</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  document.querySelectorAll('.sb-link').forEach(l => l.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// ========== INIT ==========
+document.addEventListener('DOMContentLoaded', () => {
+  renderGroups();
+  renderMatrices();
+  renderChampList('champ-top10', CHAMP_V2.slice(0,10));
+  renderChampList('champ-top20', CHAMP_V2.slice(0,20));
+  renderChampList('champ-todos', CHAMP_V2);
+  renderComparativa();
+  renderELO();
+});
+</script>
+</body>
+</html>
