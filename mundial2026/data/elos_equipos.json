@@ -1,0 +1,336 @@
+{
+  "titulo": "ELO Calculados - FIFA World Cup 2026",
+  "modelo": "ELO-Historial-Combinado v1.0",
+  "fecha_calculo": "2026-05-17",
+  "formula": "ELO = 1500 + ((101 - ranking_FIFA) * 10) + ajuste_confederacion",
+  "ajustes_confederacion": {
+    "UEFA": 50,
+    "CONMEBOL": 40,
+    "CONCACAF": 10,
+    "CAF": 5,
+    "AFC": 5,
+    "OFC": -10
+  },
+  "equipos": [
+    {
+      "equipo": "France",
+      "elo": 2550,
+      "ranking_fifa": 1,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Spain",
+      "elo": 2540,
+      "ranking_fifa": 2,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Argentina",
+      "elo": 2520,
+      "ranking_fifa": 3,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "England",
+      "elo": 2520,
+      "ranking_fifa": 4,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Portugal",
+      "elo": 2510,
+      "ranking_fifa": 5,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Brazil",
+      "elo": 2490,
+      "ranking_fifa": 6,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "Netherlands",
+      "elo": 2490,
+      "ranking_fifa": 7,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Belgium",
+      "elo": 2470,
+      "ranking_fifa": 9,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Germany",
+      "elo": 2460,
+      "ranking_fifa": 10,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Croatia",
+      "elo": 2450,
+      "ranking_fifa": 11,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Morocco",
+      "elo": 2435,
+      "ranking_fifa": 8,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Colombia",
+      "elo": 2420,
+      "ranking_fifa": 13,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "Uruguay",
+      "elo": 2380,
+      "ranking_fifa": 17,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "Senegal",
+      "elo": 2375,
+      "ranking_fifa": 14,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Mexico",
+      "elo": 2370,
+      "ranking_fifa": 15,
+      "confederacion": "CONCACAF"
+    },
+    {
+      "equipo": "Switzerland",
+      "elo": 2370,
+      "ranking_fifa": 19,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "United States",
+      "elo": 2360,
+      "ranking_fifa": 16,
+      "confederacion": "CONCACAF"
+    },
+    {
+      "equipo": "Turkiye",
+      "elo": 2340,
+      "ranking_fifa": 22,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Japan",
+      "elo": 2335,
+      "ranking_fifa": 18,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Ecuador",
+      "elo": 2320,
+      "ranking_fifa": 23,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "Austria",
+      "elo": 2320,
+      "ranking_fifa": 24,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Iran",
+      "elo": 2305,
+      "ranking_fifa": 21,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "South Korea",
+      "elo": 2265,
+      "ranking_fifa": 25,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Norway",
+      "elo": 2250,
+      "ranking_fifa": 31,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Australia",
+      "elo": 2245,
+      "ranking_fifa": 27,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Algeria",
+      "elo": 2235,
+      "ranking_fifa": 28,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Egypt",
+      "elo": 2225,
+      "ranking_fifa": 29,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Canada",
+      "elo": 2220,
+      "ranking_fifa": 30,
+      "confederacion": "CONCACAF"
+    },
+    {
+      "equipo": "Panama",
+      "elo": 2190,
+      "ranking_fifa": 33,
+      "confederacion": "CONCACAF"
+    },
+    {
+      "equipo": "Sweden",
+      "elo": 2180,
+      "ranking_fifa": 38,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Ivory Coast",
+      "elo": 2175,
+      "ranking_fifa": 34,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Paraguay",
+      "elo": 2150,
+      "ranking_fifa": 40,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "Czechia",
+      "elo": 2150,
+      "ranking_fifa": 41,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Scotland",
+      "elo": 2130,
+      "ranking_fifa": 43,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Tunisia",
+      "elo": 2075,
+      "ranking_fifa": 44,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "DR Congo",
+      "elo": 2055,
+      "ranking_fifa": 46,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Uzbekistan",
+      "elo": 2015,
+      "ranking_fifa": 50,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Qatar",
+      "elo": 1965,
+      "ranking_fifa": 55,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Iraq",
+      "elo": 1945,
+      "ranking_fifa": 57,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "South Africa",
+      "elo": 1915,
+      "ranking_fifa": 60,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Bosnia and Herzegovina",
+      "elo": 1910,
+      "ranking_fifa": 65,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Saudi Arabia",
+      "elo": 1905,
+      "ranking_fifa": 61,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Jordan",
+      "elo": 1885,
+      "ranking_fifa": 63,
+      "confederacion": "AFC"
+    },
+    {
+      "equipo": "Cape Verde",
+      "elo": 1825,
+      "ranking_fifa": 69,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Ghana",
+      "elo": 1775,
+      "ranking_fifa": 74,
+      "confederacion": "CAF"
+    },
+    {
+      "equipo": "Curacao",
+      "elo": 1700,
+      "ranking_fifa": 82,
+      "confederacion": "CONCACAF"
+    },
+    {
+      "equipo": "Haiti",
+      "elo": 1690,
+      "ranking_fifa": 83,
+      "confederacion": "CONCACAF"
+    },
+    {
+      "equipo": "New Zealand",
+      "elo": 1650,
+      "ranking_fifa": 85,
+      "confederacion": "OFC"
+    }
+  ],
+  "top_5": [
+    {
+      "equipo": "France",
+      "elo": 2550,
+      "ranking_fifa": 1,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Spain",
+      "elo": 2540,
+      "ranking_fifa": 2,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Argentina",
+      "elo": 2520,
+      "ranking_fifa": 3,
+      "confederacion": "CONMEBOL"
+    },
+    {
+      "equipo": "England",
+      "elo": 2520,
+      "ranking_fifa": 4,
+      "confederacion": "UEFA"
+    },
+    {
+      "equipo": "Portugal",
+      "elo": 2510,
+      "ranking_fifa": 5,
+      "confederacion": "UEFA"
+    }
+  ]
+}

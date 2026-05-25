@@ -1,0 +1,157 @@
+{
+  "torneo": "FIFA World Cup 2026",
+  "total_sedes": 16,
+  "paises_anfitriones": ["United States", "Mexico", "Canada"],
+  "distribucion_partidos": {
+    "United States": 78,
+    "Mexico": 13,
+    "Canada": 13
+  },
+  "total_partidos": 104,
+  "fecha_actualizacion": "2026-05-16",
+  "fuentes": [
+    "https://worldcupwiki.com/stadiums/",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/stadium-information-details",
+    "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/all-2026-world-cup-stadiums-host-cities-capacity-and-matches-2026-05-13"
+  ],
+  "regiones": {
+    "Occidental": ["Vancouver", "Seattle", "San Francisco Bay Area", "Los Angeles"],
+    "Central": ["Guadalajara", "Mexico City", "Monterrey", "Houston", "Dallas", "Kansas City"],
+    "Oriental": ["Atlanta", "Miami", "Toronto", "Boston", "Philadelphia", "New York/New Jersey"]
+  },
+  "sedes": [
+    {
+      "nombre_fifa": "New York New Jersey Stadium",
+      "nombre_real": "MetLife Stadium",
+      "ciudad": "East Rutherford, NJ",
+      "pais": "United States",
+      "capacidad_torneo": 82500,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final", "Final"],
+      "partidos_clave": ["Final (19 julio 2026)"]
+    },
+    {
+      "nombre_fifa": "Dallas Stadium",
+      "nombre_real": "AT&T Stadium",
+      "ciudad": "Arlington, TX",
+      "pais": "United States",
+      "capacidad_torneo": 92967,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final", "Semifinal"],
+      "partidos_clave": ["Semifinal (14 julio 2026)"]
+    },
+    {
+      "nombre_fifa": "Atlanta Stadium",
+      "nombre_real": "Mercedes-Benz Stadium",
+      "ciudad": "Atlanta, GA",
+      "pais": "United States",
+      "capacidad_torneo": 71000,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final", "Semifinal"],
+      "partidos_clave": ["Semifinal (15 julio 2026)"]
+    },
+    {
+      "nombre_fifa": "Los Angeles Stadium",
+      "nombre_real": "SoFi Stadium",
+      "ciudad": "Inglewood, CA",
+      "pais": "United States",
+      "capacidad_torneo": 70240,
+      "fases": ["Fase de grupos", "Ronda de 32", "Cuartos de final"]
+    },
+    {
+      "nombre_fifa": "Kansas City Stadium",
+      "nombre_real": "Arrowhead Stadium",
+      "ciudad": "Kansas City, MO",
+      "pais": "United States",
+      "capacidad_torneo": 76640,
+      "fases": ["Fase de grupos", "Ronda de 32", "Cuartos de final"]
+    },
+    {
+      "nombre_fifa": "Houston Stadium",
+      "nombre_real": "NRG Stadium",
+      "ciudad": "Houston, TX",
+      "pais": "United States",
+      "capacidad_torneo": 72220,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final"]
+    },
+    {
+      "nombre_fifa": "San Francisco Bay Area Stadium",
+      "nombre_real": "Levi's Stadium",
+      "ciudad": "Santa Clara, CA",
+      "pais": "United States",
+      "capacidad_torneo": 70909,
+      "fases": ["Fase de grupos", "Ronda de 32"]
+    },
+    {
+      "nombre_fifa": "Seattle Stadium",
+      "nombre_real": "Lumen Field",
+      "ciudad": "Seattle, WA",
+      "pais": "United States",
+      "capacidad_torneo": 68740,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final"]
+    },
+    {
+      "nombre_fifa": "Philadelphia Stadium",
+      "nombre_real": "Lincoln Financial Field",
+      "ciudad": "Philadelphia, PA",
+      "pais": "United States",
+      "capacidad_torneo": 69328,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final"]
+    },
+    {
+      "nombre_fifa": "Miami Stadium",
+      "nombre_real": "Hard Rock Stadium",
+      "ciudad": "Miami Gardens, FL",
+      "pais": "United States",
+      "capacidad_torneo": 65000,
+      "fases": ["Fase de grupos", "Ronda de 32", "Cuartos de final", "Tercer puesto"],
+      "partidos_clave": ["Partido por el tercer puesto (18 julio 2026)"]
+    },
+    {
+      "nombre_fifa": "Boston Stadium",
+      "nombre_real": "Gillette Stadium",
+      "ciudad": "Foxborough, MA",
+      "pais": "United States",
+      "capacidad_torneo": 64628,
+      "fases": ["Fase de grupos", "Ronda de 32", "Cuartos de final"]
+    },
+    {
+      "nombre_fifa": "Estadio Azteca",
+      "nombre_real": "Estadio Azteca",
+      "ciudad": "Mexico City",
+      "pais": "Mexico",
+      "capacidad_torneo": 87500,
+      "fases": ["Partido inaugural", "Fase de grupos", "Ronda de 32", "Octavos de final"],
+      "partidos_clave": ["Partido inaugural: Mexico vs South Africa (11 junio 2026)"]
+    },
+    {
+      "nombre_fifa": "Estadio BBVA",
+      "nombre_real": "Estadio BBVA",
+      "ciudad": "Monterrey",
+      "pais": "Mexico",
+      "capacidad_torneo": 53500,
+      "fases": ["Fase de grupos", "Ronda de 32"]
+    },
+    {
+      "nombre_fifa": "Estadio Akron",
+      "nombre_real": "Estadio Akron",
+      "ciudad": "Zapopan (Guadalajara)",
+      "pais": "Mexico",
+      "capacidad_torneo": 48000,
+      "fases": ["Fase de grupos"]
+    },
+    {
+      "nombre_fifa": "BMO Field",
+      "nombre_real": "BMO Field",
+      "ciudad": "Toronto, ON",
+      "pais": "Canada",
+      "capacidad_torneo": 45736,
+      "fases": ["Fase de grupos", "Ronda de 32"]
+    },
+    {
+      "nombre_fifa": "BC Place",
+      "nombre_real": "BC Place",
+      "ciudad": "Vancouver, BC",
+      "pais": "Canada",
+      "capacidad_torneo": 54500,
+      "fases": ["Fase de grupos", "Ronda de 32", "Octavos de final"]
+    }
+  ]
+}

@@ -1,0 +1,2139 @@
+{
+  "titulo": "Tandas de penales de los 48 equipos clasificados al Mundial 2026",
+  "periodo": "2018-01-01 a 2026-05-16",
+  "total_tandas": 94,
+  "fecha_generacion": "2026-05-16",
+  "fuente": "github.com/martj42/international_results/shootouts.csv",
+  "nota": "El dataset incluye el ganador de la tanda pero NO los marcadores individuales de cada penal.",
+  "partidos": [
+    {
+      "fecha": "2018-03-21",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Angola",
+      "ganador_penales": "South Africa",
+      "primer_pateador": null,
+      "competencia": "Friendly",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2018-06-03",
+      "equipo_local": "Andorra",
+      "equipo_visitante": "Cape Verde",
+      "ganador_penales": "Cape Verde",
+      "primer_pateador": null,
+      "competencia": "Friendly",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2018-06-03",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Madagascar",
+      "ganador_penales": "Madagascar",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2018-07-01",
+      "equipo_local": "Russia",
+      "equipo_visitante": "Spain",
+      "ganador_penales": "Russia",
+      "primer_pateador": "Spain",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2018-07-01",
+      "equipo_local": "Croatia",
+      "equipo_visitante": "Denmark",
+      "ganador_penales": "Croatia",
+      "primer_pateador": "Denmark",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2018-07-03",
+      "equipo_local": "Colombia",
+      "equipo_visitante": "England",
+      "ganador_penales": "England",
+      "primer_pateador": "Colombia",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2018-07-07",
+      "equipo_local": "Russia",
+      "equipo_visitante": "Croatia",
+      "ganador_penales": "Croatia",
+      "primer_pateador": "Russia",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2019-01-20",
+      "equipo_local": "Jordan",
+      "equipo_visitante": "Vietnam",
+      "ganador_penales": "Vietnam",
+      "primer_pateador": "Vietnam",
+      "competencia": "AFC Asian Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2019-01-21",
+      "equipo_local": "Australia",
+      "equipo_visitante": "Uzbekistan",
+      "ganador_penales": "Australia",
+      "primer_pateador": "Australia",
+      "competencia": "AFC Asian Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2019-06-02",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Botswana",
+      "ganador_penales": "Botswana",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2019-06-04",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Uganda",
+      "ganador_penales": "South Africa",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2019-06-07",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Malawi",
+      "ganador_penales": "South Africa",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2019-06-09",
+      "equipo_local": "Switzerland",
+      "equipo_visitante": "England",
+      "ganador_penales": "England",
+      "primer_pateador": "England",
+      "competencia": "UEFA Nations League",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2019-06-27",
+      "equipo_local": "Brazil",
+      "equipo_visitante": "Paraguay",
+      "ganador_penales": "Brazil",
+      "primer_pateador": "Paraguay",
+      "competencia": "Copa América",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2019-06-28",
+      "equipo_local": "Colombia",
+      "equipo_visitante": "Chile",
+      "ganador_penales": "Chile",
+      "primer_pateador": "Colombia",
+      "competencia": "Copa América",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2019-06-29",
+      "equipo_local": "Mexico",
+      "equipo_visitante": "Costa Rica",
+      "ganador_penales": "Mexico",
+      "primer_pateador": "Mexico",
+      "competencia": "Gold Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2019-06-29",
+      "equipo_local": "Uruguay",
+      "equipo_visitante": "Peru",
+      "ganador_penales": "Peru",
+      "primer_pateador": "Uruguay",
+      "competencia": "Copa América",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2019-07-05",
+      "equipo_local": "Morocco",
+      "equipo_visitante": "Benin",
+      "ganador_penales": "Benin",
+      "primer_pateador": "Benin",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2019-07-07",
+      "equipo_local": "Madagascar",
+      "equipo_visitante": "DR Congo",
+      "ganador_penales": "Madagascar",
+      "primer_pateador": "Madagascar",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2019-07-08",
+      "equipo_local": "Ghana",
+      "equipo_visitante": "Tunisia",
+      "ganador_penales": "Tunisia",
+      "primer_pateador": "Ghana",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2019-07-11",
+      "equipo_local": "Ivory Coast",
+      "equipo_visitante": "Algeria",
+      "ganador_penales": "Algeria",
+      "primer_pateador": "Algeria",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2020-10-08",
+      "equipo_local": "Bosnia and Herzegovina",
+      "equipo_visitante": "Northern Ireland",
+      "ganador_penales": "Northern Ireland",
+      "primer_pateador": "Bosnia and Herzegovina",
+      "competencia": "UEFA Euro qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2020-10-08",
+      "equipo_local": "Scotland",
+      "equipo_visitante": "Israel",
+      "ganador_penales": "Scotland",
+      "primer_pateador": "Scotland",
+      "competencia": "UEFA Euro qualification",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2020-11-12",
+      "equipo_local": "Serbia",
+      "equipo_visitante": "Scotland",
+      "ganador_penales": "Scotland",
+      "primer_pateador": "Scotland",
+      "competencia": "UEFA Euro qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2021-06-03",
+      "equipo_local": "Mexico",
+      "equipo_visitante": "Costa Rica",
+      "ganador_penales": "Mexico",
+      "primer_pateador": "Mexico",
+      "competencia": "CONCACAF Nations League",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2021-06-28",
+      "equipo_local": "France",
+      "equipo_visitante": "Switzerland",
+      "ganador_penales": "Switzerland",
+      "primer_pateador": "Switzerland",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "3",
+      "goles_visitante_90min": "3"
+    },
+    {
+      "fecha": "2021-07-02",
+      "equipo_local": "Peru",
+      "equipo_visitante": "Paraguay",
+      "ganador_penales": "Peru",
+      "primer_pateador": "Paraguay",
+      "competencia": "Copa América",
+      "goles_local_90min": "3",
+      "goles_visitante_90min": "3"
+    },
+    {
+      "fecha": "2021-07-02",
+      "equipo_local": "Switzerland",
+      "equipo_visitante": "Spain",
+      "ganador_penales": "Spain",
+      "primer_pateador": "Spain",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2021-07-03",
+      "equipo_local": "Uruguay",
+      "equipo_visitante": "Colombia",
+      "ganador_penales": "Colombia",
+      "primer_pateador": "Colombia",
+      "competencia": "Copa América",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2021-07-06",
+      "equipo_local": "Italy",
+      "equipo_visitante": "Spain",
+      "ganador_penales": "Italy",
+      "primer_pateador": "Italy",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2021-07-06",
+      "equipo_local": "Argentina",
+      "equipo_visitante": "Colombia",
+      "ganador_penales": "Argentina",
+      "primer_pateador": "Colombia",
+      "competencia": "Copa América",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2021-07-11",
+      "equipo_local": "England",
+      "equipo_visitante": "Italy",
+      "ganador_penales": "Italy",
+      "primer_pateador": "Italy",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2021-07-16",
+      "equipo_local": "Senegal",
+      "equipo_visitante": "Eswatini",
+      "ganador_penales": "Senegal",
+      "primer_pateador": "Eswatini",
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2021-07-18",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Senegal",
+      "ganador_penales": "South Africa",
+      "primer_pateador": "South Africa",
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2021-12-11",
+      "equipo_local": "Morocco",
+      "equipo_visitante": "Algeria",
+      "ganador_penales": "Algeria",
+      "primer_pateador": "Algeria",
+      "competencia": "Arab Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2021-12-18",
+      "equipo_local": "Qatar",
+      "equipo_visitante": "Egypt",
+      "ganador_penales": "Qatar",
+      "primer_pateador": "Qatar",
+      "competencia": "Arab Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-01-26",
+      "equipo_local": "Ivory Coast",
+      "equipo_visitante": "Egypt",
+      "ganador_penales": "Egypt",
+      "primer_pateador": "Ivory Coast",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-02-03",
+      "equipo_local": "Cameroon",
+      "equipo_visitante": "Egypt",
+      "ganador_penales": "Egypt",
+      "primer_pateador": "Cameroon",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-02-06",
+      "equipo_local": "Senegal",
+      "equipo_visitante": "Egypt",
+      "ganador_penales": "Senegal",
+      "primer_pateador": "Senegal",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-03-29",
+      "equipo_local": "Senegal",
+      "equipo_visitante": "Egypt",
+      "ganador_penales": "Senegal",
+      "primer_pateador": "Senegal",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-06-13",
+      "equipo_local": "Australia",
+      "equipo_visitante": "Peru",
+      "ganador_penales": "Australia",
+      "primer_pateador": "Australia",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-06-14",
+      "equipo_local": "Chile",
+      "equipo_visitante": "Ghana",
+      "ganador_penales": "Ghana",
+      "primer_pateador": "Chile",
+      "competencia": "Kirin Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-07-13",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Mozambique",
+      "ganador_penales": "Mozambique",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-07-13",
+      "equipo_local": "Senegal",
+      "equipo_visitante": "Eswatini",
+      "ganador_penales": "Senegal",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2022-07-17",
+      "equipo_local": "Mozambique",
+      "equipo_visitante": "Senegal",
+      "ganador_penales": "Senegal",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2022-09-23",
+      "equipo_local": "Iraq",
+      "equipo_visitante": "Oman",
+      "ganador_penales": "Oman",
+      "primer_pateador": null,
+      "competencia": "Jordan International Tournament",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2022-12-05",
+      "equipo_local": "Japan",
+      "equipo_visitante": "Croatia",
+      "ganador_penales": "Croatia",
+      "primer_pateador": "Japan",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2022-12-06",
+      "equipo_local": "Morocco",
+      "equipo_visitante": "Spain",
+      "ganador_penales": "Morocco",
+      "primer_pateador": "Morocco",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2022-12-09",
+      "equipo_local": "Croatia",
+      "equipo_visitante": "Brazil",
+      "ganador_penales": "Croatia",
+      "primer_pateador": "Croatia",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2022-12-09",
+      "equipo_local": "Netherlands",
+      "equipo_visitante": "Argentina",
+      "ganador_penales": "Argentina",
+      "primer_pateador": "Netherlands",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2022-12-18",
+      "equipo_local": "Argentina",
+      "equipo_visitante": "France",
+      "ganador_penales": "Argentina",
+      "primer_pateador": "France",
+      "competencia": "FIFA World Cup",
+      "goles_local_90min": "3",
+      "goles_visitante_90min": "3"
+    },
+    {
+      "fecha": "2023-06-16",
+      "equipo_local": "Curacao",
+      "equipo_visitante": "Saint Kitts and Nevis",
+      "ganador_penales": "Saint Kitts and Nevis",
+      "primer_pateador": "Saint Kitts and Nevis",
+      "competencia": "Gold Cup qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2023-06-18",
+      "equipo_local": "Croatia",
+      "equipo_visitante": "Spain",
+      "ganador_penales": "Spain",
+      "primer_pateador": "Croatia",
+      "competencia": "UEFA Nations League",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2023-07-09",
+      "equipo_local": "United States",
+      "equipo_visitante": "Canada",
+      "ganador_penales": "United States",
+      "primer_pateador": "Canada",
+      "competencia": "Gold Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2023-07-12",
+      "equipo_local": "United States",
+      "equipo_visitante": "Panama",
+      "ganador_penales": "Panama",
+      "primer_pateador": "United States",
+      "competencia": "Gold Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2023-07-16",
+      "equipo_local": "South Africa",
+      "equipo_visitante": "Malawi",
+      "ganador_penales": "South Africa",
+      "primer_pateador": null,
+      "competencia": "COSAFA Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2023-09-07",
+      "equipo_local": "Iraq",
+      "equipo_visitante": "India",
+      "ganador_penales": "Iraq",
+      "primer_pateador": "India",
+      "competencia": "King's Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2023-09-10",
+      "equipo_local": "Thailand",
+      "equipo_visitante": "Iraq",
+      "ganador_penales": "Iraq",
+      "primer_pateador": "Thailand",
+      "competencia": "King's Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2023-10-13",
+      "equipo_local": "Iraq",
+      "equipo_visitante": "Qatar",
+      "ganador_penales": "Qatar",
+      "primer_pateador": "Qatar",
+      "competencia": "Friendly",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2023-11-21",
+      "equipo_local": "Mexico",
+      "equipo_visitante": "Honduras",
+      "ganador_penales": "Mexico",
+      "primer_pateador": "Mexico",
+      "competencia": "CONCACAF Nations League",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-01-28",
+      "equipo_local": "Egypt",
+      "equipo_visitante": "DR Congo",
+      "ganador_penales": "DR Congo",
+      "primer_pateador": "Egypt",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-01-29",
+      "equipo_local": "Ivory Coast",
+      "equipo_visitante": "Senegal",
+      "ganador_penales": "Ivory Coast",
+      "primer_pateador": "Senegal",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-01-30",
+      "equipo_local": "Saudi Arabia",
+      "equipo_visitante": "South Korea",
+      "ganador_penales": "South Korea",
+      "primer_pateador": "Saudi Arabia",
+      "competencia": "AFC Asian Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-01-31",
+      "equipo_local": "Iran",
+      "equipo_visitante": "Syria",
+      "ganador_penales": "Iran",
+      "primer_pateador": "Iran",
+      "competencia": "AFC Asian Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-02-03",
+      "equipo_local": "Cape Verde",
+      "equipo_visitante": "South Africa",
+      "ganador_penales": "South Africa",
+      "primer_pateador": "Cape Verde",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-02-03",
+      "equipo_local": "Qatar",
+      "equipo_visitante": "Uzbekistan",
+      "ganador_penales": "Qatar",
+      "primer_pateador": "Uzbekistan",
+      "competencia": "AFC Asian Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-02-07",
+      "equipo_local": "Nigeria",
+      "equipo_visitante": "South Africa",
+      "ganador_penales": "Nigeria",
+      "primer_pateador": "Nigeria",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-03-23",
+      "equipo_local": "Tunisia",
+      "equipo_visitante": "Croatia",
+      "ganador_penales": "Croatia",
+      "primer_pateador": "Croatia",
+      "competencia": "FIFA Series",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-03-26",
+      "equipo_local": "New Zealand",
+      "equipo_visitante": "Tunisia",
+      "ganador_penales": "Tunisia",
+      "primer_pateador": "New Zealand",
+      "competencia": "FIFA Series",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-07-01",
+      "equipo_local": "Portugal",
+      "equipo_visitante": "Slovenia",
+      "ganador_penales": "Portugal",
+      "primer_pateador": "Slovenia",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-07-04",
+      "equipo_local": "Argentina",
+      "equipo_visitante": "Ecuador",
+      "ganador_penales": "Argentina",
+      "primer_pateador": "Argentina",
+      "competencia": "Copa América",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-07-05",
+      "equipo_local": "Portugal",
+      "equipo_visitante": "France",
+      "ganador_penales": "France",
+      "primer_pateador": "France",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-07-05",
+      "equipo_local": "Venezuela",
+      "equipo_visitante": "Canada",
+      "ganador_penales": "Canada",
+      "primer_pateador": "Venezuela",
+      "competencia": "Copa América",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-07-06",
+      "equipo_local": "England",
+      "equipo_visitante": "Switzerland",
+      "ganador_penales": "England",
+      "primer_pateador": "England",
+      "competencia": "UEFA Euro",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2024-07-06",
+      "equipo_local": "Uruguay",
+      "equipo_visitante": "Brazil",
+      "ganador_penales": "Uruguay",
+      "primer_pateador": "Uruguay",
+      "competencia": "Copa América",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2024-07-13",
+      "equipo_local": "Canada",
+      "equipo_visitante": "Uruguay",
+      "ganador_penales": "Uruguay",
+      "primer_pateador": "Canada",
+      "competencia": "Copa América",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2025-06-08",
+      "equipo_local": "Portugal",
+      "equipo_visitante": "Spain",
+      "ganador_penales": "Portugal",
+      "primer_pateador": "Portugal",
+      "competencia": "UEFA Nations League",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2025-06-28",
+      "equipo_local": "Panama",
+      "equipo_visitante": "Honduras",
+      "ganador_penales": "Honduras",
+      "primer_pateador": "Panama",
+      "competencia": "Gold Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2025-06-29",
+      "equipo_local": "Canada",
+      "equipo_visitante": "Guatemala",
+      "ganador_penales": "Guatemala",
+      "primer_pateador": "Canada",
+      "competencia": "Gold Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2025-06-29",
+      "equipo_local": "United States",
+      "equipo_visitante": "Costa Rica",
+      "ganador_penales": "United States",
+      "primer_pateador": "Costa Rica",
+      "competencia": "Gold Cup",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2025-11-13",
+      "equipo_local": "Iran",
+      "equipo_visitante": "Cape Verde",
+      "ganador_penales": "Iran",
+      "primer_pateador": null,
+      "competencia": "Al Ain International Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2025-11-16",
+      "equipo_local": "Nigeria",
+      "equipo_visitante": "DR Congo",
+      "ganador_penales": "DR Congo",
+      "primer_pateador": "Nigeria",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2025-11-17",
+      "equipo_local": "Cape Verde",
+      "equipo_visitante": "Egypt",
+      "ganador_penales": "Egypt",
+      "primer_pateador": null,
+      "competencia": "Al Ain International Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2025-11-18",
+      "equipo_local": "Iran",
+      "equipo_visitante": "Uzbekistan",
+      "ganador_penales": "Uzbekistan",
+      "primer_pateador": null,
+      "competencia": "Al Ain International Cup",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2025-12-12",
+      "equipo_local": "Algeria",
+      "equipo_visitante": "United Arab Emirates",
+      "ganador_penales": "United Arab Emirates",
+      "primer_pateador": null,
+      "competencia": "Arab Cup",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2026-01-03",
+      "equipo_local": "Mali",
+      "equipo_visitante": "Tunisia",
+      "ganador_penales": "Mali",
+      "primer_pateador": "Tunisia",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2026-01-14",
+      "equipo_local": "Morocco",
+      "equipo_visitante": "Nigeria",
+      "ganador_penales": "Morocco",
+      "primer_pateador": "Morocco",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2026-01-17",
+      "equipo_local": "Egypt",
+      "equipo_visitante": "Nigeria",
+      "ganador_penales": "Nigeria",
+      "primer_pateador": "Nigeria",
+      "competencia": "African Cup of Nations",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2026-03-26",
+      "equipo_local": "Wales",
+      "equipo_visitante": "Bosnia and Herzegovina",
+      "ganador_penales": "Bosnia and Herzegovina",
+      "primer_pateador": "Bosnia and Herzegovina",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2026-03-26",
+      "equipo_local": "Czechia",
+      "equipo_visitante": "Republic of Ireland",
+      "ganador_penales": "Czechia",
+      "primer_pateador": "Republic of Ireland",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    },
+    {
+      "fecha": "2026-03-30",
+      "equipo_local": "Cape Verde",
+      "equipo_visitante": "Finland",
+      "ganador_penales": "Cape Verde",
+      "primer_pateador": "Cape Verde",
+      "competencia": "FIFA Series",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2026-03-30",
+      "equipo_local": "Uzbekistan",
+      "equipo_visitante": "Venezuela",
+      "ganador_penales": "Uzbekistan",
+      "primer_pateador": null,
+      "competencia": "FIFA Series",
+      "goles_local_90min": "0",
+      "goles_visitante_90min": "0"
+    },
+    {
+      "fecha": "2026-03-31",
+      "equipo_local": "Bosnia and Herzegovina",
+      "equipo_visitante": "Italy",
+      "ganador_penales": "Bosnia and Herzegovina",
+      "primer_pateador": "Bosnia and Herzegovina",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "1",
+      "goles_visitante_90min": "1"
+    },
+    {
+      "fecha": "2026-03-31",
+      "equipo_local": "Czechia",
+      "equipo_visitante": "Denmark",
+      "ganador_penales": "Czechia",
+      "primer_pateador": "Denmark",
+      "competencia": "FIFA World Cup qualification",
+      "goles_local_90min": "2",
+      "goles_visitante_90min": "2"
+    }
+  ],
+  "resumen_por_equipo": {
+    "DR Congo": {
+      "total_tandas": 3,
+      "ganadas": 2,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 66.67,
+      "detalle": [
+        {
+          "fecha": "2019-07-07",
+          "rival": "Madagascar",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2024-01-28",
+          "rival": "Egypt",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2025-11-16",
+          "rival": "Nigeria",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        }
+      ]
+    },
+    "Portugal": {
+      "total_tandas": 3,
+      "ganadas": 2,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 66.67,
+      "detalle": [
+        {
+          "fecha": "2024-07-01",
+          "rival": "Slovenia",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2024-07-05",
+          "rival": "France",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2025-06-08",
+          "rival": "Spain",
+          "resultado": "Victoria",
+          "competencia": "UEFA Nations League"
+        }
+      ]
+    },
+    "Panama": {
+      "total_tandas": 2,
+      "ganadas": 1,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2023-07-12",
+          "rival": "United States",
+          "resultado": "Victoria",
+          "competencia": "Gold Cup"
+        },
+        {
+          "fecha": "2025-06-28",
+          "rival": "Honduras",
+          "resultado": "Derrota",
+          "competencia": "Gold Cup"
+        }
+      ]
+    },
+    "France": {
+      "total_tandas": 3,
+      "ganadas": 1,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 33.33,
+      "detalle": [
+        {
+          "fecha": "2021-06-28",
+          "rival": "Switzerland",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2022-12-18",
+          "rival": "Argentina",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2024-07-05",
+          "rival": "Portugal",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro"
+        }
+      ]
+    },
+    "Bosnia and Herzegovina": {
+      "total_tandas": 3,
+      "ganadas": 2,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 66.67,
+      "detalle": [
+        {
+          "fecha": "2020-10-08",
+          "rival": "Northern Ireland",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro qualification"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "Wales",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Italy",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        }
+      ]
+    },
+    "Norway": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "Argentina": {
+      "total_tandas": 4,
+      "ganadas": 4,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2021-07-06",
+          "rival": "Colombia",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2022-12-09",
+          "rival": "Netherlands",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2022-12-18",
+          "rival": "France",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2024-07-04",
+          "rival": "Ecuador",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        }
+      ]
+    },
+    "Algeria": {
+      "total_tandas": 3,
+      "ganadas": 2,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 66.67,
+      "detalle": [
+        {
+          "fecha": "2019-07-11",
+          "rival": "Ivory Coast",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2021-12-11",
+          "rival": "Morocco",
+          "resultado": "Victoria",
+          "competencia": "Arab Cup"
+        },
+        {
+          "fecha": "2025-12-12",
+          "rival": "United Arab Emirates",
+          "resultado": "Derrota",
+          "competencia": "Arab Cup"
+        }
+      ]
+    },
+    "Colombia": {
+      "total_tandas": 4,
+      "ganadas": 1,
+      "perdidas": 3,
+      "porcentaje_victoria_penales": 25.0,
+      "detalle": [
+        {
+          "fecha": "2018-07-03",
+          "rival": "England",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2019-06-28",
+          "rival": "Chile",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2021-07-03",
+          "rival": "Uruguay",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2021-07-06",
+          "rival": "Argentina",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        }
+      ]
+    },
+    "England": {
+      "total_tandas": 4,
+      "ganadas": 3,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 75.0,
+      "detalle": [
+        {
+          "fecha": "2018-07-03",
+          "rival": "Colombia",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2019-06-09",
+          "rival": "Switzerland",
+          "resultado": "Victoria",
+          "competencia": "UEFA Nations League"
+        },
+        {
+          "fecha": "2021-07-11",
+          "rival": "Italy",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2024-07-06",
+          "rival": "Switzerland",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro"
+        }
+      ]
+    },
+    "Netherlands": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2022-12-09",
+          "rival": "Argentina",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        }
+      ]
+    },
+    "Sweden": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "Ghana": {
+      "total_tandas": 2,
+      "ganadas": 1,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2019-07-08",
+          "rival": "Tunisia",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2022-06-14",
+          "rival": "Chile",
+          "resultado": "Victoria",
+          "competencia": "Kirin Cup"
+        }
+      ]
+    },
+    "Senegal": {
+      "total_tandas": 7,
+      "ganadas": 5,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 71.43,
+      "detalle": [
+        {
+          "fecha": "2021-07-16",
+          "rival": "Eswatini",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2021-07-18",
+          "rival": "South Africa",
+          "resultado": "Derrota",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2022-02-06",
+          "rival": "Egypt",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2022-03-29",
+          "rival": "Egypt",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        },
+        {
+          "fecha": "2022-07-13",
+          "rival": "Eswatini",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2022-07-17",
+          "rival": "Mozambique",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2024-01-29",
+          "rival": "Ivory Coast",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        }
+      ]
+    },
+    "Curacao": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2023-06-16",
+          "rival": "Saint Kitts and Nevis",
+          "resultado": "Derrota",
+          "competencia": "Gold Cup qualification"
+        }
+      ]
+    },
+    "Haiti": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "Japan": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2022-12-05",
+          "rival": "Croatia",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        }
+      ]
+    },
+    "Germany": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "Canada": {
+      "total_tandas": 4,
+      "ganadas": 1,
+      "perdidas": 3,
+      "porcentaje_victoria_penales": 25.0,
+      "detalle": [
+        {
+          "fecha": "2023-07-09",
+          "rival": "United States",
+          "resultado": "Derrota",
+          "competencia": "Gold Cup"
+        },
+        {
+          "fecha": "2024-07-05",
+          "rival": "Venezuela",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2024-07-13",
+          "rival": "Uruguay",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2025-06-29",
+          "rival": "Guatemala",
+          "resultado": "Derrota",
+          "competencia": "Gold Cup"
+        }
+      ]
+    },
+    "Cape Verde": {
+      "total_tandas": 5,
+      "ganadas": 2,
+      "perdidas": 3,
+      "porcentaje_victoria_penales": 40.0,
+      "detalle": [
+        {
+          "fecha": "2018-06-03",
+          "rival": "Andorra",
+          "resultado": "Victoria",
+          "competencia": "Friendly"
+        },
+        {
+          "fecha": "2024-02-03",
+          "rival": "South Africa",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Iran",
+          "resultado": "Derrota",
+          "competencia": "Al Ain International Cup"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Egypt",
+          "resultado": "Derrota",
+          "competencia": "Al Ain International Cup"
+        },
+        {
+          "fecha": "2026-03-30",
+          "rival": "Finland",
+          "resultado": "Victoria",
+          "competencia": "FIFA Series"
+        }
+      ]
+    },
+    "Croatia": {
+      "total_tandas": 6,
+      "ganadas": 5,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 83.33,
+      "detalle": [
+        {
+          "fecha": "2018-07-01",
+          "rival": "Denmark",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2018-07-07",
+          "rival": "Russia",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2022-12-05",
+          "rival": "Japan",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2022-12-09",
+          "rival": "Brazil",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2023-06-18",
+          "rival": "Spain",
+          "resultado": "Derrota",
+          "competencia": "UEFA Nations League"
+        },
+        {
+          "fecha": "2024-03-23",
+          "rival": "Tunisia",
+          "resultado": "Victoria",
+          "competencia": "FIFA Series"
+        }
+      ]
+    },
+    "Ecuador": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2024-07-04",
+          "rival": "Argentina",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        }
+      ]
+    },
+    "Australia": {
+      "total_tandas": 2,
+      "ganadas": 2,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2019-01-21",
+          "rival": "Uzbekistan",
+          "resultado": "Victoria",
+          "competencia": "AFC Asian Cup"
+        },
+        {
+          "fecha": "2022-06-13",
+          "rival": "Peru",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        }
+      ]
+    },
+    "South Africa": {
+      "total_tandas": 10,
+      "ganadas": 6,
+      "perdidas": 4,
+      "porcentaje_victoria_penales": 60.0,
+      "detalle": [
+        {
+          "fecha": "2018-03-21",
+          "rival": "Angola",
+          "resultado": "Victoria",
+          "competencia": "Friendly"
+        },
+        {
+          "fecha": "2018-06-03",
+          "rival": "Madagascar",
+          "resultado": "Derrota",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2019-06-02",
+          "rival": "Botswana",
+          "resultado": "Derrota",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2019-06-04",
+          "rival": "Uganda",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2019-06-07",
+          "rival": "Malawi",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2021-07-18",
+          "rival": "Senegal",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2022-07-13",
+          "rival": "Mozambique",
+          "resultado": "Derrota",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2023-07-16",
+          "rival": "Malawi",
+          "resultado": "Victoria",
+          "competencia": "COSAFA Cup"
+        },
+        {
+          "fecha": "2024-02-03",
+          "rival": "Cape Verde",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2024-02-07",
+          "rival": "Nigeria",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        }
+      ]
+    },
+    "Paraguay": {
+      "total_tandas": 2,
+      "ganadas": 0,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2019-06-27",
+          "rival": "Brazil",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2021-07-02",
+          "rival": "Peru",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        }
+      ]
+    },
+    "Ivory Coast": {
+      "total_tandas": 3,
+      "ganadas": 1,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 33.33,
+      "detalle": [
+        {
+          "fecha": "2019-07-11",
+          "rival": "Algeria",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2022-01-26",
+          "rival": "Egypt",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2024-01-29",
+          "rival": "Senegal",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        }
+      ]
+    },
+    "Scotland": {
+      "total_tandas": 2,
+      "ganadas": 2,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2020-10-08",
+          "rival": "Israel",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro qualification"
+        },
+        {
+          "fecha": "2020-11-12",
+          "rival": "Serbia",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro qualification"
+        }
+      ]
+    },
+    "Egypt": {
+      "total_tandas": 8,
+      "ganadas": 3,
+      "perdidas": 5,
+      "porcentaje_victoria_penales": 37.5,
+      "detalle": [
+        {
+          "fecha": "2021-12-18",
+          "rival": "Qatar",
+          "resultado": "Derrota",
+          "competencia": "Arab Cup"
+        },
+        {
+          "fecha": "2022-01-26",
+          "rival": "Ivory Coast",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2022-02-03",
+          "rival": "Cameroon",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2022-02-06",
+          "rival": "Senegal",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2022-03-29",
+          "rival": "Senegal",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup qualification"
+        },
+        {
+          "fecha": "2024-01-28",
+          "rival": "DR Congo",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Cape Verde",
+          "resultado": "Victoria",
+          "competencia": "Al Ain International Cup"
+        },
+        {
+          "fecha": "2026-01-17",
+          "rival": "Nigeria",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        }
+      ]
+    },
+    "Turkiye": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "Morocco": {
+      "total_tandas": 4,
+      "ganadas": 2,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2019-07-05",
+          "rival": "Benin",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2021-12-11",
+          "rival": "Algeria",
+          "resultado": "Derrota",
+          "competencia": "Arab Cup"
+        },
+        {
+          "fecha": "2022-12-06",
+          "rival": "Spain",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2026-01-14",
+          "rival": "Nigeria",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        }
+      ]
+    },
+    "Tunisia": {
+      "total_tandas": 4,
+      "ganadas": 2,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2019-07-08",
+          "rival": "Ghana",
+          "resultado": "Victoria",
+          "competencia": "African Cup of Nations"
+        },
+        {
+          "fecha": "2024-03-23",
+          "rival": "Croatia",
+          "resultado": "Derrota",
+          "competencia": "FIFA Series"
+        },
+        {
+          "fecha": "2024-03-26",
+          "rival": "New Zealand",
+          "resultado": "Victoria",
+          "competencia": "FIFA Series"
+        },
+        {
+          "fecha": "2026-01-03",
+          "rival": "Mali",
+          "resultado": "Derrota",
+          "competencia": "African Cup of Nations"
+        }
+      ]
+    },
+    "Uzbekistan": {
+      "total_tandas": 4,
+      "ganadas": 2,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2019-01-21",
+          "rival": "Australia",
+          "resultado": "Derrota",
+          "competencia": "AFC Asian Cup"
+        },
+        {
+          "fecha": "2024-02-03",
+          "rival": "Qatar",
+          "resultado": "Derrota",
+          "competencia": "AFC Asian Cup"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Iran",
+          "resultado": "Victoria",
+          "competencia": "Al Ain International Cup"
+        },
+        {
+          "fecha": "2026-03-30",
+          "rival": "Venezuela",
+          "resultado": "Victoria",
+          "competencia": "FIFA Series"
+        }
+      ]
+    },
+    "Switzerland": {
+      "total_tandas": 4,
+      "ganadas": 1,
+      "perdidas": 3,
+      "porcentaje_victoria_penales": 25.0,
+      "detalle": [
+        {
+          "fecha": "2019-06-09",
+          "rival": "England",
+          "resultado": "Derrota",
+          "competencia": "UEFA Nations League"
+        },
+        {
+          "fecha": "2021-06-28",
+          "rival": "France",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2021-07-02",
+          "rival": "Spain",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2024-07-06",
+          "rival": "England",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro"
+        }
+      ]
+    },
+    "Brazil": {
+      "total_tandas": 3,
+      "ganadas": 1,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 33.33,
+      "detalle": [
+        {
+          "fecha": "2019-06-27",
+          "rival": "Paraguay",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2022-12-09",
+          "rival": "Croatia",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2024-07-06",
+          "rival": "Uruguay",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        }
+      ]
+    },
+    "Jordan": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2019-01-20",
+          "rival": "Vietnam",
+          "resultado": "Derrota",
+          "competencia": "AFC Asian Cup"
+        }
+      ]
+    },
+    "Qatar": {
+      "total_tandas": 3,
+      "ganadas": 3,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2021-12-18",
+          "rival": "Egypt",
+          "resultado": "Victoria",
+          "competencia": "Arab Cup"
+        },
+        {
+          "fecha": "2023-10-13",
+          "rival": "Iraq",
+          "resultado": "Victoria",
+          "competencia": "Friendly"
+        },
+        {
+          "fecha": "2024-02-03",
+          "rival": "Uzbekistan",
+          "resultado": "Victoria",
+          "competencia": "AFC Asian Cup"
+        }
+      ]
+    },
+    "United States": {
+      "total_tandas": 3,
+      "ganadas": 2,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 66.67,
+      "detalle": [
+        {
+          "fecha": "2023-07-09",
+          "rival": "Canada",
+          "resultado": "Victoria",
+          "competencia": "Gold Cup"
+        },
+        {
+          "fecha": "2023-07-12",
+          "rival": "Panama",
+          "resultado": "Derrota",
+          "competencia": "Gold Cup"
+        },
+        {
+          "fecha": "2025-06-29",
+          "rival": "Costa Rica",
+          "resultado": "Victoria",
+          "competencia": "Gold Cup"
+        }
+      ]
+    },
+    "Belgium": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "New Zealand": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2024-03-26",
+          "rival": "Tunisia",
+          "resultado": "Derrota",
+          "competencia": "FIFA Series"
+        }
+      ]
+    },
+    "Austria": {
+      "total_tandas": 0,
+      "ganadas": 0,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 0,
+      "detalle": []
+    },
+    "Uruguay": {
+      "total_tandas": 4,
+      "ganadas": 2,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2019-06-29",
+          "rival": "Peru",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2021-07-03",
+          "rival": "Colombia",
+          "resultado": "Derrota",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2024-07-06",
+          "rival": "Brazil",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        },
+        {
+          "fecha": "2024-07-13",
+          "rival": "Canada",
+          "resultado": "Victoria",
+          "competencia": "Copa América"
+        }
+      ]
+    },
+    "Spain": {
+      "total_tandas": 6,
+      "ganadas": 2,
+      "perdidas": 4,
+      "porcentaje_victoria_penales": 33.33,
+      "detalle": [
+        {
+          "fecha": "2018-07-01",
+          "rival": "Russia",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2021-07-02",
+          "rival": "Switzerland",
+          "resultado": "Victoria",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2021-07-06",
+          "rival": "Italy",
+          "resultado": "Derrota",
+          "competencia": "UEFA Euro"
+        },
+        {
+          "fecha": "2022-12-06",
+          "rival": "Morocco",
+          "resultado": "Derrota",
+          "competencia": "FIFA World Cup"
+        },
+        {
+          "fecha": "2023-06-18",
+          "rival": "Croatia",
+          "resultado": "Victoria",
+          "competencia": "UEFA Nations League"
+        },
+        {
+          "fecha": "2025-06-08",
+          "rival": "Portugal",
+          "resultado": "Derrota",
+          "competencia": "UEFA Nations League"
+        }
+      ]
+    },
+    "Czechia": {
+      "total_tandas": 2,
+      "ganadas": 2,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2026-03-26",
+          "rival": "Republic of Ireland",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Denmark",
+          "resultado": "Victoria",
+          "competencia": "FIFA World Cup qualification"
+        }
+      ]
+    },
+    "Saudi Arabia": {
+      "total_tandas": 1,
+      "ganadas": 0,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 0.0,
+      "detalle": [
+        {
+          "fecha": "2024-01-30",
+          "rival": "South Korea",
+          "resultado": "Derrota",
+          "competencia": "AFC Asian Cup"
+        }
+      ]
+    },
+    "Iraq": {
+      "total_tandas": 4,
+      "ganadas": 2,
+      "perdidas": 2,
+      "porcentaje_victoria_penales": 50.0,
+      "detalle": [
+        {
+          "fecha": "2022-09-23",
+          "rival": "Oman",
+          "resultado": "Derrota",
+          "competencia": "Jordan International Tournament"
+        },
+        {
+          "fecha": "2023-09-07",
+          "rival": "India",
+          "resultado": "Victoria",
+          "competencia": "King's Cup"
+        },
+        {
+          "fecha": "2023-09-10",
+          "rival": "Thailand",
+          "resultado": "Victoria",
+          "competencia": "King's Cup"
+        },
+        {
+          "fecha": "2023-10-13",
+          "rival": "Qatar",
+          "resultado": "Derrota",
+          "competencia": "Friendly"
+        }
+      ]
+    },
+    "Mexico": {
+      "total_tandas": 3,
+      "ganadas": 3,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2019-06-29",
+          "rival": "Costa Rica",
+          "resultado": "Victoria",
+          "competencia": "Gold Cup"
+        },
+        {
+          "fecha": "2021-06-03",
+          "rival": "Costa Rica",
+          "resultado": "Victoria",
+          "competencia": "CONCACAF Nations League"
+        },
+        {
+          "fecha": "2023-11-21",
+          "rival": "Honduras",
+          "resultado": "Victoria",
+          "competencia": "CONCACAF Nations League"
+        }
+      ]
+    },
+    "Iran": {
+      "total_tandas": 3,
+      "ganadas": 2,
+      "perdidas": 1,
+      "porcentaje_victoria_penales": 66.67,
+      "detalle": [
+        {
+          "fecha": "2024-01-31",
+          "rival": "Syria",
+          "resultado": "Victoria",
+          "competencia": "AFC Asian Cup"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Cape Verde",
+          "resultado": "Victoria",
+          "competencia": "Al Ain International Cup"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Uzbekistan",
+          "resultado": "Derrota",
+          "competencia": "Al Ain International Cup"
+        }
+      ]
+    },
+    "South Korea": {
+      "total_tandas": 1,
+      "ganadas": 1,
+      "perdidas": 0,
+      "porcentaje_victoria_penales": 100.0,
+      "detalle": [
+        {
+          "fecha": "2024-01-30",
+          "rival": "Saudi Arabia",
+          "resultado": "Victoria",
+          "competencia": "AFC Asian Cup"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2636 @@
+{
+  "metadata": {
+    "torneo": "FIFA World Cup 2026",
+    "fecha_calculo": "2026-05-17",
+    "modelo": "ELO-Historial-Combinado v1.0",
+    "total_partidos_procesados": 72,
+    "partidos_datos_incompletos": 12,
+    "partidos_normalizacion_emergencia": 7,
+    "partidos_suma_failed": 0,
+    "verificacion_sumas": "PASSED",
+    "rango_probabilidades": {
+      "min_p_victoria": 0.1556,
+      "max_p_victoria": 0.7479,
+      "min_p_empate": 0.0476,
+      "max_p_empate": 0.3118,
+      "min_global": 0.0476,
+      "max_global": 0.7479
+    },
+    "pesos_modelo": {
+      "peso_elo": 0.55,
+      "peso_historial": 0.35,
+      "peso_forma_reciente": 0.1,
+      "nota_datos_escasos": "Si datos escasos: peso_elo=0.90, peso_historial=0.10"
+    }
+  },
+  "fase_grupos": {
+    "grupo_A": [
+      {
+        "fixture_id": "GA-001",
+        "partido_num": 1,
+        "fecha_hora_utc": "2026-06-11T19:00:00Z",
+        "fecha_et": "2026-06-11",
+        "hora_et": "15:00",
+        "sede": "Mexico City, Mexico",
+        "estadio": "Estadio Azteca",
+        "equipo_A": "Mexico",
+        "equipo_B": "South Africa",
+        "probabilidades": {
+          "P_A_gana": 0.6528,
+          "P_empate": 0.1307,
+          "P_B_gana": 0.2165,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2370,
+          "elo_B": 1915,
+          "elo_diferencia": 455,
+          "win_rate_A": 0.6324,
+          "win_rate_B": 0.4932,
+          "gd_avg_A": 0.8824,
+          "gd_avg_B": 0.6986
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GA-002",
+        "partido_num": 2,
+        "fecha_hora_utc": "2026-06-12T02:00:00Z",
+        "fecha_et": "2026-06-11",
+        "hora_et": "22:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "South Korea",
+        "equipo_B": "Czechia",
+        "probabilidades": {
+          "P_A_gana": 0.4903,
+          "P_empate": 0.2199,
+          "P_B_gana": 0.2897,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2265,
+          "elo_B": 2150,
+          "elo_diferencia": 115,
+          "win_rate_A": 0.6316,
+          "win_rate_B": 0.4615,
+          "gd_avg_A": 1.2632,
+          "gd_avg_B": 0.2923
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GA-025",
+        "partido_num": 25,
+        "fecha_hora_utc": "2026-06-18T16:00:00Z",
+        "fecha_et": "2026-06-18",
+        "hora_et": "12:00",
+        "sede": "Atlanta, United States",
+        "estadio": "Mercedes-Benz Stadium",
+        "equipo_A": "Czechia",
+        "equipo_B": "South Africa",
+        "probabilidades": {
+          "P_A_gana": 0.4978,
+          "P_empate": 0.2241,
+          "P_B_gana": 0.2781,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2150,
+          "elo_B": 1915,
+          "elo_diferencia": 235,
+          "win_rate_A": 0.4615,
+          "win_rate_B": 0.4932,
+          "gd_avg_A": 0.2923,
+          "gd_avg_B": 0.6986
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GA-028",
+        "partido_num": 28,
+        "fecha_hora_utc": "2026-06-19T01:00:00Z",
+        "fecha_et": "2026-06-18",
+        "hora_et": "21:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "Mexico",
+        "equipo_B": "South Korea",
+        "probabilidades": {
+          "P_A_gana": 0.4661,
+          "P_empate": 0.2109,
+          "P_B_gana": 0.323,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2370,
+          "elo_B": 2265,
+          "elo_diferencia": 105,
+          "win_rate_A": 0.6324,
+          "win_rate_B": 0.6316,
+          "gd_avg_A": 0.8824,
+          "gd_avg_B": 1.2632
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GA-053",
+        "partido_num": 53,
+        "fecha_hora_utc": "2026-06-25T01:00:00Z",
+        "fecha_et": "2026-06-24",
+        "hora_et": "21:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "South Africa",
+        "equipo_B": "South Korea",
+        "probabilidades": {
+          "P_A_gana": 0.2313,
+          "P_empate": 0.188,
+          "P_B_gana": 0.5807,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1915,
+          "elo_B": 2265,
+          "elo_diferencia": -350,
+          "win_rate_A": 0.4932,
+          "win_rate_B": 0.6316,
+          "gd_avg_A": 0.6986,
+          "gd_avg_B": 1.2632
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GA-054",
+        "partido_num": 54,
+        "fecha_hora_utc": "2026-06-25T01:00:00Z",
+        "fecha_et": "2026-06-24",
+        "hora_et": "21:00",
+        "sede": "Mexico City, Mexico",
+        "estadio": "Estadio Azteca",
+        "equipo_A": "Czechia",
+        "equipo_B": "Mexico",
+        "probabilidades": {
+          "P_A_gana": 0.2449,
+          "P_empate": 0.1638,
+          "P_B_gana": 0.5914,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2150,
+          "elo_B": 2370,
+          "elo_diferencia": -220,
+          "win_rate_A": 0.4615,
+          "win_rate_B": 0.6324,
+          "gd_avg_A": 0.2923,
+          "gd_avg_B": 0.8824
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_B": [
+      {
+        "fixture_id": "GB-003",
+        "partido_num": 3,
+        "fecha_hora_utc": "2026-06-12T19:00:00Z",
+        "fecha_et": "2026-06-12",
+        "hora_et": "15:00",
+        "sede": "Toronto, Canada",
+        "estadio": "BMO Field",
+        "equipo_A": "Canada",
+        "equipo_B": "Bosnia and Herzegovina",
+        "probabilidades": {
+          "P_A_gana": 0.6507,
+          "P_empate": 0.1666,
+          "P_B_gana": 0.1827,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2220,
+          "elo_B": 1910,
+          "elo_diferencia": 310,
+          "win_rate_A": 0.5821,
+          "win_rate_B": 0.3065,
+          "gd_avg_A": 1.4627,
+          "gd_avg_B": -0.3065
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GB-005",
+        "partido_num": 5,
+        "fecha_hora_utc": "2026-06-13T19:00:00Z",
+        "fecha_et": "2026-06-13",
+        "hora_et": "15:00",
+        "sede": "Santa Clara, United States",
+        "estadio": "Levi's Stadium",
+        "equipo_A": "Qatar",
+        "equipo_B": "Switzerland",
+        "probabilidades": {
+          "P_A_gana": 0.2269,
+          "P_empate": 0.1554,
+          "P_B_gana": 0.6177,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1965,
+          "elo_B": 2370,
+          "elo_diferencia": -405,
+          "win_rate_A": 0.5467,
+          "win_rate_B": 0.4189,
+          "gd_avg_A": 0.7467,
+          "gd_avg_B": 0.6081
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GB-026",
+        "partido_num": 26,
+        "fecha_hora_utc": "2026-06-18T19:00:00Z",
+        "fecha_et": "2026-06-18",
+        "hora_et": "15:00",
+        "sede": "Inglewood, United States",
+        "estadio": "SoFi Stadium",
+        "equipo_A": "Switzerland",
+        "equipo_B": "Bosnia and Herzegovina",
+        "probabilidades": {
+          "P_A_gana": 0.6849,
+          "P_empate": 0.1595,
+          "P_B_gana": 0.1556,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2370,
+          "elo_B": 1910,
+          "elo_diferencia": 460,
+          "win_rate_A": 0.4189,
+          "win_rate_B": 0.3065,
+          "gd_avg_A": 0.6081,
+          "gd_avg_B": -0.3065
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GB-027",
+        "partido_num": 27,
+        "fecha_hora_utc": "2026-06-18T22:00:00Z",
+        "fecha_et": "2026-06-18",
+        "hora_et": "18:00",
+        "sede": "Vancouver, Canada",
+        "estadio": "BC Place",
+        "equipo_A": "Canada",
+        "equipo_B": "Qatar",
+        "probabilidades": {
+          "P_A_gana": 0.5935,
+          "P_empate": 0.144,
+          "P_B_gana": 0.2625,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2220,
+          "elo_B": 1965,
+          "elo_diferencia": 255,
+          "win_rate_A": 0.5821,
+          "win_rate_B": 0.5467,
+          "gd_avg_A": 1.4627,
+          "gd_avg_B": 0.7467
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GB-049",
+        "partido_num": 49,
+        "fecha_hora_utc": "2026-06-24T19:00:00Z",
+        "fecha_et": "2026-06-24",
+        "hora_et": "15:00",
+        "sede": "Vancouver, Canada",
+        "estadio": "BC Place",
+        "equipo_A": "Switzerland",
+        "equipo_B": "Canada",
+        "probabilidades": {
+          "P_A_gana": 0.4312,
+          "P_empate": 0.2586,
+          "P_B_gana": 0.3102,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2370,
+          "elo_B": 2220,
+          "elo_diferencia": 150,
+          "win_rate_A": 0.4189,
+          "win_rate_B": 0.5821,
+          "gd_avg_A": 0.6081,
+          "gd_avg_B": 1.4627
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GB-050",
+        "partido_num": 50,
+        "fecha_hora_utc": "2026-06-24T19:00:00Z",
+        "fecha_et": "2026-06-24",
+        "hora_et": "15:00",
+        "sede": "Seattle, United States",
+        "estadio": "Lumen Field",
+        "equipo_A": "Bosnia and Herzegovina",
+        "equipo_B": "Qatar",
+        "probabilidades": {
+          "P_A_gana": 0.3031,
+          "P_empate": 0.25,
+          "P_B_gana": 0.4469,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1910,
+          "elo_B": 1965,
+          "elo_diferencia": -55,
+          "win_rate_A": 0.3065,
+          "win_rate_B": 0.5467,
+          "gd_avg_A": -0.3065,
+          "gd_avg_B": 0.7467
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_C": [
+      {
+        "fixture_id": "GC-006",
+        "partido_num": 6,
+        "fecha_hora_utc": "2026-06-13T22:00:00Z",
+        "fecha_et": "2026-06-13",
+        "hora_et": "18:00",
+        "sede": "East Rutherford, United States",
+        "estadio": "MetLife Stadium",
+        "equipo_A": "Brazil",
+        "equipo_B": "Morocco",
+        "probabilidades": {
+          "P_A_gana": 0.3816,
+          "P_empate": 0.244,
+          "P_B_gana": 0.3744,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2490,
+          "elo_B": 2435,
+          "elo_diferencia": 55,
+          "win_rate_A": 0.6129,
+          "win_rate_B": 0.7143,
+          "gd_avg_A": 1.2258,
+          "gd_avg_B": 1.5714
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GC-007",
+        "partido_num": 7,
+        "fecha_hora_utc": "2026-06-14T01:00:00Z",
+        "fecha_et": "2026-06-13",
+        "hora_et": "21:00",
+        "sede": "Foxborough, United States",
+        "estadio": "Gillette Stadium",
+        "equipo_A": "Haiti",
+        "equipo_B": "Scotland",
+        "probabilidades": {
+          "P_A_gana": 0.2562,
+          "P_empate": 0.0974,
+          "P_B_gana": 0.6463,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1690,
+          "elo_B": 2130,
+          "elo_diferencia": -440,
+          "win_rate_A": 0.5818,
+          "win_rate_B": 0.5075,
+          "gd_avg_A": 1.4,
+          "gd_avg_B": 0.3134
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GC-030",
+        "partido_num": 30,
+        "fecha_hora_utc": "2026-06-19T22:00:00Z",
+        "fecha_et": "2026-06-19",
+        "hora_et": "18:00",
+        "sede": "Foxborough, United States",
+        "estadio": "Gillette Stadium",
+        "equipo_A": "Scotland",
+        "equipo_B": "Morocco",
+        "probabilidades": {
+          "P_A_gana": 0.2564,
+          "P_empate": 0.1388,
+          "P_B_gana": 0.6048,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2130,
+          "elo_B": 2435,
+          "elo_diferencia": -305,
+          "win_rate_A": 0.5075,
+          "win_rate_B": 0.7143,
+          "gd_avg_A": 0.3134,
+          "gd_avg_B": 1.5714
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GC-031",
+        "partido_num": 31,
+        "fecha_hora_utc": "2026-06-20T00:30:00Z",
+        "fecha_et": "2026-06-19",
+        "hora_et": "20:30",
+        "sede": "Philadelphia, United States",
+        "estadio": "Lincoln Financial Field",
+        "equipo_A": "Brazil",
+        "equipo_B": "Haiti",
+        "probabilidades": {
+          "P_A_gana": 0.7125,
+          "P_empate": 0.0476,
+          "P_B_gana": 0.2399,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2490,
+          "elo_B": 1690,
+          "elo_diferencia": 800,
+          "win_rate_A": 0.6129,
+          "win_rate_B": 0.5818,
+          "gd_avg_A": 1.2258,
+          "gd_avg_B": 1.4
+        },
+        "datos_incompletos": false,
+        "flags": [
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GC-051",
+        "partido_num": 51,
+        "fecha_hora_utc": "2026-06-24T22:00:00Z",
+        "fecha_et": "2026-06-24",
+        "hora_et": "18:00",
+        "sede": "Atlanta, United States",
+        "estadio": "Mercedes-Benz Stadium",
+        "equipo_A": "Morocco",
+        "equipo_B": "Haiti",
+        "probabilidades": {
+          "P_A_gana": 0.7261,
+          "P_empate": 0.0483,
+          "P_B_gana": 0.2256,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2435,
+          "elo_B": 1690,
+          "elo_diferencia": 745,
+          "win_rate_A": 0.7143,
+          "win_rate_B": 0.5818,
+          "gd_avg_A": 1.5714,
+          "gd_avg_B": 1.4
+        },
+        "datos_incompletos": false,
+        "flags": [
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GC-052",
+        "partido_num": 52,
+        "fecha_hora_utc": "2026-06-24T22:00:00Z",
+        "fecha_et": "2026-06-24",
+        "hora_et": "18:00",
+        "sede": "Miami Gardens, United States",
+        "estadio": "Hard Rock Stadium",
+        "equipo_A": "Scotland",
+        "equipo_B": "Brazil",
+        "probabilidades": {
+          "P_A_gana": 0.2587,
+          "P_empate": 0.1389,
+          "P_B_gana": 0.6024,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2130,
+          "elo_B": 2490,
+          "elo_diferencia": -360,
+          "win_rate_A": 0.5075,
+          "win_rate_B": 0.6129,
+          "gd_avg_A": 0.3134,
+          "gd_avg_B": 1.2258
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_D": [
+      {
+        "fixture_id": "GD-004",
+        "partido_num": 4,
+        "fecha_hora_utc": "2026-06-13T01:00:00Z",
+        "fecha_et": "2026-06-12",
+        "hora_et": "21:00",
+        "sede": "Inglewood, United States",
+        "estadio": "SoFi Stadium",
+        "equipo_A": "United States",
+        "equipo_B": "Paraguay",
+        "probabilidades": {
+          "P_A_gana": 0.5578,
+          "P_empate": 0.242,
+          "P_B_gana": 0.2002,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2360,
+          "elo_B": 2150,
+          "elo_diferencia": 210,
+          "win_rate_A": 0.6406,
+          "win_rate_B": 0.25,
+          "gd_avg_A": 1.4062,
+          "gd_avg_B": -0.2917
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GD-008",
+        "partido_num": 8,
+        "fecha_hora_utc": "2026-06-14T04:00:00Z",
+        "fecha_et": "2026-06-14",
+        "hora_et": "00:00",
+        "sede": "Vancouver, Canada",
+        "estadio": "BC Place",
+        "equipo_A": "Australia",
+        "equipo_B": "Turkiye",
+        "probabilidades": {
+          "P_A_gana": 0.3439,
+          "P_empate": 0.217,
+          "P_B_gana": 0.4391,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2245,
+          "elo_B": 2340,
+          "elo_diferencia": -95,
+          "win_rate_A": 0.5849,
+          "win_rate_B": 0.5507,
+          "gd_avg_A": 1.2642,
+          "gd_avg_B": 0.6812
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GD-029",
+        "partido_num": 29,
+        "fecha_hora_utc": "2026-06-19T19:00:00Z",
+        "fecha_et": "2026-06-19",
+        "hora_et": "15:00",
+        "sede": "Seattle, United States",
+        "estadio": "Lumen Field",
+        "equipo_A": "United States",
+        "equipo_B": "Australia",
+        "probabilidades": {
+          "P_A_gana": 0.4656,
+          "P_empate": 0.1949,
+          "P_B_gana": 0.3395,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2360,
+          "elo_B": 2245,
+          "elo_diferencia": 115,
+          "win_rate_A": 0.6406,
+          "win_rate_B": 0.5849,
+          "gd_avg_A": 1.4062,
+          "gd_avg_B": 1.2642
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GD-032",
+        "partido_num": 32,
+        "fecha_hora_utc": "2026-06-20T03:00:00Z",
+        "fecha_et": "2026-06-19",
+        "hora_et": "23:00",
+        "sede": "Santa Clara, United States",
+        "estadio": "Levi's Stadium",
+        "equipo_A": "Turkiye",
+        "equipo_B": "Paraguay",
+        "probabilidades": {
+          "P_A_gana": 0.5301,
+          "P_empate": 0.2644,
+          "P_B_gana": 0.2055,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2340,
+          "elo_B": 2150,
+          "elo_diferencia": 190,
+          "win_rate_A": 0.5507,
+          "win_rate_B": 0.25,
+          "gd_avg_A": 0.6812,
+          "gd_avg_B": -0.2917
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GD-059",
+        "partido_num": 59,
+        "fecha_hora_utc": "2026-06-26T02:00:00Z",
+        "fecha_et": "2026-06-25",
+        "hora_et": "22:00",
+        "sede": "Inglewood, United States",
+        "estadio": "SoFi Stadium",
+        "equipo_A": "Turkiye",
+        "equipo_B": "United States",
+        "probabilidades": {
+          "P_A_gana": 0.3752,
+          "P_empate": 0.2193,
+          "P_B_gana": 0.4056,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2340,
+          "elo_B": 2360,
+          "elo_diferencia": -20,
+          "win_rate_A": 0.5507,
+          "win_rate_B": 0.6406,
+          "gd_avg_A": 0.6812,
+          "gd_avg_B": 1.4062
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GD-060",
+        "partido_num": 60,
+        "fecha_hora_utc": "2026-06-26T02:00:00Z",
+        "fecha_et": "2026-06-25",
+        "hora_et": "22:00",
+        "sede": "Santa Clara, United States",
+        "estadio": "Levi's Stadium",
+        "equipo_A": "Paraguay",
+        "equipo_B": "Australia",
+        "probabilidades": {
+          "P_A_gana": 0.2367,
+          "P_empate": 0.308,
+          "P_B_gana": 0.4553,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2150,
+          "elo_B": 2245,
+          "elo_diferencia": -95,
+          "win_rate_A": 0.25,
+          "win_rate_B": 0.5849,
+          "gd_avg_A": -0.2917,
+          "gd_avg_B": 1.2642
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_E": [
+      {
+        "fixture_id": "GE-009",
+        "partido_num": 9,
+        "fecha_hora_utc": "2026-06-14T17:00:00Z",
+        "fecha_et": "2026-06-14",
+        "hora_et": "13:00",
+        "sede": "Houston, United States",
+        "estadio": "NRG Stadium",
+        "equipo_A": "Germany",
+        "equipo_B": "Curacao",
+        "probabilidades": {
+          "P_A_gana": 0.7479,
+          "P_empate": 0.0483,
+          "P_B_gana": 0.2038,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2460,
+          "elo_B": 1700,
+          "elo_diferencia": 760,
+          "win_rate_A": 0.5385,
+          "win_rate_B": 0.4565,
+          "gd_avg_A": 1.2308,
+          "gd_avg_B": 1.2826
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos",
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GE-011",
+        "partido_num": 11,
+        "fecha_hora_utc": "2026-06-14T23:00:00Z",
+        "fecha_et": "2026-06-14",
+        "hora_et": "19:00",
+        "sede": "Philadelphia, United States",
+        "estadio": "Lincoln Financial Field",
+        "equipo_A": "Ivory Coast",
+        "equipo_B": "Ecuador",
+        "probabilidades": {
+          "P_A_gana": 0.3304,
+          "P_empate": 0.2909,
+          "P_B_gana": 0.3786,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2175,
+          "elo_B": 2320,
+          "elo_diferencia": -145,
+          "win_rate_A": 0.65,
+          "win_rate_B": 0.3333,
+          "gd_avg_A": 1.1667,
+          "gd_avg_B": 0.1961
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GE-034",
+        "partido_num": 34,
+        "fecha_hora_utc": "2026-06-20T20:00:00Z",
+        "fecha_et": "2026-06-20",
+        "hora_et": "16:00",
+        "sede": "Toronto, Canada",
+        "estadio": "BMO Field",
+        "equipo_A": "Germany",
+        "equipo_B": "Ivory Coast",
+        "probabilidades": {
+          "P_A_gana": 0.5546,
+          "P_empate": 0.1664,
+          "P_B_gana": 0.279,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2460,
+          "elo_B": 2175,
+          "elo_diferencia": 285,
+          "win_rate_A": 0.5385,
+          "win_rate_B": 0.65,
+          "gd_avg_A": 1.2308,
+          "gd_avg_B": 1.1667
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GE-035",
+        "partido_num": 35,
+        "fecha_hora_utc": "2026-06-21T00:00:00Z",
+        "fecha_et": "2026-06-20",
+        "hora_et": "20:00",
+        "sede": "Kansas City, United States",
+        "estadio": "Arrowhead Stadium",
+        "equipo_A": "Ecuador",
+        "equipo_B": "Curacao",
+        "probabilidades": {
+          "P_A_gana": 0.6756,
+          "P_empate": 0.0882,
+          "P_B_gana": 0.2363,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2320,
+          "elo_B": 1700,
+          "elo_diferencia": 620,
+          "win_rate_A": 0.3333,
+          "win_rate_B": 0.4565,
+          "gd_avg_A": 0.1961,
+          "gd_avg_B": 1.2826
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GE-055",
+        "partido_num": 55,
+        "fecha_hora_utc": "2026-06-25T20:00:00Z",
+        "fecha_et": "2026-06-25",
+        "hora_et": "16:00",
+        "sede": "Philadelphia, United States",
+        "estadio": "Lincoln Financial Field",
+        "equipo_A": "Curacao",
+        "equipo_B": "Ivory Coast",
+        "probabilidades": {
+          "P_A_gana": 0.2127,
+          "P_empate": 0.1123,
+          "P_B_gana": 0.675,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1700,
+          "elo_B": 2175,
+          "elo_diferencia": -475,
+          "win_rate_A": 0.4565,
+          "win_rate_B": 0.65,
+          "gd_avg_A": 1.2826,
+          "gd_avg_B": 1.1667
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GE-056",
+        "partido_num": 56,
+        "fecha_hora_utc": "2026-06-25T20:00:00Z",
+        "fecha_et": "2026-06-25",
+        "hora_et": "16:00",
+        "sede": "East Rutherford, United States",
+        "estadio": "MetLife Stadium",
+        "equipo_A": "Ecuador",
+        "equipo_B": "Germany",
+        "probabilidades": {
+          "P_A_gana": 0.2174,
+          "P_empate": 0.3084,
+          "P_B_gana": 0.4742,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2320,
+          "elo_B": 2460,
+          "elo_diferencia": -140,
+          "win_rate_A": 0.3333,
+          "win_rate_B": 0.5385,
+          "gd_avg_A": 0.1961,
+          "gd_avg_B": 1.2308
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_F": [
+      {
+        "fixture_id": "GF-010",
+        "partido_num": 10,
+        "fecha_hora_utc": "2026-06-14T20:00:00Z",
+        "fecha_et": "2026-06-14",
+        "hora_et": "16:00",
+        "sede": "Arlington, United States",
+        "estadio": "AT&T Stadium",
+        "equipo_A": "Netherlands",
+        "equipo_B": "Japan",
+        "probabilidades": {
+          "P_A_gana": 0.4955,
+          "P_empate": 0.1692,
+          "P_B_gana": 0.3352,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2490,
+          "elo_B": 2335,
+          "elo_diferencia": 155,
+          "win_rate_A": 0.6104,
+          "win_rate_B": 0.6935,
+          "gd_avg_A": 1.3896,
+          "gd_avg_B": 1.9355
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GF-012",
+        "partido_num": 12,
+        "fecha_hora_utc": "2026-06-15T02:00:00Z",
+        "fecha_et": "2026-06-14",
+        "hora_et": "22:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "Sweden",
+        "equipo_B": "Tunisia",
+        "probabilidades": {
+          "P_A_gana": 0.4599,
+          "P_empate": 0.189,
+          "P_B_gana": 0.3511,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2180,
+          "elo_B": 2075,
+          "elo_diferencia": 105,
+          "win_rate_A": 0.4627,
+          "win_rate_B": 0.5467,
+          "gd_avg_A": 0.3582,
+          "gd_avg_B": 0.8533
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GF-033",
+        "partido_num": 33,
+        "fecha_hora_utc": "2026-06-20T17:00:00Z",
+        "fecha_et": "2026-06-20",
+        "hora_et": "13:00",
+        "sede": "Houston, United States",
+        "estadio": "NRG Stadium",
+        "equipo_A": "Netherlands",
+        "equipo_B": "Sweden",
+        "probabilidades": {
+          "P_A_gana": 0.6318,
+          "P_empate": 0.136,
+          "P_B_gana": 0.2322,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2490,
+          "elo_B": 2180,
+          "elo_diferencia": 310,
+          "win_rate_A": 0.6104,
+          "win_rate_B": 0.4627,
+          "gd_avg_A": 1.3896,
+          "gd_avg_B": 0.3582
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GF-036",
+        "partido_num": 36,
+        "fecha_hora_utc": "2026-06-21T04:00:00Z",
+        "fecha_et": "2026-06-21",
+        "hora_et": "00:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "Tunisia",
+        "equipo_B": "Japan",
+        "probabilidades": {
+          "P_A_gana": 0.2638,
+          "P_empate": 0.1386,
+          "P_B_gana": 0.5976,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2075,
+          "elo_B": 2335,
+          "elo_diferencia": -260,
+          "win_rate_A": 0.5467,
+          "win_rate_B": 0.6935,
+          "gd_avg_A": 0.8533,
+          "gd_avg_B": 1.9355
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GF-057",
+        "partido_num": 57,
+        "fecha_hora_utc": "2026-06-25T23:00:00Z",
+        "fecha_et": "2026-06-25",
+        "hora_et": "19:00",
+        "sede": "Kansas City, United States",
+        "estadio": "Arrowhead Stadium",
+        "equipo_A": "Tunisia",
+        "equipo_B": "Netherlands",
+        "probabilidades": {
+          "P_A_gana": 0.2258,
+          "P_empate": 0.1253,
+          "P_B_gana": 0.6488,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2075,
+          "elo_B": 2490,
+          "elo_diferencia": -415,
+          "win_rate_A": 0.5467,
+          "win_rate_B": 0.6104,
+          "gd_avg_A": 0.8533,
+          "gd_avg_B": 1.3896
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GF-058",
+        "partido_num": 58,
+        "fecha_hora_utc": "2026-06-25T23:00:00Z",
+        "fecha_et": "2026-06-25",
+        "hora_et": "19:00",
+        "sede": "Arlington, United States",
+        "estadio": "AT&T Stadium",
+        "equipo_A": "Japan",
+        "equipo_B": "Sweden",
+        "probabilidades": {
+          "P_A_gana": 0.5685,
+          "P_empate": 0.1346,
+          "P_B_gana": 0.2969,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2335,
+          "elo_B": 2180,
+          "elo_diferencia": 155,
+          "win_rate_A": 0.6935,
+          "win_rate_B": 0.4627,
+          "gd_avg_A": 1.9355,
+          "gd_avg_B": 0.3582
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_G": [
+      {
+        "fixture_id": "GG-014",
+        "partido_num": 14,
+        "fecha_hora_utc": "2026-06-15T19:00:00Z",
+        "fecha_et": "2026-06-15",
+        "hora_et": "15:00",
+        "sede": "Seattle, United States",
+        "estadio": "Lumen Field",
+        "equipo_A": "Belgium",
+        "equipo_B": "Egypt",
+        "probabilidades": {
+          "P_A_gana": 0.5542,
+          "P_empate": 0.1856,
+          "P_B_gana": 0.2602,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2470,
+          "elo_B": 2225,
+          "elo_diferencia": 245,
+          "win_rate_A": 0.6582,
+          "win_rate_B": 0.56,
+          "gd_avg_A": 1.557,
+          "gd_avg_B": 0.9333
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GG-016",
+        "partido_num": 16,
+        "fecha_hora_utc": "2026-06-16T01:00:00Z",
+        "fecha_et": "2026-06-15",
+        "hora_et": "21:00",
+        "sede": "Inglewood, United States",
+        "estadio": "SoFi Stadium",
+        "equipo_A": "Iran",
+        "equipo_B": "New Zealand",
+        "probabilidades": {
+          "P_A_gana": 0.6325,
+          "P_empate": 0.0483,
+          "P_B_gana": 0.3191,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2305,
+          "elo_B": 1650,
+          "elo_diferencia": 655,
+          "win_rate_A": 0.6909,
+          "win_rate_B": 0.8889,
+          "gd_avg_A": 1.5455,
+          "gd_avg_B": 3.3333
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos",
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GG-038",
+        "partido_num": 38,
+        "fecha_hora_utc": "2026-06-21T19:00:00Z",
+        "fecha_et": "2026-06-21",
+        "hora_et": "15:00",
+        "sede": "Inglewood, United States",
+        "estadio": "SoFi Stadium",
+        "equipo_A": "Belgium",
+        "equipo_B": "Iran",
+        "probabilidades": {
+          "P_A_gana": 0.5199,
+          "P_empate": 0.1356,
+          "P_B_gana": 0.3445,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2470,
+          "elo_B": 2305,
+          "elo_diferencia": 165,
+          "win_rate_A": 0.6582,
+          "win_rate_B": 0.6909,
+          "gd_avg_A": 1.557,
+          "gd_avg_B": 1.5455
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GG-040",
+        "partido_num": 40,
+        "fecha_hora_utc": "2026-06-22T01:00:00Z",
+        "fecha_et": "2026-06-21",
+        "hora_et": "21:00",
+        "sede": "Vancouver, Canada",
+        "estadio": "BC Place",
+        "equipo_A": "New Zealand",
+        "equipo_B": "Egypt",
+        "probabilidades": {
+          "P_A_gana": 0.341,
+          "P_empate": 0.0518,
+          "P_B_gana": 0.6072,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1650,
+          "elo_B": 2225,
+          "elo_diferencia": -575,
+          "win_rate_A": 0.8889,
+          "win_rate_B": 0.56,
+          "gd_avg_A": 3.3333,
+          "gd_avg_B": 0.9333
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GG-065",
+        "partido_num": 65,
+        "fecha_hora_utc": "2026-06-27T03:00:00Z",
+        "fecha_et": "2026-06-26",
+        "hora_et": "23:00",
+        "sede": "Vancouver, Canada",
+        "estadio": "BC Place",
+        "equipo_A": "New Zealand",
+        "equipo_B": "Belgium",
+        "probabilidades": {
+          "P_A_gana": 0.3166,
+          "P_empate": 0.0476,
+          "P_B_gana": 0.6358,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1650,
+          "elo_B": 2470,
+          "elo_diferencia": -820,
+          "win_rate_A": 0.8889,
+          "win_rate_B": 0.6582,
+          "gd_avg_A": 3.3333,
+          "gd_avg_B": 1.557
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos",
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GG-066",
+        "partido_num": 66,
+        "fecha_hora_utc": "2026-06-27T03:00:00Z",
+        "fecha_et": "2026-06-26",
+        "hora_et": "23:00",
+        "sede": "Seattle, United States",
+        "estadio": "Lumen Field",
+        "equipo_A": "Egypt",
+        "equipo_B": "Iran",
+        "probabilidades": {
+          "P_A_gana": 0.3118,
+          "P_empate": 0.2442,
+          "P_B_gana": 0.444,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2225,
+          "elo_B": 2305,
+          "elo_diferencia": -80,
+          "win_rate_A": 0.56,
+          "win_rate_B": 0.6909,
+          "gd_avg_A": 0.9333,
+          "gd_avg_B": 1.5455
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_H": [
+      {
+        "fixture_id": "GH-013",
+        "partido_num": 13,
+        "fecha_hora_utc": "2026-06-15T16:00:00Z",
+        "fecha_et": "2026-06-15",
+        "hora_et": "12:00",
+        "sede": "Atlanta, United States",
+        "estadio": "Mercedes-Benz Stadium",
+        "equipo_A": "Spain",
+        "equipo_B": "Cape Verde",
+        "probabilidades": {
+          "P_A_gana": 0.739,
+          "P_empate": 0.0493,
+          "P_B_gana": 0.2117,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2540,
+          "elo_B": 1825,
+          "elo_diferencia": 715,
+          "win_rate_A": 0.6386,
+          "win_rate_B": 0.4375,
+          "gd_avg_A": 1.5542,
+          "gd_avg_B": 0.2917
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos",
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GH-015",
+        "partido_num": 15,
+        "fecha_hora_utc": "2026-06-15T22:00:00Z",
+        "fecha_et": "2026-06-15",
+        "hora_et": "18:00",
+        "sede": "Miami Gardens, United States",
+        "estadio": "Hard Rock Stadium",
+        "equipo_A": "Saudi Arabia",
+        "equipo_B": "Uruguay",
+        "probabilidades": {
+          "P_A_gana": 0.2349,
+          "P_empate": 0.1219,
+          "P_B_gana": 0.6432,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1905,
+          "elo_B": 2380,
+          "elo_diferencia": -475,
+          "win_rate_A": 0.4805,
+          "win_rate_B": 0.4576,
+          "gd_avg_A": 0.3636,
+          "gd_avg_B": 0.4746
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GH-037",
+        "partido_num": 37,
+        "fecha_hora_utc": "2026-06-21T16:00:00Z",
+        "fecha_et": "2026-06-21",
+        "hora_et": "12:00",
+        "sede": "Atlanta, United States",
+        "estadio": "Mercedes-Benz Stadium",
+        "equipo_A": "Spain",
+        "equipo_B": "Saudi Arabia",
+        "probabilidades": {
+          "P_A_gana": 0.7321,
+          "P_empate": 0.0569,
+          "P_B_gana": 0.211,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2540,
+          "elo_B": 1905,
+          "elo_diferencia": 635,
+          "win_rate_A": 0.6386,
+          "win_rate_B": 0.4805,
+          "gd_avg_A": 1.5542,
+          "gd_avg_B": 0.3636
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GH-039",
+        "partido_num": 39,
+        "fecha_hora_utc": "2026-06-21T22:00:00Z",
+        "fecha_et": "2026-06-21",
+        "hora_et": "18:00",
+        "sede": "Miami Gardens, United States",
+        "estadio": "Hard Rock Stadium",
+        "equipo_A": "Uruguay",
+        "equipo_B": "Cape Verde",
+        "probabilidades": {
+          "P_A_gana": 0.6568,
+          "P_empate": 0.1135,
+          "P_B_gana": 0.2297,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2380,
+          "elo_B": 1825,
+          "elo_diferencia": 555,
+          "win_rate_A": 0.4576,
+          "win_rate_B": 0.4375,
+          "gd_avg_A": 0.4746,
+          "gd_avg_B": 0.2917
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GH-063",
+        "partido_num": 63,
+        "fecha_hora_utc": "2026-06-27T00:00:00Z",
+        "fecha_et": "2026-06-26",
+        "hora_et": "20:00",
+        "sede": "Houston, United States",
+        "estadio": "NRG Stadium",
+        "equipo_A": "Cape Verde",
+        "equipo_B": "Saudi Arabia",
+        "probabilidades": {
+          "P_A_gana": 0.3201,
+          "P_empate": 0.2739,
+          "P_B_gana": 0.4059,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1825,
+          "elo_B": 1905,
+          "elo_diferencia": -80,
+          "win_rate_A": 0.4375,
+          "win_rate_B": 0.4805,
+          "gd_avg_A": 0.2917,
+          "gd_avg_B": 0.3636
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GH-064",
+        "partido_num": 64,
+        "fecha_hora_utc": "2026-06-27T00:00:00Z",
+        "fecha_et": "2026-06-26",
+        "hora_et": "20:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "Uruguay",
+        "equipo_B": "Spain",
+        "probabilidades": {
+          "P_A_gana": 0.2459,
+          "P_empate": 0.2737,
+          "P_B_gana": 0.4804,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2380,
+          "elo_B": 2540,
+          "elo_diferencia": -160,
+          "win_rate_A": 0.4576,
+          "win_rate_B": 0.6386,
+          "gd_avg_A": 0.4746,
+          "gd_avg_B": 1.5542
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_I": [
+      {
+        "fixture_id": "GI-017",
+        "partido_num": 17,
+        "fecha_hora_utc": "2026-06-16T19:00:00Z",
+        "fecha_et": "2026-06-16",
+        "hora_et": "15:00",
+        "sede": "East Rutherford, United States",
+        "estadio": "MetLife Stadium",
+        "equipo_A": "France",
+        "equipo_B": "Senegal",
+        "probabilidades": {
+          "P_A_gana": 0.4764,
+          "P_empate": 0.2204,
+          "P_B_gana": 0.3033,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2550,
+          "elo_B": 2375,
+          "elo_diferencia": 175,
+          "win_rate_A": 0.6548,
+          "win_rate_B": 0.6463,
+          "gd_avg_A": 1.2381,
+          "gd_avg_B": 1.0732
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GI-018",
+        "partido_num": 18,
+        "fecha_hora_utc": "2026-06-16T22:00:00Z",
+        "fecha_et": "2026-06-16",
+        "hora_et": "18:00",
+        "sede": "Foxborough, United States",
+        "estadio": "Gillette Stadium",
+        "equipo_A": "Iraq",
+        "equipo_B": "Norway",
+        "probabilidades": {
+          "P_A_gana": 0.236,
+          "P_empate": 0.1935,
+          "P_B_gana": 0.5705,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1945,
+          "elo_B": 2250,
+          "elo_diferencia": -305,
+          "win_rate_A": 0.5,
+          "win_rate_B": 0.5574,
+          "gd_avg_A": 0.5,
+          "gd_avg_B": 1.082
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GI-042",
+        "partido_num": 42,
+        "fecha_hora_utc": "2026-06-22T21:00:00Z",
+        "fecha_et": "2026-06-22",
+        "hora_et": "17:00",
+        "sede": "Philadelphia, United States",
+        "estadio": "Lincoln Financial Field",
+        "equipo_A": "France",
+        "equipo_B": "Iraq",
+        "probabilidades": {
+          "P_A_gana": 0.7119,
+          "P_empate": 0.0757,
+          "P_B_gana": 0.2124,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2550,
+          "elo_B": 1945,
+          "elo_diferencia": 605,
+          "win_rate_A": 0.6548,
+          "win_rate_B": 0.5,
+          "gd_avg_A": 1.2381,
+          "gd_avg_B": 0.5
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GI-043",
+        "partido_num": 43,
+        "fecha_hora_utc": "2026-06-23T00:00:00Z",
+        "fecha_et": "2026-06-22",
+        "hora_et": "20:00",
+        "sede": "Toronto, Canada",
+        "estadio": "BMO Field",
+        "equipo_A": "Norway",
+        "equipo_B": "Senegal",
+        "probabilidades": {
+          "P_A_gana": 0.3138,
+          "P_empate": 0.2397,
+          "P_B_gana": 0.4465,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2250,
+          "elo_B": 2375,
+          "elo_diferencia": -125,
+          "win_rate_A": 0.5574,
+          "win_rate_B": 0.6463,
+          "gd_avg_A": 1.082,
+          "gd_avg_B": 1.0732
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GI-061",
+        "partido_num": 61,
+        "fecha_hora_utc": "2026-06-26T19:00:00Z",
+        "fecha_et": "2026-06-26",
+        "hora_et": "15:00",
+        "sede": "Foxborough, United States",
+        "estadio": "Gillette Stadium",
+        "equipo_A": "Norway",
+        "equipo_B": "France",
+        "probabilidades": {
+          "P_A_gana": 0.2716,
+          "P_empate": 0.1709,
+          "P_B_gana": 0.5575,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2250,
+          "elo_B": 2550,
+          "elo_diferencia": -300,
+          "win_rate_A": 0.5574,
+          "win_rate_B": 0.6548,
+          "gd_avg_A": 1.082,
+          "gd_avg_B": 1.2381
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GI-062",
+        "partido_num": 62,
+        "fecha_hora_utc": "2026-06-26T19:00:00Z",
+        "fecha_et": "2026-06-26",
+        "hora_et": "15:00",
+        "sede": "Toronto, Canada",
+        "estadio": "BMO Field",
+        "equipo_A": "Senegal",
+        "equipo_B": "Iraq",
+        "probabilidades": {
+          "P_A_gana": 0.6347,
+          "P_empate": 0.1486,
+          "P_B_gana": 0.2167,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2375,
+          "elo_B": 1945,
+          "elo_diferencia": 430,
+          "win_rate_A": 0.6463,
+          "win_rate_B": 0.5,
+          "gd_avg_A": 1.0732,
+          "gd_avg_B": 0.5
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_J": [
+      {
+        "fixture_id": "GJ-019",
+        "partido_num": 19,
+        "fecha_hora_utc": "2026-06-17T01:00:00Z",
+        "fecha_et": "2026-06-16",
+        "hora_et": "21:00",
+        "sede": "Kansas City, United States",
+        "estadio": "Arrowhead Stadium",
+        "equipo_A": "Argentina",
+        "equipo_B": "Algeria",
+        "probabilidades": {
+          "P_A_gana": 0.5323,
+          "P_empate": 0.183,
+          "P_B_gana": 0.2847,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2520,
+          "elo_B": 2235,
+          "elo_diferencia": 285,
+          "win_rate_A": 0.6364,
+          "win_rate_B": 0.6522,
+          "gd_avg_A": 0.9848,
+          "gd_avg_B": 1.4783
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GJ-020",
+        "partido_num": 20,
+        "fecha_hora_utc": "2026-06-17T04:00:00Z",
+        "fecha_et": "2026-06-17",
+        "hora_et": "00:00",
+        "sede": "Santa Clara, United States",
+        "estadio": "Levi's Stadium",
+        "equipo_A": "Austria",
+        "equipo_B": "Jordan",
+        "probabilidades": {
+          "P_A_gana": 0.6323,
+          "P_empate": 0.1028,
+          "P_B_gana": 0.2649,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2320,
+          "elo_B": 1885,
+          "elo_diferencia": 435,
+          "win_rate_A": 0.5362,
+          "win_rate_B": 0.5577,
+          "gd_avg_A": 0.6812,
+          "gd_avg_B": 1.0
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GJ-041",
+        "partido_num": 41,
+        "fecha_hora_utc": "2026-06-22T17:00:00Z",
+        "fecha_et": "2026-06-22",
+        "hora_et": "13:00",
+        "sede": "Arlington, United States",
+        "estadio": "AT&T Stadium",
+        "equipo_A": "Argentina",
+        "equipo_B": "Austria",
+        "probabilidades": {
+          "P_A_gana": 0.5398,
+          "P_empate": 0.1675,
+          "P_B_gana": 0.2927,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2520,
+          "elo_B": 2320,
+          "elo_diferencia": 200,
+          "win_rate_A": 0.6364,
+          "win_rate_B": 0.5362,
+          "gd_avg_A": 0.9848,
+          "gd_avg_B": 0.6812
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GJ-044",
+        "partido_num": 44,
+        "fecha_hora_utc": "2026-06-23T03:00:00Z",
+        "fecha_et": "2026-06-22",
+        "hora_et": "23:00",
+        "sede": "Santa Clara, United States",
+        "estadio": "Levi's Stadium",
+        "equipo_A": "Jordan",
+        "equipo_B": "Algeria",
+        "probabilidades": {
+          "P_A_gana": 0.2516,
+          "P_empate": 0.1611,
+          "P_B_gana": 0.5874,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1885,
+          "elo_B": 2235,
+          "elo_diferencia": -350,
+          "win_rate_A": 0.5577,
+          "win_rate_B": 0.6522,
+          "gd_avg_A": 1.0,
+          "gd_avg_B": 1.4783
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GJ-069",
+        "partido_num": 69,
+        "fecha_hora_utc": "2026-06-28T00:00:00Z",
+        "fecha_et": "2026-06-27",
+        "hora_et": "20:00",
+        "sede": "Miami Gardens, United States",
+        "estadio": "Hard Rock Stadium",
+        "equipo_A": "Algeria",
+        "equipo_B": "Austria",
+        "probabilidades": {
+          "P_A_gana": 0.3696,
+          "P_empate": 0.2098,
+          "P_B_gana": 0.4206,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2235,
+          "elo_B": 2320,
+          "elo_diferencia": -85,
+          "win_rate_A": 0.6522,
+          "win_rate_B": 0.5362,
+          "gd_avg_A": 1.4783,
+          "gd_avg_B": 0.6812
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GJ-070",
+        "partido_num": 70,
+        "fecha_hora_utc": "2026-06-28T00:00:00Z",
+        "fecha_et": "2026-06-27",
+        "hora_et": "20:00",
+        "sede": "Monterrey, Mexico",
+        "estadio": "Estadio BBVA",
+        "equipo_A": "Jordan",
+        "equipo_B": "Argentina",
+        "probabilidades": {
+          "P_A_gana": 0.2461,
+          "P_empate": 0.0567,
+          "P_B_gana": 0.6972,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1885,
+          "elo_B": 2520,
+          "elo_diferencia": -635,
+          "win_rate_A": 0.5577,
+          "win_rate_B": 0.6364,
+          "gd_avg_A": 1.0,
+          "gd_avg_B": 0.9848
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_K": [
+      {
+        "fixture_id": "GK-021",
+        "partido_num": 21,
+        "fecha_hora_utc": "2026-06-17T17:00:00Z",
+        "fecha_et": "2026-06-17",
+        "hora_et": "13:00",
+        "sede": "Houston, United States",
+        "estadio": "NRG Stadium",
+        "equipo_A": "Portugal",
+        "equipo_B": "DR Congo",
+        "probabilidades": {
+          "P_A_gana": 0.6538,
+          "P_empate": 0.1383,
+          "P_B_gana": 0.2079,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2510,
+          "elo_B": 2055,
+          "elo_diferencia": 455,
+          "win_rate_A": 0.625,
+          "win_rate_B": 0.4407,
+          "gd_avg_A": 1.475,
+          "gd_avg_B": 0.4237
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GK-024",
+        "partido_num": 24,
+        "fecha_hora_utc": "2026-06-18T02:00:00Z",
+        "fecha_et": "2026-06-17",
+        "hora_et": "22:00",
+        "sede": "Mexico City, Mexico",
+        "estadio": "Estadio Azteca",
+        "equipo_A": "Uzbekistan",
+        "equipo_B": "Colombia",
+        "probabilidades": {
+          "P_A_gana": 0.2672,
+          "P_empate": 0.1758,
+          "P_B_gana": 0.557,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2015,
+          "elo_B": 2420,
+          "elo_diferencia": -405,
+          "win_rate_A": 0.625,
+          "win_rate_B": 0.4035,
+          "gd_avg_A": 1.25,
+          "gd_avg_B": 0.4737
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GK-045",
+        "partido_num": 45,
+        "fecha_hora_utc": "2026-06-23T17:00:00Z",
+        "fecha_et": "2026-06-23",
+        "hora_et": "13:00",
+        "sede": "Houston, United States",
+        "estadio": "NRG Stadium",
+        "equipo_A": "Portugal",
+        "equipo_B": "Uzbekistan",
+        "probabilidades": {
+          "P_A_gana": 0.649,
+          "P_empate": 0.1001,
+          "P_B_gana": 0.251,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2510,
+          "elo_B": 2015,
+          "elo_diferencia": 495,
+          "win_rate_A": 0.625,
+          "win_rate_B": 0.625,
+          "gd_avg_A": 1.475,
+          "gd_avg_B": 1.25
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GK-048",
+        "partido_num": 48,
+        "fecha_hora_utc": "2026-06-24T02:00:00Z",
+        "fecha_et": "2026-06-23",
+        "hora_et": "22:00",
+        "sede": "Zapopan, Mexico",
+        "estadio": "Estadio Akron",
+        "equipo_A": "Colombia",
+        "equipo_B": "DR Congo",
+        "probabilidades": {
+          "P_A_gana": 0.5501,
+          "P_empate": 0.2252,
+          "P_B_gana": 0.2247,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2420,
+          "elo_B": 2055,
+          "elo_diferencia": 365,
+          "win_rate_A": 0.4035,
+          "win_rate_B": 0.4407,
+          "gd_avg_A": 0.4737,
+          "gd_avg_B": 0.4237
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GK-071",
+        "partido_num": 71,
+        "fecha_hora_utc": "2026-06-28T01:00:00Z",
+        "fecha_et": "2026-06-27",
+        "hora_et": "21:00",
+        "sede": "Mexico City, Mexico",
+        "estadio": "Estadio Azteca",
+        "equipo_A": "DR Congo",
+        "equipo_B": "Uzbekistan",
+        "probabilidades": {
+          "P_A_gana": 0.3436,
+          "P_empate": 0.3118,
+          "P_B_gana": 0.3446,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2055,
+          "elo_B": 2015,
+          "elo_diferencia": 40,
+          "win_rate_A": 0.4407,
+          "win_rate_B": 0.625,
+          "gd_avg_A": 0.4237,
+          "gd_avg_B": 1.25
+        },
+        "datos_incompletos": true,
+        "flags": [
+          "datos_escasos"
+        ]
+      },
+      {
+        "fixture_id": "GK-072",
+        "partido_num": 72,
+        "fecha_hora_utc": "2026-06-28T01:00:00Z",
+        "fecha_et": "2026-06-27",
+        "hora_et": "21:00",
+        "sede": "Arlington, United States",
+        "estadio": "AT&T Stadium",
+        "equipo_A": "Colombia",
+        "equipo_B": "Portugal",
+        "probabilidades": {
+          "P_A_gana": 0.2643,
+          "P_empate": 0.3093,
+          "P_B_gana": 0.4263,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2420,
+          "elo_B": 2510,
+          "elo_diferencia": -90,
+          "win_rate_A": 0.4035,
+          "win_rate_B": 0.625,
+          "gd_avg_A": 0.4737,
+          "gd_avg_B": 1.475
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ],
+    "grupo_L": [
+      {
+        "fixture_id": "GL-022",
+        "partido_num": 22,
+        "fecha_hora_utc": "2026-06-17T20:00:00Z",
+        "fecha_et": "2026-06-17",
+        "hora_et": "16:00",
+        "sede": "Arlington, United States",
+        "estadio": "AT&T Stadium",
+        "equipo_A": "England",
+        "equipo_B": "Croatia",
+        "probabilidades": {
+          "P_A_gana": 0.4348,
+          "P_empate": 0.246,
+          "P_B_gana": 0.3192,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2520,
+          "elo_B": 2450,
+          "elo_diferencia": 70,
+          "win_rate_A": 0.631,
+          "win_rate_B": 0.5062,
+          "gd_avg_A": 1.6667,
+          "gd_avg_B": 0.6296
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GL-023",
+        "partido_num": 23,
+        "fecha_hora_utc": "2026-06-17T23:00:00Z",
+        "fecha_et": "2026-06-17",
+        "hora_et": "19:00",
+        "sede": "Toronto, Canada",
+        "estadio": "BMO Field",
+        "equipo_A": "Ghana",
+        "equipo_B": "Panama",
+        "probabilidades": {
+          "P_A_gana": 0.2328,
+          "P_empate": 0.1476,
+          "P_B_gana": 0.6196,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 1775,
+          "elo_B": 2190,
+          "elo_diferencia": -415,
+          "win_rate_A": 0.4423,
+          "win_rate_B": 0.5263,
+          "gd_avg_A": 0.5192,
+          "gd_avg_B": 0.5658
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GL-046",
+        "partido_num": 46,
+        "fecha_hora_utc": "2026-06-23T20:00:00Z",
+        "fecha_et": "2026-06-23",
+        "hora_et": "16:00",
+        "sede": "Foxborough, United States",
+        "estadio": "Gillette Stadium",
+        "equipo_A": "England",
+        "equipo_B": "Ghana",
+        "probabilidades": {
+          "P_A_gana": 0.7429,
+          "P_empate": 0.0486,
+          "P_B_gana": 0.2084,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2520,
+          "elo_B": 1775,
+          "elo_diferencia": 745,
+          "win_rate_A": 0.631,
+          "win_rate_B": 0.4423,
+          "gd_avg_A": 1.6667,
+          "gd_avg_B": 0.5192
+        },
+        "datos_incompletos": false,
+        "flags": [
+          "normalizacion_emergencia"
+        ]
+      },
+      {
+        "fixture_id": "GL-047",
+        "partido_num": 47,
+        "fecha_hora_utc": "2026-06-23T23:00:00Z",
+        "fecha_et": "2026-06-23",
+        "hora_et": "19:00",
+        "sede": "Foxborough, United States",
+        "estadio": "Gillette Stadium",
+        "equipo_A": "Panama",
+        "equipo_B": "Croatia",
+        "probabilidades": {
+          "P_A_gana": 0.2707,
+          "P_empate": 0.1746,
+          "P_B_gana": 0.5547,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2190,
+          "elo_B": 2450,
+          "elo_diferencia": -260,
+          "win_rate_A": 0.5263,
+          "win_rate_B": 0.5062,
+          "gd_avg_A": 0.5658,
+          "gd_avg_B": 0.6296
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GL-067",
+        "partido_num": 67,
+        "fecha_hora_utc": "2026-06-27T21:00:00Z",
+        "fecha_et": "2026-06-27",
+        "hora_et": "17:00",
+        "sede": "East Rutherford, United States",
+        "estadio": "MetLife Stadium",
+        "equipo_A": "Panama",
+        "equipo_B": "England",
+        "probabilidades": {
+          "P_A_gana": 0.2446,
+          "P_empate": 0.1363,
+          "P_B_gana": 0.6191,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2190,
+          "elo_B": 2520,
+          "elo_diferencia": -330,
+          "win_rate_A": 0.5263,
+          "win_rate_B": 0.631,
+          "gd_avg_A": 0.5658,
+          "gd_avg_B": 1.6667
+        },
+        "datos_incompletos": false,
+        "flags": []
+      },
+      {
+        "fixture_id": "GL-068",
+        "partido_num": 68,
+        "fecha_hora_utc": "2026-06-27T21:00:00Z",
+        "fecha_et": "2026-06-27",
+        "hora_et": "17:00",
+        "sede": "Philadelphia, United States",
+        "estadio": "Lincoln Financial Field",
+        "equipo_A": "Croatia",
+        "equipo_B": "Ghana",
+        "probabilidades": {
+          "P_A_gana": 0.7229,
+          "P_empate": 0.0538,
+          "P_B_gana": 0.2233,
+          "suma_verificada": 1.0,
+          "verificacion": "PASSED"
+        },
+        "inputs_modelo": {
+          "elo_A": 2450,
+          "elo_B": 1775,
+          "elo_diferencia": 675,
+          "win_rate_A": 0.5062,
+          "win_rate_B": 0.4423,
+          "gd_avg_A": 0.6296,
+          "gd_avg_B": 0.5192
+        },
+        "datos_incompletos": false,
+        "flags": []
+      }
+    ]
+  },
+  "fase_eliminatoria": {
+    "ronda_32": [
+      {
+        "fixture_id": "R32-073",
+        "partido_num": 73,
+        "fecha": "2026-06-28",
+        "hora_et": "15:00",
+        "descripcion": "2do Grupo A vs 2do Grupo B",
+        "equipo_A": "2do_Grupo_A",
+        "equipo_B": "2do_Grupo_B",
+        "estadio": "SoFi Stadium",
+        "ciudad": "Inglewood",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-074",
+        "partido_num": 74,
+        "fecha": "2026-06-29",
+        "hora_et": "16:30",
+        "descripcion": "1ro Grupo E vs 3ro (A/B/C/D/F)",
+        "equipo_A": "1ro_Grupo_E",
+        "equipo_B": "3ro_Mejor_ABCDF",
+        "estadio": "Gillette Stadium",
+        "ciudad": "Foxborough",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-075",
+        "partido_num": 75,
+        "fecha": "2026-06-29",
+        "hora_et": "21:00",
+        "descripcion": "1ro Grupo F vs 2do Grupo C",
+        "equipo_A": "1ro_Grupo_F",
+        "equipo_B": "2do_Grupo_C",
+        "estadio": "Estadio Akron",
+        "ciudad": "Zapopan",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-076",
+        "partido_num": 76,
+        "fecha": "2026-06-29",
+        "hora_et": "13:00",
+        "descripcion": "1ro Grupo C vs 2do Grupo F",
+        "equipo_A": "1ro_Grupo_C",
+        "equipo_B": "2do_Grupo_F",
+        "estadio": "NRG Stadium",
+        "ciudad": "Houston",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-077",
+        "partido_num": 77,
+        "fecha": "2026-06-30",
+        "hora_et": "17:00",
+        "descripcion": "1ro Grupo I vs 3ro (C/D/F/G/H)",
+        "equipo_A": "1ro_Grupo_I",
+        "equipo_B": "3ro_Mejor_CDFGH",
+        "estadio": "MetLife Stadium",
+        "ciudad": "East Rutherford",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-078",
+        "partido_num": 78,
+        "fecha": "2026-06-30",
+        "hora_et": "13:00",
+        "descripcion": "2do Grupo E vs 2do Grupo I",
+        "equipo_A": "2do_Grupo_E",
+        "equipo_B": "2do_Grupo_I",
+        "estadio": "AT&T Stadium",
+        "ciudad": "Arlington",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-079",
+        "partido_num": 79,
+        "fecha": "2026-07-01",
+        "hora_et": "21:00",
+        "descripcion": "1ro Grupo A vs 3ro (C/E/F/H/I)",
+        "equipo_A": "1ro_Grupo_A",
+        "equipo_B": "3ro_Mejor_CEFHI",
+        "estadio": "Estadio Azteca",
+        "ciudad": "Mexico City",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-080",
+        "partido_num": 80,
+        "fecha": "2026-07-01",
+        "hora_et": "12:00",
+        "descripcion": "1ro Grupo L vs 3ro (E/H/I/J/K)",
+        "equipo_A": "1ro_Grupo_L",
+        "equipo_B": "3ro_Mejor_EHIJK",
+        "estadio": "Mercedes-Benz Stadium",
+        "ciudad": "Atlanta",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-081",
+        "partido_num": 81,
+        "fecha": "2026-07-01",
+        "hora_et": "20:00",
+        "descripcion": "1ro Grupo D vs 3ro (B/E/F/I/J)",
+        "equipo_A": "1ro_Grupo_D",
+        "equipo_B": "3ro_Mejor_BEFIJ",
+        "estadio": "Levi's Stadium",
+        "ciudad": "Santa Clara",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-082",
+        "partido_num": 82,
+        "fecha": "2026-07-01",
+        "hora_et": "16:00",
+        "descripcion": "1ro Grupo G vs 3ro (A/E/H/I/J)",
+        "equipo_A": "1ro_Grupo_G",
+        "equipo_B": "3ro_Mejor_AEHIJ",
+        "estadio": "Lumen Field",
+        "ciudad": "Seattle",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-083",
+        "partido_num": 83,
+        "fecha": "2026-07-02",
+        "hora_et": "19:00",
+        "descripcion": "2do Grupo K vs 2do Grupo L",
+        "equipo_A": "2do_Grupo_K",
+        "equipo_B": "2do_Grupo_L",
+        "estadio": "BMO Field",
+        "ciudad": "Toronto",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-084",
+        "partido_num": 84,
+        "fecha": "2026-07-02",
+        "hora_et": "15:00",
+        "descripcion": "1ro Grupo H vs 2do Grupo J",
+        "equipo_A": "1ro_Grupo_H",
+        "equipo_B": "2do_Grupo_J",
+        "estadio": "SoFi Stadium",
+        "ciudad": "Inglewood",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-085",
+        "partido_num": 85,
+        "fecha": "2026-07-02",
+        "hora_et": "23:00",
+        "descripcion": "1ro Grupo B vs 3ro (E/F/G/I/J)",
+        "equipo_A": "1ro_Grupo_B",
+        "equipo_B": "3ro_Mejor_EFGIJ",
+        "estadio": "BC Place",
+        "ciudad": "Vancouver",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-086",
+        "partido_num": 86,
+        "fecha": "2026-07-03",
+        "hora_et": "18:00",
+        "descripcion": "1ro Grupo J vs 2do Grupo H",
+        "equipo_A": "1ro_Grupo_J",
+        "equipo_B": "2do_Grupo_H",
+        "estadio": "Hard Rock Stadium",
+        "ciudad": "Miami Gardens",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-087",
+        "partido_num": 87,
+        "fecha": "2026-06-28",
+        "hora_et": "21:30",
+        "descripcion": "1ro Grupo K vs 3ro (D/E/I/J/L)",
+        "equipo_A": "1ro_Grupo_K",
+        "equipo_B": "3ro_Mejor_DEIJL",
+        "estadio": "Arrowhead Stadium",
+        "ciudad": "Kansas City",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "R32-088",
+        "partido_num": 88,
+        "fecha": "2026-07-03",
+        "hora_et": "14:00",
+        "descripcion": "2do Grupo D vs 2do Grupo G",
+        "equipo_A": "2do_Grupo_D",
+        "equipo_B": "2do_Grupo_G",
+        "estadio": "AT&T Stadium",
+        "ciudad": "Arlington",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      }
+    ],
+    "octavos": [
+      {
+        "fixture_id": "OCT-089",
+        "partido_num": 89,
+        "fecha": "2026-07-04",
+        "hora_et": "17:00",
+        "descripcion": "Ganador P74 vs Ganador P77",
+        "equipo_A": "Ganador_P74",
+        "equipo_B": "Ganador_P77",
+        "estadio": "Lincoln Financial Field",
+        "ciudad": "Philadelphia",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-090",
+        "partido_num": 90,
+        "fecha": "2026-07-04",
+        "hora_et": "13:00",
+        "descripcion": "Ganador P73 vs Ganador P75",
+        "equipo_A": "Ganador_P73",
+        "equipo_B": "Ganador_P75",
+        "estadio": "NRG Stadium",
+        "ciudad": "Houston",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-091",
+        "partido_num": 91,
+        "fecha": "2026-07-05",
+        "hora_et": "16:00",
+        "descripcion": "Ganador P76 vs Ganador P78",
+        "equipo_A": "Ganador_P76",
+        "equipo_B": "Ganador_P78",
+        "estadio": "MetLife Stadium",
+        "ciudad": "East Rutherford",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-092",
+        "partido_num": 92,
+        "fecha": "2026-07-05",
+        "hora_et": "20:00",
+        "descripcion": "Ganador P79 vs Ganador P80",
+        "equipo_A": "Ganador_P79",
+        "equipo_B": "Ganador_P80",
+        "estadio": "Estadio Azteca",
+        "ciudad": "Mexico City",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-093",
+        "partido_num": 93,
+        "fecha": "2026-07-06",
+        "hora_et": "15:00",
+        "descripcion": "Ganador P83 vs Ganador P84",
+        "equipo_A": "Ganador_P83",
+        "equipo_B": "Ganador_P84",
+        "estadio": "AT&T Stadium",
+        "ciudad": "Arlington",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-094",
+        "partido_num": 94,
+        "fecha": "2026-07-06",
+        "hora_et": "20:00",
+        "descripcion": "Ganador P81 vs Ganador P82",
+        "equipo_A": "Ganador_P81",
+        "equipo_B": "Ganador_P82",
+        "estadio": "Lumen Field",
+        "ciudad": "Seattle",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-095",
+        "partido_num": 95,
+        "fecha": "2026-07-07",
+        "hora_et": "12:00",
+        "descripcion": "Ganador P86 vs Ganador P88",
+        "equipo_A": "Ganador_P86",
+        "equipo_B": "Ganador_P88",
+        "estadio": "Mercedes-Benz Stadium",
+        "ciudad": "Atlanta",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "OCT-096",
+        "partido_num": 96,
+        "fecha": "2026-07-07",
+        "hora_et": "16:00",
+        "descripcion": "Ganador P85 vs Ganador P87",
+        "equipo_A": "Ganador_P85",
+        "equipo_B": "Ganador_P87",
+        "estadio": "BC Place",
+        "ciudad": "Vancouver",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      }
+    ],
+    "cuartos": [
+      {
+        "fixture_id": "QTR-097",
+        "partido_num": 97,
+        "fecha": "2026-07-09",
+        "hora_et": "16:00",
+        "descripcion": "Ganador P89 vs Ganador P90",
+        "equipo_A": "Ganador_P89",
+        "equipo_B": "Ganador_P90",
+        "estadio": "Gillette Stadium",
+        "ciudad": "Foxborough",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "QTR-098",
+        "partido_num": 98,
+        "fecha": "2026-07-10",
+        "hora_et": "15:00",
+        "descripcion": "Ganador P93 vs Ganador P94",
+        "equipo_A": "Ganador_P93",
+        "equipo_B": "Ganador_P94",
+        "estadio": "SoFi Stadium",
+        "ciudad": "Inglewood",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "QTR-099",
+        "partido_num": 99,
+        "fecha": "2026-07-11",
+        "hora_et": "17:00",
+        "descripcion": "Ganador P91 vs Ganador P92",
+        "equipo_A": "Ganador_P91",
+        "equipo_B": "Ganador_P92",
+        "estadio": "Hard Rock Stadium",
+        "ciudad": "Miami Gardens",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "QTR-100",
+        "partido_num": 100,
+        "fecha": "2026-07-11",
+        "hora_et": "21:00",
+        "descripcion": "Ganador P95 vs Ganador P96",
+        "equipo_A": "Ganador_P95",
+        "equipo_B": "Ganador_P96",
+        "estadio": "Arrowhead Stadium",
+        "ciudad": "Kansas City",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      }
+    ],
+    "semifinales": [
+      {
+        "fixture_id": "SF-101",
+        "partido_num": 101,
+        "fecha": "2026-07-14",
+        "hora_et": "15:00",
+        "descripcion": "Ganador P97 vs Ganador P98",
+        "equipo_A": "Ganador_P97",
+        "equipo_B": "Ganador_P98",
+        "estadio": "AT&T Stadium",
+        "ciudad": "Arlington",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      },
+      {
+        "fixture_id": "SF-102",
+        "partido_num": 102,
+        "fecha": "2026-07-15",
+        "hora_et": "15:00",
+        "descripcion": "Ganador P99 vs Ganador P100",
+        "equipo_A": "Ganador_P99",
+        "equipo_B": "Ganador_P100",
+        "estadio": "Mercedes-Benz Stadium",
+        "ciudad": "Atlanta",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      }
+    ],
+    "tercer_puesto": [
+      {
+        "fixture_id": "3P-103",
+        "partido_num": 103,
+        "fecha": "2026-07-18",
+        "hora_et": "17:00",
+        "descripcion": "Perdedor SF1 vs Perdedor SF2",
+        "equipo_A": "Perdedor_SF1",
+        "equipo_B": "Perdedor_SF2",
+        "estadio": "Hard Rock Stadium",
+        "ciudad": "Miami Gardens",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      }
+    ],
+    "final": [
+      {
+        "fixture_id": "FIN-104",
+        "partido_num": 104,
+        "fecha": "2026-07-19",
+        "hora_et": "15:00",
+        "descripcion": "Ganador SF1 vs Ganador SF2",
+        "equipo_A": "Ganador_SF1",
+        "equipo_B": "Ganador_SF2",
+        "estadio": "MetLife Stadium",
+        "ciudad": "East Rutherford",
+        "equipos_pendientes": true,
+        "probabilidades": "pendiente_clasificacion",
+        "nota": "Las probabilidades se calcularán dinámicamente cuando el simulador proporcione los equipos clasificados."
+      }
+    ]
+  }
+}

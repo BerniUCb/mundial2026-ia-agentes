@@ -1,0 +1,638 @@
+{
+  "titulo": "Matrices de Probabilidad v2 - FIFA World Cup 2026",
+  "modelo": "ELO-Historial-Combinado v2.0",
+  "fecha_calculo": "2026-05-17",
+  "pesos": {
+    "elo": 0.55,
+    "historial": 0.35,
+    "forma": 0.1
+  },
+  "elos_v2": {
+    "Algeria": 2265,
+    "Argentina": 2535,
+    "Australia": 2250,
+    "Austria": 2320,
+    "Belgium": 2445,
+    "Bosnia and Herzegovina": 1910,
+    "Brazil": 2478,
+    "Canada": 2230,
+    "Cape Verde": 1825,
+    "Colombia": 2405,
+    "Croatia": 2425,
+    "Curacao": 1700,
+    "Czechia": 2150,
+    "DR Congo": 2055,
+    "Ecuador": 2295,
+    "Egypt": 2225,
+    "England": 2500,
+    "France": 2535,
+    "Germany": 2475,
+    "Ghana": 1775,
+    "Haiti": 1690,
+    "Iran": 2325,
+    "Iraq": 1945,
+    "Ivory Coast": 2210,
+    "Japan": 2360,
+    "Jordan": 1885,
+    "Mexico": 2380,
+    "Morocco": 2490,
+    "Netherlands": 2485,
+    "New Zealand": 1595,
+    "Norway": 2275,
+    "Panama": 2190,
+    "Paraguay": 2150,
+    "Portugal": 2510,
+    "Qatar": 1965,
+    "Saudi Arabia": 1905,
+    "Scotland": 2130,
+    "Senegal": 2415,
+    "South Africa": 1915,
+    "South Korea": 2285,
+    "Spain": 2530,
+    "Sweden": 2180,
+    "Switzerland": 2375,
+    "Tunisia": 2075,
+    "Turkiye": 2340,
+    "United States": 2370,
+    "Uruguay": 2370,
+    "Uzbekistan": 2015
+  },
+  "partidos": {
+    "GA-001": {
+      "A": "Mexico",
+      "B": "South Africa",
+      "pA": 0.6962,
+      "pE": 0.1038,
+      "pB": 0.2,
+      "suma": 1.0
+    },
+    "GA-002": {
+      "A": "South Korea",
+      "B": "Czechia",
+      "pA": 0.5216,
+      "pE": 0.1787,
+      "pB": 0.2997,
+      "suma": 1.0
+    },
+    "GA-025": {
+      "A": "Czechia",
+      "B": "South Africa",
+      "pA": 0.5598,
+      "pE": 0.1551,
+      "pB": 0.2851,
+      "suma": 1.0
+    },
+    "GA-028": {
+      "A": "Mexico",
+      "B": "South Korea",
+      "pA": 0.4852,
+      "pE": 0.1588,
+      "pB": 0.356,
+      "suma": 1.0
+    },
+    "GA-053": {
+      "A": "South Africa",
+      "B": "South Korea",
+      "pA": 0.2229,
+      "pE": 0.1067,
+      "pB": 0.6704,
+      "suma": 1.0
+    },
+    "GA-054": {
+      "A": "Czechia",
+      "B": "Mexico",
+      "pA": 0.2549,
+      "pE": 0.1613,
+      "pB": 0.5838,
+      "suma": 1.0
+    },
+    "GB-003": {
+      "A": "Canada",
+      "B": "Bosnia and Herzegovina",
+      "pA": 0.6429,
+      "pE": 0.1146,
+      "pB": 0.2426,
+      "suma": 1.0001
+    },
+    "GB-005": {
+      "A": "Qatar",
+      "B": "Switzerland",
+      "pA": 0.2427,
+      "pE": 0.1295,
+      "pB": 0.6278,
+      "suma": 1.0
+    },
+    "GB-026": {
+      "A": "Switzerland",
+      "B": "Bosnia and Herzegovina",
+      "pA": 0.6259,
+      "pE": 0.1509,
+      "pB": 0.2231,
+      "suma": 0.9999
+    },
+    "GB-027": {
+      "A": "Canada",
+      "B": "Qatar",
+      "pA": 0.6358,
+      "pE": 0.0906,
+      "pB": 0.2736,
+      "suma": 1.0
+    },
+    "GB-049": {
+      "A": "Switzerland",
+      "B": "Canada",
+      "pA": 0.4698,
+      "pE": 0.1901,
+      "pB": 0.3402,
+      "suma": 1.0001
+    },
+    "GB-050": {
+      "A": "Bosnia and Herzegovina",
+      "B": "Qatar",
+      "pA": 0.3844,
+      "pE": 0.1512,
+      "pB": 0.4644,
+      "suma": 1.0
+    },
+    "GC-006": {
+      "A": "Brazil",
+      "B": "Morocco",
+      "pA": 0.4184,
+      "pE": 0.1152,
+      "pB": 0.4663,
+      "suma": 0.9999
+    },
+    "GC-007": {
+      "A": "Haiti",
+      "B": "Scotland",
+      "pA": 0.1938,
+      "pE": 0.1238,
+      "pB": 0.6824,
+      "suma": 1.0
+    },
+    "GC-030": {
+      "A": "Scotland",
+      "B": "Morocco",
+      "pA": 0.2059,
+      "pE": 0.1207,
+      "pB": 0.6733,
+      "suma": 0.9999
+    },
+    "GC-031": {
+      "A": "Brazil",
+      "B": "Haiti",
+      "pA": 0.7875,
+      "pE": 0.0693,
+      "pB": 0.1432,
+      "suma": 1.0
+    },
+    "GC-051": {
+      "A": "Morocco",
+      "B": "Haiti",
+      "pA": 0.8024,
+      "pE": 0.069,
+      "pB": 0.1286,
+      "suma": 1.0
+    },
+    "GC-052": {
+      "A": "Scotland",
+      "B": "Brazil",
+      "pA": 0.2241,
+      "pE": 0.1223,
+      "pB": 0.6535,
+      "suma": 0.9999
+    },
+    "GD-004": {
+      "A": "United States",
+      "B": "Paraguay",
+      "pA": 0.5919,
+      "pE": 0.1633,
+      "pB": 0.2448,
+      "suma": 1.0
+    },
+    "GD-008": {
+      "A": "Australia",
+      "B": "Turkiye",
+      "pA": 0.3738,
+      "pE": 0.1683,
+      "pB": 0.4579,
+      "suma": 1.0
+    },
+    "GD-029": {
+      "A": "United States",
+      "B": "Australia",
+      "pA": 0.515,
+      "pE": 0.136,
+      "pB": 0.3491,
+      "suma": 1.0001
+    },
+    "GD-032": {
+      "A": "Turkiye",
+      "B": "Paraguay",
+      "pA": 0.5389,
+      "pE": 0.1926,
+      "pB": 0.2685,
+      "suma": 1.0
+    },
+    "GD-059": {
+      "A": "Turkiye",
+      "B": "United States",
+      "pA": 0.372,
+      "pE": 0.178,
+      "pB": 0.45,
+      "suma": 1.0
+    },
+    "GD-060": {
+      "A": "Paraguay",
+      "B": "Australia",
+      "pA": 0.2988,
+      "pE": 0.2008,
+      "pB": 0.5003,
+      "suma": 0.9999
+    },
+    "GE-009": {
+      "A": "Germany",
+      "B": "Curacao",
+      "pA": 0.7543,
+      "pE": 0.1013,
+      "pB": 0.1444,
+      "suma": 1.0
+    },
+    "GE-011": {
+      "A": "Ivory Coast",
+      "B": "Ecuador",
+      "pA": 0.3811,
+      "pE": 0.2532,
+      "pB": 0.3656,
+      "suma": 0.9999
+    },
+    "GE-034": {
+      "A": "Germany",
+      "B": "Ivory Coast",
+      "pA": 0.599,
+      "pE": 0.1239,
+      "pB": 0.2771,
+      "suma": 1.0
+    },
+    "GE-035": {
+      "A": "Ecuador",
+      "B": "Curacao",
+      "pA": 0.6245,
+      "pE": 0.1612,
+      "pB": 0.2143,
+      "suma": 1.0
+    },
+    "GE-055": {
+      "A": "Curacao",
+      "B": "Ivory Coast",
+      "pA": 0.1676,
+      "pE": 0.1094,
+      "pB": 0.723,
+      "suma": 1.0
+    },
+    "GE-056": {
+      "A": "Ecuador",
+      "B": "Germany",
+      "pA": 0.2246,
+      "pE": 0.2187,
+      "pB": 0.5568,
+      "suma": 1.0001
+    },
+    "GF-010": {
+      "A": "Netherlands",
+      "B": "Japan",
+      "pA": 0.5247,
+      "pE": 0.111,
+      "pB": 0.3644,
+      "suma": 1.0001
+    },
+    "GF-012": {
+      "A": "Sweden",
+      "B": "Tunisia",
+      "pA": 0.488,
+      "pE": 0.2076,
+      "pB": 0.3044,
+      "suma": 1.0
+    },
+    "GF-033": {
+      "A": "Netherlands",
+      "B": "Sweden",
+      "pA": 0.6216,
+      "pE": 0.1302,
+      "pB": 0.2482,
+      "suma": 1.0
+    },
+    "GF-036": {
+      "A": "Tunisia",
+      "B": "Japan",
+      "pA": 0.2251,
+      "pE": 0.1168,
+      "pB": 0.6581,
+      "suma": 1.0
+    },
+    "GF-057": {
+      "A": "Tunisia",
+      "B": "Netherlands",
+      "pA": 0.1902,
+      "pE": 0.1252,
+      "pB": 0.6846,
+      "suma": 1.0
+    },
+    "GF-058": {
+      "A": "Japan",
+      "B": "Sweden",
+      "pA": 0.5744,
+      "pE": 0.1248,
+      "pB": 0.3008,
+      "suma": 1.0
+    },
+    "GG-014": {
+      "A": "Belgium",
+      "B": "Egypt",
+      "pA": 0.5849,
+      "pE": 0.1255,
+      "pB": 0.2896,
+      "suma": 1.0
+    },
+    "GG-016": {
+      "A": "Iran",
+      "B": "New Zealand",
+      "pA": 0.7209,
+      "pE": 0.0471,
+      "pB": 0.232,
+      "suma": 1.0
+    },
+    "GG-038": {
+      "A": "Belgium",
+      "B": "Iran",
+      "pA": 0.5186,
+      "pE": 0.1059,
+      "pB": 0.3755,
+      "suma": 1.0
+    },
+    "GG-040": {
+      "A": "New Zealand",
+      "B": "Egypt",
+      "pA": 0.255,
+      "pE": 0.073,
+      "pB": 0.672,
+      "suma": 1.0
+    },
+    "GG-065": {
+      "A": "New Zealand",
+      "B": "Belgium",
+      "pA": 0.2391,
+      "pE": 0.0462,
+      "pB": 0.7147,
+      "suma": 1.0
+    },
+    "GG-066": {
+      "A": "Egypt",
+      "B": "Iran",
+      "pA": 0.3372,
+      "pE": 0.1503,
+      "pB": 0.5125,
+      "suma": 1.0
+    },
+    "GH-013": {
+      "A": "Spain",
+      "B": "Cape Verde",
+      "pA": 0.7333,
+      "pE": 0.0933,
+      "pB": 0.1734,
+      "suma": 1.0
+    },
+    "GH-015": {
+      "A": "Saudi Arabia",
+      "B": "Uruguay",
+      "pA": 0.2211,
+      "pE": 0.1236,
+      "pB": 0.6553,
+      "suma": 1.0
+    },
+    "GH-037": {
+      "A": "Spain",
+      "B": "Saudi Arabia",
+      "pA": 0.7623,
+      "pE": 0.0732,
+      "pB": 0.1645,
+      "suma": 1.0
+    },
+    "GH-039": {
+      "A": "Uruguay",
+      "B": "Cape Verde",
+      "pA": 0.6354,
+      "pE": 0.1411,
+      "pB": 0.2235,
+      "suma": 1.0
+    },
+    "GH-063": {
+      "A": "Cape Verde",
+      "B": "Saudi Arabia",
+      "pA": 0.3734,
+      "pE": 0.1848,
+      "pB": 0.4418,
+      "suma": 1.0
+    },
+    "GH-064": {
+      "A": "Uruguay",
+      "B": "Spain",
+      "pA": 0.2778,
+      "pE": 0.15,
+      "pB": 0.5722,
+      "suma": 1.0
+    },
+    "GI-017": {
+      "A": "France",
+      "B": "Senegal",
+      "pA": 0.5453,
+      "pE": 0.1049,
+      "pB": 0.3498,
+      "suma": 1.0
+    },
+    "GI-018": {
+      "A": "Iraq",
+      "B": "Norway",
+      "pA": 0.2175,
+      "pE": 0.1459,
+      "pB": 0.6366,
+      "suma": 1.0
+    },
+    "GI-042": {
+      "A": "France",
+      "B": "Iraq",
+      "pA": 0.7425,
+      "pE": 0.0946,
+      "pB": 0.1629,
+      "suma": 1.0
+    },
+    "GI-043": {
+      "A": "Norway",
+      "B": "Senegal",
+      "pA": 0.3339,
+      "pE": 0.1453,
+      "pB": 0.5207,
+      "suma": 0.9999
+    },
+    "GI-061": {
+      "A": "Norway",
+      "B": "France",
+      "pA": 0.2709,
+      "pE": 0.1087,
+      "pB": 0.6204,
+      "suma": 1.0
+    },
+    "GI-062": {
+      "A": "Senegal",
+      "B": "Iraq",
+      "pA": 0.699,
+      "pE": 0.1115,
+      "pB": 0.1895,
+      "suma": 1.0
+    },
+    "GJ-019": {
+      "A": "Argentina",
+      "B": "Algeria",
+      "pA": 0.6291,
+      "pE": 0.0899,
+      "pB": 0.281,
+      "suma": 1.0
+    },
+    "GJ-020": {
+      "A": "Austria",
+      "B": "Jordan",
+      "pA": 0.6716,
+      "pE": 0.1267,
+      "pB": 0.2017,
+      "suma": 1.0
+    },
+    "GJ-041": {
+      "A": "Argentina",
+      "B": "Austria",
+      "pA": 0.6025,
+      "pE": 0.1131,
+      "pB": 0.2843,
+      "suma": 0.9999
+    },
+    "GJ-044": {
+      "A": "Jordan",
+      "B": "Algeria",
+      "pA": 0.2022,
+      "pE": 0.1186,
+      "pB": 0.6792,
+      "suma": 1.0
+    },
+    "GJ-069": {
+      "A": "Algeria",
+      "B": "Austria",
+      "pA": 0.3934,
+      "pE": 0.1679,
+      "pB": 0.4387,
+      "suma": 1.0
+    },
+    "GJ-070": {
+      "A": "Jordan",
+      "B": "Argentina",
+      "pA": 0.1596,
+      "pE": 0.0896,
+      "pB": 0.7509,
+      "suma": 1.0001
+    },
+    "GK-021": {
+      "A": "Portugal",
+      "B": "DR Congo",
+      "pA": 0.6701,
+      "pE": 0.1155,
+      "pB": 0.2145,
+      "suma": 1.0001
+    },
+    "GK-024": {
+      "A": "Uzbekistan",
+      "B": "Colombia",
+      "pA": 0.2528,
+      "pE": 0.1594,
+      "pB": 0.5878,
+      "suma": 1.0
+    },
+    "GK-045": {
+      "A": "Portugal",
+      "B": "Uzbekistan",
+      "pA": 0.6894,
+      "pE": 0.0973,
+      "pB": 0.2132,
+      "suma": 0.9999
+    },
+    "GK-048": {
+      "A": "Colombia",
+      "B": "DR Congo",
+      "pA": 0.5626,
+      "pE": 0.1825,
+      "pB": 0.2549,
+      "suma": 1.0
+    },
+    "GK-071": {
+      "A": "DR Congo",
+      "B": "Uzbekistan",
+      "pA": 0.4244,
+      "pE": 0.1999,
+      "pB": 0.3757,
+      "suma": 1.0
+    },
+    "GK-072": {
+      "A": "Colombia",
+      "B": "Portugal",
+      "pA": 0.2944,
+      "pE": 0.2208,
+      "pB": 0.4848,
+      "suma": 1.0
+    },
+    "GL-022": {
+      "A": "England",
+      "B": "Croatia",
+      "pA": 0.4971,
+      "pE": 0.1687,
+      "pB": 0.3342,
+      "suma": 1.0
+    },
+    "GL-023": {
+      "A": "Ghana",
+      "B": "Panama",
+      "pA": 0.2166,
+      "pE": 0.146,
+      "pB": 0.6374,
+      "suma": 1.0
+    },
+    "GL-046": {
+      "A": "England",
+      "B": "Ghana",
+      "pA": 0.7497,
+      "pE": 0.1104,
+      "pB": 0.1399,
+      "suma": 1.0
+    },
+    "GL-047": {
+      "A": "Panama",
+      "B": "Croatia",
+      "pA": 0.2662,
+      "pE": 0.1583,
+      "pB": 0.5754,
+      "suma": 0.9999
+    },
+    "GL-067": {
+      "A": "Panama",
+      "B": "England",
+      "pA": 0.2158,
+      "pE": 0.115,
+      "pB": 0.6692,
+      "suma": 1.0
+    },
+    "GL-068": {
+      "A": "Croatia",
+      "B": "Ghana",
+      "pA": 0.692,
+      "pE": 0.1361,
+      "pB": 0.1719,
+      "suma": 1.0
+    }
+  }
+}

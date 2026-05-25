@@ -1,0 +1,124 @@
+{
+  "torneo": "FIFA World Cup 2026",
+  "sede": "USA / Mexico / Canada",
+  "fecha_sorteo": "2025-12-05",
+  "lugar_sorteo": "Kennedy Center, Washington D.C.",
+  "formato": "12 grupos de 4 equipos (48 equipos total)",
+  "fecha_actualizacion": "2026-05-16",
+  "fuentes": [
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-draw-results",
+    "https://www.mlssoccer.com/news/fifa-2026-world-cup-draw-full-results-every-group",
+    "https://worldcupwiki.com/groups/",
+    "https://www.skysports.com/football/news/11095/13481245/world-cup-2026-fixture-schedule"
+  ],
+  "grupos": {
+    "A": {
+      "nombre": "Grupo A",
+      "equipos": [
+        {"nombre": "Mexico", "confederacion": "CONCACAF", "fifa_ranking": 15, "rol": "Anfitrion"},
+        {"nombre": "South Africa", "confederacion": "CAF", "fifa_ranking": 60},
+        {"nombre": "South Korea", "confederacion": "AFC", "fifa_ranking": 25},
+        {"nombre": "Czechia", "confederacion": "UEFA", "fifa_ranking": 41}
+      ]
+    },
+    "B": {
+      "nombre": "Grupo B",
+      "equipos": [
+        {"nombre": "Canada", "confederacion": "CONCACAF", "fifa_ranking": 30, "rol": "Anfitrion"},
+        {"nombre": "Bosnia and Herzegovina", "confederacion": "UEFA", "fifa_ranking": 65},
+        {"nombre": "Qatar", "confederacion": "AFC", "fifa_ranking": 55},
+        {"nombre": "Switzerland", "confederacion": "UEFA", "fifa_ranking": 19}
+      ]
+    },
+    "C": {
+      "nombre": "Grupo C",
+      "equipos": [
+        {"nombre": "Brazil", "confederacion": "CONMEBOL", "fifa_ranking": 6},
+        {"nombre": "Morocco", "confederacion": "CAF", "fifa_ranking": 8},
+        {"nombre": "Haiti", "confederacion": "CONCACAF", "fifa_ranking": 83},
+        {"nombre": "Scotland", "confederacion": "UEFA", "fifa_ranking": 43}
+      ]
+    },
+    "D": {
+      "nombre": "Grupo D",
+      "equipos": [
+        {"nombre": "United States", "confederacion": "CONCACAF", "fifa_ranking": 16, "rol": "Anfitrion"},
+        {"nombre": "Paraguay", "confederacion": "CONMEBOL", "fifa_ranking": 40},
+        {"nombre": "Australia", "confederacion": "AFC", "fifa_ranking": 27},
+        {"nombre": "Turkiye", "confederacion": "UEFA", "fifa_ranking": 22}
+      ]
+    },
+    "E": {
+      "nombre": "Grupo E",
+      "equipos": [
+        {"nombre": "Germany", "confederacion": "UEFA", "fifa_ranking": 10},
+        {"nombre": "Curacao", "confederacion": "CONCACAF", "fifa_ranking": 82},
+        {"nombre": "Ivory Coast", "confederacion": "CAF", "fifa_ranking": 34},
+        {"nombre": "Ecuador", "confederacion": "CONMEBOL", "fifa_ranking": 23}
+      ]
+    },
+    "F": {
+      "nombre": "Grupo F",
+      "equipos": [
+        {"nombre": "Netherlands", "confederacion": "UEFA", "fifa_ranking": 7},
+        {"nombre": "Japan", "confederacion": "AFC", "fifa_ranking": 18},
+        {"nombre": "Sweden", "confederacion": "UEFA", "fifa_ranking": 38},
+        {"nombre": "Tunisia", "confederacion": "CAF", "fifa_ranking": 44}
+      ]
+    },
+    "G": {
+      "nombre": "Grupo G",
+      "equipos": [
+        {"nombre": "Belgium", "confederacion": "UEFA", "fifa_ranking": 9},
+        {"nombre": "Egypt", "confederacion": "CAF", "fifa_ranking": 29},
+        {"nombre": "Iran", "confederacion": "AFC", "fifa_ranking": 21},
+        {"nombre": "New Zealand", "confederacion": "OFC", "fifa_ranking": 85}
+      ]
+    },
+    "H": {
+      "nombre": "Grupo H",
+      "equipos": [
+        {"nombre": "Spain", "confederacion": "UEFA", "fifa_ranking": 2},
+        {"nombre": "Cape Verde", "confederacion": "CAF", "fifa_ranking": 69},
+        {"nombre": "Saudi Arabia", "confederacion": "AFC", "fifa_ranking": 61},
+        {"nombre": "Uruguay", "confederacion": "CONMEBOL", "fifa_ranking": 17}
+      ]
+    },
+    "I": {
+      "nombre": "Grupo I",
+      "equipos": [
+        {"nombre": "France", "confederacion": "UEFA", "fifa_ranking": 1},
+        {"nombre": "Senegal", "confederacion": "CAF", "fifa_ranking": 14},
+        {"nombre": "Iraq", "confederacion": "AFC", "fifa_ranking": 57},
+        {"nombre": "Norway", "confederacion": "UEFA", "fifa_ranking": 31}
+      ]
+    },
+    "J": {
+      "nombre": "Grupo J",
+      "equipos": [
+        {"nombre": "Argentina", "confederacion": "CONMEBOL", "fifa_ranking": 3},
+        {"nombre": "Algeria", "confederacion": "CAF", "fifa_ranking": 28},
+        {"nombre": "Austria", "confederacion": "UEFA", "fifa_ranking": 24},
+        {"nombre": "Jordan", "confederacion": "AFC", "fifa_ranking": 63}
+      ]
+    },
+    "K": {
+      "nombre": "Grupo K",
+      "equipos": [
+        {"nombre": "Portugal", "confederacion": "UEFA", "fifa_ranking": 5},
+        {"nombre": "DR Congo", "confederacion": "CAF", "fifa_ranking": 46},
+        {"nombre": "Uzbekistan", "confederacion": "AFC", "fifa_ranking": 50},
+        {"nombre": "Colombia", "confederacion": "CONMEBOL", "fifa_ranking": 13}
+      ]
+    },
+    "L": {
+      "nombre": "Grupo L",
+      "equipos": [
+        {"nombre": "England", "confederacion": "UEFA", "fifa_ranking": 4},
+        {"nombre": "Croatia", "confederacion": "UEFA", "fifa_ranking": 11},
+        {"nombre": "Ghana", "confederacion": "CAF", "fifa_ranking": 74},
+        {"nombre": "Panama", "confederacion": "CONCACAF", "fifa_ranking": 33}
+      ]
+    }
+  }
+}

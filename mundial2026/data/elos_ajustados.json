@@ -1,0 +1,218 @@
+[
+  {
+    "equipo": "Morocco",
+    "elo_original": 2435,
+    "elo_ajustado": 2490,
+    "delta": 55,
+    "justificacion": "Penalización injusta por confederación CAF (+5 vs UEFA +50) pese a ser el #8 FIFA. Semifinalistas Qatar 2022, primer equipo africano en lograrlo. Campeones AFCON 2026 (enero 2026). Win rate 71.43%, mejor racha 14 victorias, solo 7 derrotas en 77 partidos desde 2018. Historial de penales sobresaliente: ganaron vs España en Qatar 2022, y vs Nigeria en AFCON 2026. Plantilla con mayoría en ligas top europeas (Hakimi-PSG, Ziyech, En-Nesyri). Brecha de confederación de 45 puntos frente a pares UEFA equivalentes es insostenible.",
+    "flags": ["subestimado_por_confederacion", "campeon_regional", "experiencia_mundialista_elite", "penales_competente"]
+  },
+  {
+    "equipo": "England",
+    "elo_original": 2520,
+    "elo_ajustado": 2500,
+    "delta": -20,
+    "justificacion": "Generación talentosa (Bellingham, Saka, Foden) justifica ELO alto, pero historial sistemático de colapso en torneos grandes desde 1966. Eliminados en penales en EURO 2020 (vs Italia) y semifinales EURO 2024. Solo 1 victoria en tandas de los últimos 5 partidos eliminatorios a nivel de torneo hasta EURO 2024 (aunque el dataset 2018-2026 muestra 2/2 en penales, el contexto histórico de 60 años incluye múltiples traumas: 1990, 1996, 1998, 2004, 2006). Racha actual de 11 victorias consecutivas es impresionante pero parcialmente contra rivales de clasificatoria débiles. Ajuste moderado para reflejar factor presión en eliminatorias.",
+    "flags": ["factor_presion_torneos", "historial_penales_traumatico", "sobreestimado_por_ranking"]
+  },
+  {
+    "equipo": "France",
+    "elo_original": 2550,
+    "elo_ajustado": 2535,
+    "delta": -15,
+    "justificacion": "Plantilla de máxima calidad (Mbappé, Griezmann) con ranking FIFA #1 justificado. Sin embargo: win rate en penales 33.33% (2/3 en el período), eliminados por Switzerland en Euro 2020 y por Argentina en la Final Qatar 2022. Estos resultados en instancias eliminatorias de alta presión son una debilidad documentada. Forma reciente buena (WWDWW) pero pendiente la confirmación de Mbappé al 100% sin molestias físicas. Ajuste leve por factor penal sistemático.",
+    "flags": ["riesgo_penales_alto", "potencia_confirmada", "forma_reciente_solida"]
+  },
+  {
+    "equipo": "Spain",
+    "elo_original": 2540,
+    "elo_ajustado": 2530,
+    "delta": -10,
+    "justificacion": "Campeones EURO 2024, forma reciente excelente (WWWWD), generación brillante (Yamal, Pedri, Nico Williams). Win rate en penales históricamente bajo: perdieron vs Russia 2018, vs Italia 2021; solo ganaron vs Suiza 2021 y vs Croacia 2023 (2/4 en el período = 50%). Además, Portugal les eliminó en penales en Nations League 2025. La victoria en EURO 2024 fue sin necesitar penales, lo que no corrige el patrón. Ajuste menor por este riesgo específico.",
+    "flags": ["riesgo_penales_moderado", "campeon_reciente_euro2024", "forma_elite"]
+  },
+  {
+    "equipo": "Norway",
+    "elo_original": 2250,
+    "elo_ajustado": 2275,
+    "delta": 25,
+    "justificacion": "Subestimado por ranking FIFA #31. Racha de 10 victorias consecutivas (mejor racha de todos los 48 equipos junto a England). Últimos 5: WWWWW. Haaland lidera una generación con calidad real en ligas top. Win rate 55.74% en competencias con mezcla de UEFA Nations League y clasificatorias europeas, rivales de nivel real. Sin historial de penales (0 tandas registradas), lo que elimina el riesgo penaltis en el modelo. Primera participación mundialista desde 1998, factor inexperiencia moderado compensado por la calidad individual.",
+    "flags": ["subestimado_por_ranking", "forma_excepcional", "haaland_factor", "sin_historial_penales"]
+  },
+  {
+    "equipo": "Germany",
+    "elo_original": 2460,
+    "elo_ajustado": 2475,
+    "delta": 15,
+    "justificacion": "El modelo captura parcialmente la reconstrucción post-2018, pero la forma reciente real es notablemente fuerte: 5 victorias consecutivas, últimos 5 WWWWW, win rate mejorado. Fue el anfitrión de EURO 2024, llegó a cuartos donde perdió vs España en un partido cerrado. La nueva generación (Wirtz, Musiala, Gündogan) muestra cohesión táctica bajo Nagelsmann. Ajuste al alza moderado por forma reciente y recuperación institucional confirmada.",
+    "flags": ["reconstruccion_completada", "forma_reciente_fuerte", "nueva_generacion_cohesionada"]
+  },
+  {
+    "equipo": "Brazil",
+    "elo_original": 2490,
+    "elo_ajustado": 2478,
+    "delta": -12,
+    "justificacion": "Win rate en penales 33.33% (1/3 en el período: perdieron vs Croacia en Qatar 2022, perdieron vs Uruguay en Copa América 2024, ganaron vs Paraguay 2019). Últimos 5: LDWWL — forma irregular. Cambio de entrenador reciente (Dorival Júnior) con sistema táctico aún en consolidación. No han ganado la Copa América desde 2019 y fueron eliminados en cuartos en Qatar 2022. Ajuste menor por el combinado de riesgo penal y forma no óptima.",
+    "flags": ["riesgo_penales_alto", "forma_irregular", "transicion_tactica"]
+  },
+  {
+    "equipo": "Argentina",
+    "elo_original": 2520,
+    "elo_ajustado": 2535,
+    "delta": 15,
+    "justificacion": "Campeones vigentes Qatar 2022 y Copa América 2024. Factor momentum y mentalidad ganadora activos. Historial de penales perfecto: 4/4 (100%) en el período, incluyendo victorias vs Colombia (semifinal Copa América 2021), vs Países Bajos (cuartos Qatar 2022), y vs Francia (Final Qatar 2022). Messi al límite físico pero con motivación máxima para su último mundial y completó la Copa América 2024. El sistema funciona incluso en partidos sin su mejor versión. Ajuste al alza por factor campeón vigente, mentalidad y penales.",
+    "flags": ["campeon_vigente_doble", "penales_elite", "factor_momentum", "liderazgo_messi"]
+  },
+  {
+    "equipo": "Japan",
+    "elo_original": 2335,
+    "elo_ajustado": 2360,
+    "delta": 25,
+    "justificacion": "Subestimado por ajuste AFC (+5 vs UEFA +50) pese a ser el equipo más competitivo de Asia en torneos recientes. Ganadores del Grupo E en Qatar 2022 (eliminaron a Alemania y España). Win rate 69.35% (tercero más alto de los 48), promedio 2.63 goles por partido. La nueva generación juega en ligas top europeas (Bundesliga, LaLiga, Premier League). Perdieron vs Croacia en penales en Qatar 2022 (1/2 en tandas = 50%). La diferencia de +45 vs pares UEFA de mismo nivel de ranking es estructuralmente injusta.",
+    "flags": ["subestimado_por_confederacion", "calidad_real_elite", "generacion_europea"]
+  },
+  {
+    "equipo": "Croatia",
+    "elo_original": 2450,
+    "elo_ajustado": 2425,
+    "delta": -25,
+    "justificacion": "El modelo sobrestima a Croacia. Tienen 4to lugar en Qatar 2022 pero la generación Modric-Kovacic está en declive evidente: Modric tiene 40 años en 2026, Kovacic 32. Win rate 50.62% en el período, forma reciente WDWWW pero sin enfrentamientos de élite recientes en esa racha. En la UEFA Nations League 2024-25 fueron relegados de Liga A. Primera vez que superarán este rendimiento requerirá jugadores de reemplazo aún no consolidados. Ajuste a la baja por envejecimiento generacional.",
+    "flags": ["generacion_envejecida", "declive_confirmado", "modric_limit_age"]
+  },
+  {
+    "equipo": "New Zealand",
+    "elo_original": 1650,
+    "elo_ajustado": 1595,
+    "delta": -55,
+    "justificacion": "Win rate inflado al 88.89% con solo 18 partidos, todos contra rivales OFC de nivel extremadamente bajo (Islas del Pacífico, etc.). El ELO base ya aplica penalización OFC (-10) pero es insuficiente. Nunca han pasado la fase de grupos en un mundial. En el único test real del dataset, perdieron en penales vs Túnez (FIFA Series 2024). Sus 16 victorias son mayoritariamente contra equipos como Islas Salomón, Tahití, etc. Reducción adicional de 45 puntos para reflejar la realidad competitiva.",
+    "flags": ["datos_inflados_ofc", "debutante_nivel_mundial", "rivales_irrelevantes", "primer_ronda_esperada"]
+  },
+  {
+    "equipo": "Colombia",
+    "elo_original": 2420,
+    "elo_ajustado": 2405,
+    "delta": -15,
+    "justificacion": "Win rate 40.35% en el período es notablemente bajo para un equipo con ELO 2420 y FIFA #13. Últimos 5: DDDWW — tres empates consecutivos antes de las victorias recientes sugieren inconsistencia. Solo 23 victorias en 57 partidos. Fueron finalistas de la Copa América 2024 (perdieron vs Argentina) lo que es un mérito, pero su patrón de muchos empates indica falta de carácter ganador consistente. Ajuste moderado a la baja.",
+    "flags": ["win_rate_bajo_para_elo", "patron_empates", "inconsistencia_tactica"]
+  },
+  {
+    "equipo": "Belgium",
+    "elo_original": 2470,
+    "elo_ajustado": 2445,
+    "delta": -25,
+    "justificacion": "La 'generación dorada' está en declive: De Bruyne tiene 35 años en 2026, Lukaku 33, Courtois recuperándose de lesión de rodilla grave. Win rate 65.82% es bueno pero la forma reciente es mediocre (WDWDW — solo victorias alternadas con empates). El ELO 2470 con ranking FIFA #9 refleja reputación histórica más que forma actual. No han pasado de semifinales en su mejor momento (2018), y esa generación ya no tiene el mismo nivel. Ajuste significativo por declive generacional.",
+    "flags": ["generacion_dorada_declinando", "lesion_clave_courtois", "forma_mediocre_reciente"]
+  },
+  {
+    "equipo": "Senegal",
+    "elo_original": 2375,
+    "elo_ajustado": 2415,
+    "delta": 40,
+    "justificacion": "Subestimado severamente por confederación CAF (+5). Ranking FIFA #14, win rate 64.63%, diferencia de goles +88 en 82 partidos. Campeones África 2022, clasificados a fases eliminatorias en Qatar 2022. Mane, Sarr, Diatta son jugadores de nivel Champions League. La brecha de ajuste CAF vs UEFA (45 puntos) es injusta para un equipo que compite de igual a igual con potencias europeas. Perdieron en AFCON 2024 en penales vs Ivory Coast (factor penales negativo). Ajuste neto positivo significativo por corrección confederación.",
+    "flags": ["subestimado_por_confederacion", "campeon_africano_2022", "calidad_europea_real"]
+  },
+  {
+    "equipo": "Uruguay",
+    "elo_original": 2380,
+    "elo_ajustado": 2370,
+    "delta": -10,
+    "justificacion": "Forma reciente débil: DLWWD — derrota y empate en los últimos 5. Win rate 45.76% en el período es bajo para un equipo con ELO 2380. Solo 27 victorias en 59 partidos desde 2018. Semifinalistas en Copa América 2024 pero el modelo ya captura su historial. Ajuste leve a la baja por consistencia insuficiente. Cavani (38 en 2026) ya no es factor, Suárez retirado; la nueva generación (Valverde, Araújo) compensa parcialmente.",
+    "flags": ["forma_reciente_debil", "win_rate_bajo", "transicion_generacional"]
+  },
+  {
+    "equipo": "Netherlands",
+    "elo_original": 2490,
+    "elo_ajustado": 2485,
+    "delta": -5,
+    "justificacion": "Semifinalistas en Qatar 2022, sólidos en EURO 2024 (semifinalistas, perdieron vs England). Forma reciente buena (WWWDW). Van Dijk y De Ligt son una defensa de clase mundial. Ajuste mínimo a la baja por pérdida de Depay como referencia y dependencia elevada en De Jong para la creación. El ELO 2490 es razonable pero ligeramente alto frente a su rendimiento real constante.",
+    "flags": ["nivel_consistente", "ajuste_minimo"]
+  },
+  {
+    "equipo": "Ivory Coast",
+    "elo_original": 2175,
+    "elo_ajustado": 2210,
+    "delta": 35,
+    "justificacion": "Campeones de AFCON 2024 (enero 2024) — el torneo más reciente de selecciones africanas. Win rate 65% (tercero más alto entre equipos CAF). Solo 9 derrotas en 60 partidos. La brecha de confederación CAF vs UEFA es especialmente injusta para el campeón africano vigente. Kalajdzic, Zaha, Cornet, Simon son jugadores de Premier League / Bundesliga. Ajuste al alza por corrección confederación y título regional vigente.",
+    "flags": ["campeon_afcon2024", "subestimado_por_confederacion", "calidad_europea_real"]
+  },
+  {
+    "equipo": "Iran",
+    "elo_original": 2305,
+    "elo_ajustado": 2325,
+    "delta": 20,
+    "justificacion": "Subestimado por ajuste AFC (+5). Win rate 69.09% (cuarto más alto de los 48 equipos). Clasificados a tres mundiales consecutivos. Solo 9 derrotas en 55 partidos. Mehdi Taremi (Inter de Milán) es uno de los delanteros más en forma de Europa. Historial de penales: 2/2 (100%) en el período. El ajuste AFC que iguala a Irán con equipos como Uzbekistán o Qatar es estructuralmente incorrecto.",
+    "flags": ["subestimado_por_confederacion", "win_rate_elite", "taremi_factor", "penales_solidos"]
+  },
+  {
+    "equipo": "South Korea",
+    "elo_original": 2265,
+    "elo_ajustado": 2285,
+    "delta": 20,
+    "justificacion": "Misma problemática AFC (+5). Son-Heung-min (Tottenham) como capitán, plantilla con experiencia en ligas europeas. Win rate 63.16%, diferencia de goles +72 en 57 partidos. Llegaron a cuartos en Qatar 2022, eliminaron a Portugal. Historial de penales: 1/1 (ganaron vs Arabia Saudí en AFC Asian Cup 2024). Equiparables en calidad real con equipos UEFA de ranking similar (Austria #24, Turkiye #22) que reciben +50.",
+    "flags": ["subestimado_por_confederacion", "son_factor", "experiencia_mundialista"]
+  },
+  {
+    "equipo": "Ecuador",
+    "elo_original": 2320,
+    "elo_ajustado": 2295,
+    "delta": -25,
+    "justificacion": "Win rate solo 33.33% (el más bajo de todos los equipos de ELO>2200 del torneo). Últimos 5: DDDDW — cuatro empates consecutivos antes de la victoria. Solo 17 victorias en 51 partidos. Clasificaron como 4tos en Sudamérica. Sin Enner Valencia como referencia histórica, la generación actual no muestra carácter ganador suficiente para su ELO de 2320. Ajuste significativo a la baja.",
+    "flags": ["win_rate_critico", "patron_empates_extremo", "sobreestimado_por_ranking"]
+  },
+  {
+    "equipo": "Algeria",
+    "elo_original": 2235,
+    "elo_ajustado": 2265,
+    "delta": 30,
+    "justificacion": "Subestimado por confederación CAF. Win rate 65.22%, diferencia de goles +102 en 69 partidos. Campeones AFCON 2019. Aymen Mahrez (Al-Ahli, ex-Manchester City) lidera una plantilla de nivel europeo. Últimos 5: WWWWL — solo una derrota reciente. Brecha CAF vs UEFA injusta para un equipo que consistentemente compite a nivel alto. Sin historial de penales reciente, lo que elimina el riesgo negativo específico.",
+    "flags": ["subestimado_por_confederacion", "calidad_europea_real", "win_rate_alto"]
+  },
+  {
+    "equipo": "United States",
+    "elo_original": 2360,
+    "elo_ajustado": 2370,
+    "delta": 10,
+    "justificacion": "Factor anfitrión no capturado en el ELO base. Jugarán en sus propios estadios con apoyo masivo de aficionados. Win rate 64.06%, forma reciente WWDWL. Pulisic (AC Milan), Reyna, McKennie, Turner son jugadores de nivel europeo real. El bono de local en torneos mundiales es históricamente entre +50 y +100 puntos ELO equivalente. Ajuste moderado al alza.",
+    "flags": ["factor_anfitrion", "calidad_creciente", "pulisic_factor"]
+  },
+  {
+    "equipo": "Mexico",
+    "elo_original": 2370,
+    "elo_ajustado": 2380,
+    "delta": 10,
+    "justificacion": "Co-anfitrión del torneo. Factor local en estadios propios (Azteca, Guadalajara, Monterrey). Win rate 63.24%, forma reciente WDWWW. Jiménez, Lozano, Antuna son piezas consolidadas. El modelo no captura explícitamente el factor anfitrión. Ajuste leve al alza.",
+    "flags": ["factor_anfitrion_coorganizador", "forma_reciente_positiva"]
+  },
+  {
+    "equipo": "Canada",
+    "elo_original": 2220,
+    "elo_ajustado": 2230,
+    "delta": 10,
+    "justificacion": "Co-anfitrión con factor local. Davies (Bayern Munich), Johnston, Osorio son jugadores de nivel europeo real. Win rate 58.21%, forma reciente WWDWD. En Copa América 2024 llegaron a semifinales (perdieron vs Argentina en penales). La presencia en casa es un factor real para un equipo en ascenso. Ajuste leve por factor anfitrión.",
+    "flags": ["factor_anfitrion_coorganizador", "generacion_emergente", "davies_factor"]
+  },
+  {
+    "equipo": "Portugal",
+    "elo_original": 2510,
+    "elo_ajustado": 2510,
+    "delta": 0,
+    "justificacion": "ELO razonable. Ranking FIFA #5, plantilla completa con Ronaldo como figura (aunque en declive físico, sigue siendo factor motivacional). Campeones Nations League 2025 (eliminaron a España en penales). Forma reciente WWDLW — una derrota puntual. Win rate 62.5%, diferencia de goles +118. Historial penales 2/3 (66.67%). El modelo los captura bien. Sin ajuste.",
+    "flags": ["nivel_correcto", "naciones_league_2025"]
+  },
+  {
+    "equipo": "Switzerland",
+    "elo_original": 2370,
+    "elo_ajustado": 2375,
+    "delta": 5,
+    "justificacion": "Subestimado ligeramente frente a pares UEFA de similar ranking. Win rate 41.89% bajo, pero en el período incluyen empates frecuentes como táctica defensiva consolidada. Ganaron vs France en penales (Euro 2020) y vs England en penales (Nations League 2019) — dos victorias de gran calibre en tandas. Historial penales 1/2 en período pero ambas instancias son relevantes. Ajuste mínimo.",
+    "flags": ["especialistas_penales_selectivos", "solidos_defensivamente"]
+  },
+  {
+    "equipo": "Australia",
+    "elo_original": 2245,
+    "elo_ajustado": 2250,
+    "delta": 5,
+    "justificacion": "Ajuste AFC (+5 vs UEFA +50) subestima ligeramente a Australia. Llegaron a cuartos de Qatar 2022. Forma reciente fuerte (DWWWW — 4 victorias consecutivas). Win rate 58.49%. Historial penales 1/1 en período (ganaron vs Perú en repechaje 2022). Ajuste muy menor por forma reciente.",
+    "flags": ["semifinalista_reciente_regional", "forma_positiva"]
+  }
+]
