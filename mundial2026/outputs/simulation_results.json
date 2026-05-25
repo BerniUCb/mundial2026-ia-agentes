@@ -1,0 +1,995 @@
+{
+  "metadata": {
+    "torneo": "FIFA World Cup 2026",
+    "fecha_simulacion": "2026-05-17",
+    "N_optimo": 50000,
+    "semilla": 2026,
+    "modelo_probabilidades": "ELO-Historial-Combinado v1.0",
+    "tiempo_ejecucion_segundos": 22.71,
+    "convergencia": {
+      "criterio": "max_var < 0.5% entre pasos consecutivos",
+      "tabla": [
+        {
+          "N": 1000,
+          "probs_top5": {
+            "France": 10.8,
+            "Spain": 12.2,
+            "Argentina": 9.4,
+            "England": 10.3,
+            "Portugal": 9.7
+          },
+          "max_variacion": null
+        },
+        {
+          "N": 5000,
+          "probs_top5": {
+            "France": 9.84,
+            "Spain": 11.22,
+            "Argentina": 9.92,
+            "England": 10.86,
+            "Portugal": 9.78
+          },
+          "max_variacion": 0.98
+        },
+        {
+          "N": 10000,
+          "probs_top5": {
+            "France": 10.52,
+            "Spain": 10.68,
+            "Argentina": 10.23,
+            "England": 10.66,
+            "Portugal": 9.41
+          },
+          "max_variacion": 0.68
+        },
+        {
+          "N": 50000,
+          "probs_top5": {
+            "France": 10.582,
+            "Spain": 10.672,
+            "Argentina": 10.382,
+            "England": 10.762,
+            "Portugal": 9.062
+          },
+          "max_variacion": 0.348
+        }
+      ]
+    }
+  },
+  "probabilidades_campeon": {
+    "England": {
+      "prob_pct": 10.762,
+      "ic95": [
+        10.49,
+        11.034
+      ]
+    },
+    "Spain": {
+      "prob_pct": 10.672,
+      "ic95": [
+        10.401,
+        10.943
+      ]
+    },
+    "France": {
+      "prob_pct": 10.582,
+      "ic95": [
+        10.312,
+        10.852
+      ]
+    },
+    "Argentina": {
+      "prob_pct": 10.382,
+      "ic95": [
+        10.115,
+        10.649
+      ]
+    },
+    "Portugal": {
+      "prob_pct": 9.062,
+      "ic95": [
+        8.81,
+        9.314
+      ]
+    },
+    "Brazil": {
+      "prob_pct": 6.994,
+      "ic95": [
+        6.77,
+        7.218
+      ]
+    },
+    "Germany": {
+      "prob_pct": 5.684,
+      "ic95": [
+        5.481,
+        5.887
+      ]
+    },
+    "Netherlands": {
+      "prob_pct": 5.662,
+      "ic95": [
+        5.459,
+        5.865
+      ]
+    },
+    "Croatia": {
+      "prob_pct": 4.918,
+      "ic95": [
+        4.728,
+        5.108
+      ]
+    },
+    "Morocco": {
+      "prob_pct": 4.392,
+      "ic95": [
+        4.212,
+        4.572
+      ]
+    },
+    "Belgium": {
+      "prob_pct": 3.826,
+      "ic95": [
+        3.658,
+        3.994
+      ]
+    },
+    "Mexico": {
+      "prob_pct": 2.556,
+      "ic95": [
+        2.418,
+        2.694
+      ]
+    },
+    "Colombia": {
+      "prob_pct": 2.514,
+      "ic95": [
+        2.377,
+        2.651
+      ]
+    },
+    "Uruguay": {
+      "prob_pct": 1.97,
+      "ic95": [
+        1.848,
+        2.092
+      ]
+    },
+    "Senegal": {
+      "prob_pct": 1.874,
+      "ic95": [
+        1.755,
+        1.993
+      ]
+    },
+    "United States": {
+      "prob_pct": 1.59,
+      "ic95": [
+        1.48,
+        1.7
+      ]
+    },
+    "Switzerland": {
+      "prob_pct": 1.546,
+      "ic95": [
+        1.438,
+        1.654
+      ]
+    },
+    "Turkiye": {
+      "prob_pct": 1.064,
+      "ic95": [
+        0.974,
+        1.154
+      ]
+    },
+    "Austria": {
+      "prob_pct": 0.776,
+      "ic95": [
+        0.699,
+        0.853
+      ]
+    },
+    "Japan": {
+      "prob_pct": 0.614,
+      "ic95": [
+        0.546,
+        0.682
+      ]
+    },
+    "South Korea": {
+      "prob_pct": 0.456,
+      "ic95": [
+        0.397,
+        0.515
+      ]
+    },
+    "Iran": {
+      "prob_pct": 0.446,
+      "ic95": [
+        0.388,
+        0.504
+      ]
+    },
+    "Ecuador": {
+      "prob_pct": 0.424,
+      "ic95": [
+        0.367,
+        0.481
+      ]
+    },
+    "Australia": {
+      "prob_pct": 0.25,
+      "ic95": [
+        0.206,
+        0.294
+      ]
+    },
+    "Norway": {
+      "prob_pct": 0.224,
+      "ic95": [
+        0.183,
+        0.265
+      ]
+    },
+    "Algeria": {
+      "prob_pct": 0.186,
+      "ic95": [
+        0.148,
+        0.224
+      ]
+    },
+    "Canada": {
+      "prob_pct": 0.164,
+      "ic95": [
+        0.129,
+        0.199
+      ]
+    },
+    "Egypt": {
+      "prob_pct": 0.102,
+      "ic95": [
+        0.074,
+        0.13
+      ]
+    },
+    "Panama": {
+      "prob_pct": 0.076,
+      "ic95": [
+        0.052,
+        0.1
+      ]
+    },
+    "Sweden": {
+      "prob_pct": 0.07,
+      "ic95": [
+        0.047,
+        0.093
+      ]
+    },
+    "Ivory Coast": {
+      "prob_pct": 0.058,
+      "ic95": [
+        0.037,
+        0.079
+      ]
+    },
+    "Scotland": {
+      "prob_pct": 0.044,
+      "ic95": [
+        0.026,
+        0.062
+      ]
+    },
+    "Czechia": {
+      "prob_pct": 0.042,
+      "ic95": [
+        0.024,
+        0.06
+      ]
+    },
+    "Paraguay": {
+      "prob_pct": 0.008,
+      "ic95": [
+        0.0,
+        0.016
+      ]
+    },
+    "Tunisia": {
+      "prob_pct": 0.008,
+      "ic95": [
+        0.0,
+        0.016
+      ]
+    },
+    "DR Congo": {
+      "prob_pct": 0.002,
+      "ic95": [
+        0,
+        0.006
+      ]
+    },
+    "Uzbekistan": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Qatar": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Iraq": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "South Africa": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Bosnia and Herzegovina": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Saudi Arabia": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Jordan": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Cape Verde": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Ghana": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Curacao": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "Haiti": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    },
+    "New Zealand": {
+      "prob_pct": 0.0,
+      "ic95": [
+        0,
+        0.0
+      ]
+    }
+  },
+  "probabilidades_llegar": {
+    "England": {
+      "final_pct": 17.88,
+      "semifinal_pct": 29.476,
+      "cuartos_pct": 46.046,
+      "r32_pct": 87.49
+    },
+    "Spain": {
+      "final_pct": 17.966,
+      "semifinal_pct": 29.306,
+      "cuartos_pct": 44.33,
+      "r32_pct": 90.648
+    },
+    "France": {
+      "final_pct": 17.436,
+      "semifinal_pct": 27.94,
+      "cuartos_pct": 40.144,
+      "r32_pct": 86.286
+    },
+    "Argentina": {
+      "final_pct": 17.446,
+      "semifinal_pct": 28.504,
+      "cuartos_pct": 41.524,
+      "r32_pct": 85.788
+    },
+    "Portugal": {
+      "final_pct": 16.114,
+      "semifinal_pct": 26.586,
+      "cuartos_pct": 40.53,
+      "r32_pct": 87.204
+    },
+    "Brazil": {
+      "final_pct": 14.106,
+      "semifinal_pct": 25.304,
+      "cuartos_pct": 43.928,
+      "r32_pct": 84.636
+    },
+    "Germany": {
+      "final_pct": 11.374,
+      "semifinal_pct": 21.794,
+      "cuartos_pct": 38.99,
+      "r32_pct": 88.534
+    },
+    "Netherlands": {
+      "final_pct": 12.508,
+      "semifinal_pct": 26.304,
+      "cuartos_pct": 48.688,
+      "r32_pct": 85.966
+    },
+    "Croatia": {
+      "final_pct": 9.776,
+      "semifinal_pct": 18.75,
+      "cuartos_pct": 35.232,
+      "r32_pct": 82.668
+    },
+    "Morocco": {
+      "final_pct": 9.914,
+      "semifinal_pct": 20.234,
+      "cuartos_pct": 38.666,
+      "r32_pct": 85.068
+    },
+    "Belgium": {
+      "final_pct": 7.938,
+      "semifinal_pct": 15.048,
+      "cuartos_pct": 25.326,
+      "r32_pct": 82.828
+    },
+    "Mexico": {
+      "final_pct": 6.354,
+      "semifinal_pct": 14.084,
+      "cuartos_pct": 30.21,
+      "r32_pct": 85.712
+    },
+    "Colombia": {
+      "final_pct": 5.814,
+      "semifinal_pct": 12.406,
+      "cuartos_pct": 24.438,
+      "r32_pct": 78.444
+    },
+    "Uruguay": {
+      "final_pct": 4.808,
+      "semifinal_pct": 12.046,
+      "cuartos_pct": 25.58,
+      "r32_pct": 82.092
+    },
+    "Senegal": {
+      "final_pct": 4.61,
+      "semifinal_pct": 10.368,
+      "cuartos_pct": 20.492,
+      "r32_pct": 77.494
+    },
+    "United States": {
+      "final_pct": 4.008,
+      "semifinal_pct": 10.028,
+      "cuartos_pct": 24.382,
+      "r32_pct": 78.718
+    },
+    "Switzerland": {
+      "final_pct": 4.176,
+      "semifinal_pct": 10.344,
+      "cuartos_pct": 25.4,
+      "r32_pct": 88.24
+    },
+    "Turkiye": {
+      "final_pct": 2.894,
+      "semifinal_pct": 8.078,
+      "cuartos_pct": 21.26,
+      "r32_pct": 76.6
+    },
+    "Austria": {
+      "final_pct": 2.286,
+      "semifinal_pct": 6.356,
+      "cuartos_pct": 14.732,
+      "r32_pct": 72.488
+    },
+    "Japan": {
+      "final_pct": 2.286,
+      "semifinal_pct": 7.694,
+      "cuartos_pct": 22.312,
+      "r32_pct": 77.962
+    },
+    "South Korea": {
+      "final_pct": 1.824,
+      "semifinal_pct": 5.784,
+      "cuartos_pct": 17.086,
+      "r32_pct": 77.224
+    },
+    "Iran": {
+      "final_pct": 1.498,
+      "semifinal_pct": 4.402,
+      "cuartos_pct": 11.026,
+      "r32_pct": 74.224
+    },
+    "Ecuador": {
+      "final_pct": 1.296,
+      "semifinal_pct": 4.422,
+      "cuartos_pct": 14.046,
+      "r32_pct": 75.64
+    },
+    "Australia": {
+      "final_pct": 0.976,
+      "semifinal_pct": 3.444,
+      "cuartos_pct": 12.14,
+      "r32_pct": 67.222
+    },
+    "Norway": {
+      "final_pct": 0.914,
+      "semifinal_pct": 3.308,
+      "cuartos_pct": 9.566,
+      "r32_pct": 67.168
+    },
+    "Algeria": {
+      "final_pct": 0.878,
+      "semifinal_pct": 3.2,
+      "cuartos_pct": 9.448,
+      "r32_pct": 69.786
+    },
+    "Canada": {
+      "final_pct": 0.69,
+      "semifinal_pct": 2.812,
+      "cuartos_pct": 11.084,
+      "r32_pct": 82.838
+    },
+    "Egypt": {
+      "final_pct": 0.368,
+      "semifinal_pct": 1.65,
+      "cuartos_pct": 5.854,
+      "r32_pct": 66.14
+    },
+    "Panama": {
+      "final_pct": 0.428,
+      "semifinal_pct": 1.87,
+      "cuartos_pct": 7.73,
+      "r32_pct": 63.35
+    },
+    "Sweden": {
+      "final_pct": 0.366,
+      "semifinal_pct": 1.974,
+      "cuartos_pct": 8.034,
+      "r32_pct": 55.38
+    },
+    "Ivory Coast": {
+      "final_pct": 0.318,
+      "semifinal_pct": 1.64,
+      "cuartos_pct": 7.52,
+      "r32_pct": 73.626
+    },
+    "Scotland": {
+      "final_pct": 0.262,
+      "semifinal_pct": 1.492,
+      "cuartos_pct": 7.286,
+      "r32_pct": 62.784
+    },
+    "Czechia": {
+      "final_pct": 0.278,
+      "semifinal_pct": 1.374,
+      "cuartos_pct": 6.706,
+      "r32_pct": 60.5
+    },
+    "Paraguay": {
+      "final_pct": 0.06,
+      "semifinal_pct": 0.506,
+      "cuartos_pct": 3.272,
+      "r32_pct": 42.91
+    },
+    "Tunisia": {
+      "final_pct": 0.064,
+      "semifinal_pct": 0.584,
+      "cuartos_pct": 3.528,
+      "r32_pct": 47.038
+    },
+    "DR Congo": {
+      "final_pct": 0.044,
+      "semifinal_pct": 0.278,
+      "cuartos_pct": 1.974,
+      "r32_pct": 48.224
+    },
+    "Uzbekistan": {
+      "final_pct": 0.018,
+      "semifinal_pct": 0.182,
+      "cuartos_pct": 1.622,
+      "r32_pct": 50.388
+    },
+    "Qatar": {
+      "final_pct": 0.014,
+      "semifinal_pct": 0.158,
+      "cuartos_pct": 1.516,
+      "r32_pct": 54.456
+    },
+    "Iraq": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.076,
+      "cuartos_pct": 0.72,
+      "r32_pct": 36.248
+    },
+    "South Africa": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.056,
+      "cuartos_pct": 0.816,
+      "r32_pct": 42.46
+    },
+    "Bosnia and Herzegovina": {
+      "final_pct": 0.002,
+      "semifinal_pct": 0.044,
+      "cuartos_pct": 0.632,
+      "r32_pct": 38.512
+    },
+    "Saudi Arabia": {
+      "final_pct": 0.004,
+      "semifinal_pct": 0.046,
+      "cuartos_pct": 0.614,
+      "r32_pct": 47.67
+    },
+    "Jordan": {
+      "final_pct": 0.004,
+      "semifinal_pct": 0.014,
+      "cuartos_pct": 0.32,
+      "r32_pct": 40.082
+    },
+    "Cape Verde": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.026,
+      "cuartos_pct": 0.378,
+      "r32_pct": 42.47
+    },
+    "Ghana": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.004,
+      "cuartos_pct": 0.15,
+      "r32_pct": 33.906
+    },
+    "Curacao": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.002,
+      "cuartos_pct": 0.058,
+      "r32_pct": 32.914
+    },
+    "Haiti": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.002,
+      "cuartos_pct": 0.132,
+      "r32_pct": 35.602
+    },
+    "New Zealand": {
+      "final_pct": 0.0,
+      "semifinal_pct": 0.0,
+      "cuartos_pct": 0.018,
+      "r32_pct": 46.372
+    }
+  },
+  "distribucion_grupos": {
+    "Mexico": {
+      "1ro_pct": 44.35,
+      "2do_pct": 28.26,
+      "3ro_pct": 17.54,
+      "4to_pct": 9.85
+    },
+    "South Africa": {
+      "1ro_pct": 9.17,
+      "2do_pct": 16.4,
+      "3ro_pct": 28.04,
+      "4to_pct": 46.39
+    },
+    "South Korea": {
+      "1ro_pct": 30.15,
+      "2do_pct": 30.63,
+      "3ro_pct": 23.53,
+      "4to_pct": 15.69
+    },
+    "Czechia": {
+      "1ro_pct": 16.33,
+      "2do_pct": 24.71,
+      "3ro_pct": 30.89,
+      "4to_pct": 28.07
+    },
+    "Canada": {
+      "1ro_pct": 34.74,
+      "2do_pct": 33.11,
+      "3ro_pct": 20.96,
+      "4to_pct": 11.19
+    },
+    "Bosnia and Herzegovina": {
+      "1ro_pct": 6.62,
+      "2do_pct": 14.92,
+      "3ro_pct": 29.7,
+      "4to_pct": 48.76
+    },
+    "Qatar": {
+      "1ro_pct": 12.81,
+      "2do_pct": 21.52,
+      "3ro_pct": 33.23,
+      "4to_pct": 32.44
+    },
+    "Switzerland": {
+      "1ro_pct": 45.83,
+      "2do_pct": 30.45,
+      "3ro_pct": 16.11,
+      "4to_pct": 7.61
+    },
+    "Brazil": {
+      "1ro_pct": 38.75,
+      "2do_pct": 31.29,
+      "3ro_pct": 19.34,
+      "4to_pct": 10.62
+    },
+    "Morocco": {
+      "1ro_pct": 38.73,
+      "2do_pct": 31.72,
+      "3ro_pct": 19.49,
+      "4to_pct": 10.07
+    },
+    "Haiti": {
+      "1ro_pct": 7.29,
+      "2do_pct": 12.16,
+      "3ro_pct": 26.47,
+      "4to_pct": 54.08
+    },
+    "Scotland": {
+      "1ro_pct": 15.22,
+      "2do_pct": 24.84,
+      "3ro_pct": 34.7,
+      "4to_pct": 25.24
+    },
+    "United States": {
+      "1ro_pct": 35.37,
+      "2do_pct": 28.16,
+      "3ro_pct": 21.53,
+      "4to_pct": 14.94
+    },
+    "Paraguay": {
+      "1ro_pct": 9.18,
+      "2do_pct": 17.26,
+      "3ro_pct": 28.06,
+      "4to_pct": 45.5
+    },
+    "Australia": {
+      "1ro_pct": 23.35,
+      "2do_pct": 26.17,
+      "3ro_pct": 27.31,
+      "4to_pct": 23.17
+    },
+    "Turkiye": {
+      "1ro_pct": 32.1,
+      "2do_pct": 28.41,
+      "3ro_pct": 23.1,
+      "4to_pct": 16.39
+    },
+    "Germany": {
+      "1ro_pct": 46.86,
+      "2do_pct": 27.83,
+      "3ro_pct": 17.29,
+      "4to_pct": 8.01
+    },
+    "Curacao": {
+      "1ro_pct": 6.48,
+      "2do_pct": 10.87,
+      "3ro_pct": 25.32,
+      "4to_pct": 57.32
+    },
+    "Ivory Coast": {
+      "1ro_pct": 23.13,
+      "2do_pct": 29.49,
+      "3ro_pct": 29.67,
+      "4to_pct": 17.71
+    },
+    "Ecuador": {
+      "1ro_pct": 23.52,
+      "2do_pct": 31.81,
+      "3ro_pct": 27.72,
+      "4to_pct": 16.95
+    },
+    "Netherlands": {
+      "1ro_pct": 44.71,
+      "2do_pct": 28.89,
+      "3ro_pct": 16.8,
+      "4to_pct": 9.6
+    },
+    "Japan": {
+      "1ro_pct": 31.42,
+      "2do_pct": 30.67,
+      "3ro_pct": 22.65,
+      "4to_pct": 15.25
+    },
+    "Sweden": {
+      "1ro_pct": 13.52,
+      "2do_pct": 22.18,
+      "3ro_pct": 31.1,
+      "4to_pct": 33.19
+    },
+    "Tunisia": {
+      "1ro_pct": 10.34,
+      "2do_pct": 18.26,
+      "3ro_pct": 29.45,
+      "4to_pct": 41.95
+    },
+    "Belgium": {
+      "1ro_pct": 40.47,
+      "2do_pct": 28.02,
+      "3ro_pct": 19.0,
+      "4to_pct": 12.51
+    },
+    "Egypt": {
+      "1ro_pct": 19.0,
+      "2do_pct": 26.5,
+      "3ro_pct": 29.05,
+      "4to_pct": 25.45
+    },
+    "Iran": {
+      "1ro_pct": 27.67,
+      "2do_pct": 28.83,
+      "3ro_pct": 24.73,
+      "4to_pct": 18.77
+    },
+    "New Zealand": {
+      "1ro_pct": 12.85,
+      "2do_pct": 16.66,
+      "3ro_pct": 27.23,
+      "4to_pct": 43.26
+    },
+    "Spain": {
+      "1ro_pct": 51.75,
+      "2do_pct": 28.36,
+      "3ro_pct": 13.63,
+      "4to_pct": 6.26
+    },
+    "Cape Verde": {
+      "1ro_pct": 8.14,
+      "2do_pct": 16.42,
+      "3ro_pct": 31.36,
+      "4to_pct": 44.07
+    },
+    "Saudi Arabia": {
+      "1ro_pct": 9.39,
+      "2do_pct": 19.01,
+      "3ro_pct": 33.76,
+      "4to_pct": 37.83
+    },
+    "Uruguay": {
+      "1ro_pct": 30.71,
+      "2do_pct": 36.2,
+      "3ro_pct": 21.25,
+      "4to_pct": 11.84
+    },
+    "France": {
+      "1ro_pct": 44.64,
+      "2do_pct": 28.19,
+      "3ro_pct": 17.78,
+      "4to_pct": 9.39
+    },
+    "Senegal": {
+      "1ro_pct": 28.52,
+      "2do_pct": 31.14,
+      "3ro_pct": 25.09,
+      "4to_pct": 15.25
+    },
+    "Iraq": {
+      "1ro_pct": 7.12,
+      "2do_pct": 13.49,
+      "3ro_pct": 26.19,
+      "4to_pct": 53.2
+    },
+    "Norway": {
+      "1ro_pct": 19.71,
+      "2do_pct": 27.18,
+      "3ro_pct": 30.94,
+      "4to_pct": 22.17
+    },
+    "Argentina": {
+      "1ro_pct": 44.94,
+      "2do_pct": 27.7,
+      "3ro_pct": 17.41,
+      "4to_pct": 9.95
+    },
+    "Algeria": {
+      "1ro_pct": 21.89,
+      "2do_pct": 28.2,
+      "3ro_pct": 28.93,
+      "4to_pct": 20.98
+    },
+    "Austria": {
+      "1ro_pct": 24.48,
+      "2do_pct": 29.39,
+      "3ro_pct": 26.7,
+      "4to_pct": 19.43
+    },
+    "Jordan": {
+      "1ro_pct": 8.69,
+      "2do_pct": 14.7,
+      "3ro_pct": 26.96,
+      "4to_pct": 49.65
+    },
+    "Portugal": {
+      "1ro_pct": 46.85,
+      "2do_pct": 27.98,
+      "3ro_pct": 16.23,
+      "4to_pct": 8.94
+    },
+    "DR Congo": {
+      "1ro_pct": 10.58,
+      "2do_pct": 19.22,
+      "3ro_pct": 31.03,
+      "4to_pct": 39.16
+    },
+    "Uzbekistan": {
+      "1ro_pct": 12.68,
+      "2do_pct": 19.89,
+      "3ro_pct": 30.3,
+      "4to_pct": 37.13
+    },
+    "Colombia": {
+      "1ro_pct": 29.88,
+      "2do_pct": 32.92,
+      "3ro_pct": 22.44,
+      "4to_pct": 14.77
+    },
+    "England": {
+      "1ro_pct": 44.35,
+      "2do_pct": 29.96,
+      "3ro_pct": 17.13,
+      "4to_pct": 8.55
+    },
+    "Croatia": {
+      "1ro_pct": 33.74,
+      "2do_pct": 32.97,
+      "3ro_pct": 21.68,
+      "4to_pct": 11.6
+    },
+    "Ghana": {
+      "1ro_pct": 6.56,
+      "2do_pct": 11.83,
+      "3ro_pct": 26.21,
+      "4to_pct": 55.4
+    },
+    "Panama": {
+      "1ro_pct": 15.34,
+      "2do_pct": 25.23,
+      "3ro_pct": 34.97,
+      "4to_pct": 24.45
+    }
+  },
+  "grupo_de_la_muerte": {
+    "grupo": "I",
+    "equipos": [
+      "France",
+      "Senegal",
+      "Iraq",
+      "Norway"
+    ],
+    "suma_elo": 9120
+  },
+  "partido_mas_parejo": {
+    "fixture_id": "GK-071",
+    "equipo_A": "DR Congo",
+    "equipo_B": "Uzbekistan",
+    "P_A_gana": 0.3436,
+    "P_empate": 0.3118,
+    "P_B_gana": 0.3446
+  }
+}

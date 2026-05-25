@@ -1,0 +1,1811 @@
+{
+  "metadata": {
+    "generado": "2026-05-21",
+    "modelo": "probabilistico v2",
+    "fuentes": [
+      "data/probabilidades_partidos_v2.json",
+      "outputs/simulation_results_v2.json",
+      "data/grupos.json"
+    ],
+    "total_partidos_grupo": 72,
+    "total_partidos_eliminatoria": 32,
+    "total_partidos": 104,
+    "equipos_clasificados_r32": 32,
+    "descripcion": "Resultados mas probables basados en ELO-Historial-Combinado v2.0 (50000 simulaciones Monte Carlo)"
+  },
+  "fase_grupos": {
+    "grupo_A": {
+      "partidos": [
+        {
+          "fixture_id": "GA-001",
+          "equipo_a": "Mexico",
+          "equipo_b": "South Africa",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.6962,
+          "pE": 0.1038,
+          "pB": 0.2
+        },
+        {
+          "fixture_id": "GA-002",
+          "equipo_a": "South Korea",
+          "equipo_b": "Czechia",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.5216,
+          "pE": 0.1787,
+          "pB": 0.2997
+        },
+        {
+          "fixture_id": "GA-025",
+          "equipo_a": "Czechia",
+          "equipo_b": "South Africa",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.5598,
+          "pE": 0.1551,
+          "pB": 0.2851
+        },
+        {
+          "fixture_id": "GA-028",
+          "equipo_a": "Mexico",
+          "equipo_b": "South Korea",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.4852,
+          "pE": 0.1588,
+          "pB": 0.356
+        },
+        {
+          "fixture_id": "GA-053",
+          "equipo_a": "South Africa",
+          "equipo_b": "South Korea",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2229,
+          "pE": 0.1067,
+          "pB": 0.6704
+        },
+        {
+          "fixture_id": "GA-054",
+          "equipo_a": "Czechia",
+          "equipo_b": "Mexico",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2549,
+          "pE": 0.1613,
+          "pB": 0.5838
+        }
+      ],
+      "clasificados": [
+        "Mexico",
+        "South Korea"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Mexico",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 1,
+          "dg": 4
+        },
+        {
+          "equipo": "South Korea",
+          "puntos": 6,
+          "gf": 3,
+          "ga": 1,
+          "dg": 2
+        },
+        {
+          "equipo": "Czechia",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 4,
+          "dg": -1
+        },
+        {
+          "equipo": "South Africa",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 6,
+          "dg": -5
+        }
+      ]
+    },
+    "grupo_B": {
+      "partidos": [
+        {
+          "fixture_id": "GB-003",
+          "equipo_a": "Canada",
+          "equipo_b": "Bosnia and Herzegovina",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6429,
+          "pE": 0.1146,
+          "pB": 0.2426
+        },
+        {
+          "fixture_id": "GB-005",
+          "equipo_a": "Qatar",
+          "equipo_b": "Switzerland",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2427,
+          "pE": 0.1295,
+          "pB": 0.6278
+        },
+        {
+          "fixture_id": "GB-026",
+          "equipo_a": "Switzerland",
+          "equipo_b": "Bosnia and Herzegovina",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6259,
+          "pE": 0.1509,
+          "pB": 0.2231
+        },
+        {
+          "fixture_id": "GB-027",
+          "equipo_a": "Canada",
+          "equipo_b": "Qatar",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6358,
+          "pE": 0.0906,
+          "pB": 0.2736
+        },
+        {
+          "fixture_id": "GB-049",
+          "equipo_a": "Switzerland",
+          "equipo_b": "Canada",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.4698,
+          "pE": 0.1901,
+          "pB": 0.3402
+        },
+        {
+          "fixture_id": "GB-050",
+          "equipo_a": "Bosnia and Herzegovina",
+          "equipo_b": "Qatar",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.3844,
+          "pE": 0.1512,
+          "pB": 0.4644
+        }
+      ],
+      "clasificados": [
+        "Switzerland",
+        "Canada"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Switzerland",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 2,
+          "dg": 3
+        },
+        {
+          "equipo": "Canada",
+          "puntos": 6,
+          "gf": 4,
+          "ga": 3,
+          "dg": 1
+        },
+        {
+          "equipo": "Qatar",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 4,
+          "dg": -1
+        },
+        {
+          "equipo": "Bosnia and Herzegovina",
+          "puntos": 0,
+          "gf": 2,
+          "ga": 5,
+          "dg": -3
+        }
+      ]
+    },
+    "grupo_C": {
+      "partidos": [
+        {
+          "fixture_id": "GC-006",
+          "equipo_a": "Brazil",
+          "equipo_b": "Morocco",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.4184,
+          "pE": 0.1152,
+          "pB": 0.4663
+        },
+        {
+          "fixture_id": "GC-007",
+          "equipo_a": "Haiti",
+          "equipo_b": "Scotland",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.1938,
+          "pE": 0.1238,
+          "pB": 0.6824
+        },
+        {
+          "fixture_id": "GC-030",
+          "equipo_a": "Scotland",
+          "equipo_b": "Morocco",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2059,
+          "pE": 0.1207,
+          "pB": 0.6733
+        },
+        {
+          "fixture_id": "GC-031",
+          "equipo_a": "Brazil",
+          "equipo_b": "Haiti",
+          "resultado_probable": "A",
+          "marcador": "3-0",
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "pA": 0.7875,
+          "pE": 0.0693,
+          "pB": 0.1432
+        },
+        {
+          "fixture_id": "GC-051",
+          "equipo_a": "Morocco",
+          "equipo_b": "Haiti",
+          "resultado_probable": "A",
+          "marcador": "3-0",
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "pA": 0.8024,
+          "pE": 0.069,
+          "pB": 0.1286
+        },
+        {
+          "fixture_id": "GC-052",
+          "equipo_a": "Scotland",
+          "equipo_b": "Brazil",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2241,
+          "pE": 0.1223,
+          "pB": 0.6535
+        }
+      ],
+      "clasificados": [
+        "Morocco",
+        "Brazil"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Morocco",
+          "puntos": 9,
+          "gf": 6,
+          "ga": 0,
+          "dg": 6
+        },
+        {
+          "equipo": "Brazil",
+          "puntos": 6,
+          "gf": 5,
+          "ga": 1,
+          "dg": 4
+        },
+        {
+          "equipo": "Scotland",
+          "puntos": 3,
+          "gf": 2,
+          "ga": 4,
+          "dg": -2
+        },
+        {
+          "equipo": "Haiti",
+          "puntos": 0,
+          "gf": 0,
+          "ga": 8,
+          "dg": -8
+        }
+      ]
+    },
+    "grupo_D": {
+      "partidos": [
+        {
+          "fixture_id": "GD-004",
+          "equipo_a": "United States",
+          "equipo_b": "Paraguay",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.5919,
+          "pE": 0.1633,
+          "pB": 0.2448
+        },
+        {
+          "fixture_id": "GD-008",
+          "equipo_a": "Australia",
+          "equipo_b": "Turkiye",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.3738,
+          "pE": 0.1683,
+          "pB": 0.4579
+        },
+        {
+          "fixture_id": "GD-029",
+          "equipo_a": "United States",
+          "equipo_b": "Australia",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.515,
+          "pE": 0.136,
+          "pB": 0.3491
+        },
+        {
+          "fixture_id": "GD-032",
+          "equipo_a": "Turkiye",
+          "equipo_b": "Paraguay",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.5389,
+          "pE": 0.1926,
+          "pB": 0.2685
+        },
+        {
+          "fixture_id": "GD-059",
+          "equipo_a": "Turkiye",
+          "equipo_b": "United States",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.372,
+          "pE": 0.178,
+          "pB": 0.45
+        },
+        {
+          "fixture_id": "GD-060",
+          "equipo_a": "Paraguay",
+          "equipo_b": "Australia",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.2988,
+          "pE": 0.2008,
+          "pB": 0.5003
+        }
+      ],
+      "clasificados": [
+        "United States",
+        "Turkiye"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "United States",
+          "puntos": 9,
+          "gf": 4,
+          "ga": 1,
+          "dg": 3
+        },
+        {
+          "equipo": "Turkiye",
+          "puntos": 6,
+          "gf": 2,
+          "ga": 1,
+          "dg": 1
+        },
+        {
+          "equipo": "Australia",
+          "puntos": 3,
+          "gf": 1,
+          "ga": 2,
+          "dg": -1
+        },
+        {
+          "equipo": "Paraguay",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 4,
+          "dg": -3
+        }
+      ]
+    },
+    "grupo_E": {
+      "partidos": [
+        {
+          "fixture_id": "GE-009",
+          "equipo_a": "Germany",
+          "equipo_b": "Curacao",
+          "resultado_probable": "A",
+          "marcador": "3-0",
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "pA": 0.7543,
+          "pE": 0.1013,
+          "pB": 0.1444
+        },
+        {
+          "fixture_id": "GE-011",
+          "equipo_a": "Ivory Coast",
+          "equipo_b": "Ecuador",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.3811,
+          "pE": 0.2532,
+          "pB": 0.3656
+        },
+        {
+          "fixture_id": "GE-034",
+          "equipo_a": "Germany",
+          "equipo_b": "Ivory Coast",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.599,
+          "pE": 0.1239,
+          "pB": 0.2771
+        },
+        {
+          "fixture_id": "GE-035",
+          "equipo_a": "Ecuador",
+          "equipo_b": "Curacao",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6245,
+          "pE": 0.1612,
+          "pB": 0.2143
+        },
+        {
+          "fixture_id": "GE-055",
+          "equipo_a": "Curacao",
+          "equipo_b": "Ivory Coast",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.1676,
+          "pE": 0.1094,
+          "pB": 0.723
+        },
+        {
+          "fixture_id": "GE-056",
+          "equipo_a": "Ecuador",
+          "equipo_b": "Germany",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2246,
+          "pE": 0.2187,
+          "pB": 0.5568
+        }
+      ],
+      "clasificados": [
+        "Germany",
+        "Ivory Coast"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Germany",
+          "puntos": 9,
+          "gf": 7,
+          "ga": 2,
+          "dg": 5
+        },
+        {
+          "equipo": "Ivory Coast",
+          "puntos": 6,
+          "gf": 4,
+          "ga": 2,
+          "dg": 2
+        },
+        {
+          "equipo": "Ecuador",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 4,
+          "dg": -1
+        },
+        {
+          "equipo": "Curacao",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 7,
+          "dg": -6
+        }
+      ]
+    },
+    "grupo_F": {
+      "partidos": [
+        {
+          "fixture_id": "GF-010",
+          "equipo_a": "Netherlands",
+          "equipo_b": "Japan",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.5247,
+          "pE": 0.111,
+          "pB": 0.3644
+        },
+        {
+          "fixture_id": "GF-012",
+          "equipo_a": "Sweden",
+          "equipo_b": "Tunisia",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.488,
+          "pE": 0.2076,
+          "pB": 0.3044
+        },
+        {
+          "fixture_id": "GF-033",
+          "equipo_a": "Netherlands",
+          "equipo_b": "Sweden",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6216,
+          "pE": 0.1302,
+          "pB": 0.2482
+        },
+        {
+          "fixture_id": "GF-036",
+          "equipo_a": "Tunisia",
+          "equipo_b": "Japan",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2251,
+          "pE": 0.1168,
+          "pB": 0.6581
+        },
+        {
+          "fixture_id": "GF-057",
+          "equipo_a": "Tunisia",
+          "equipo_b": "Netherlands",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.1902,
+          "pE": 0.1252,
+          "pB": 0.6846
+        },
+        {
+          "fixture_id": "GF-058",
+          "equipo_a": "Japan",
+          "equipo_b": "Sweden",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.5744,
+          "pE": 0.1248,
+          "pB": 0.3008
+        }
+      ],
+      "clasificados": [
+        "Netherlands",
+        "Japan"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Netherlands",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 1,
+          "dg": 4
+        },
+        {
+          "equipo": "Japan",
+          "puntos": 6,
+          "gf": 4,
+          "ga": 2,
+          "dg": 2
+        },
+        {
+          "equipo": "Sweden",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 4,
+          "dg": -1
+        },
+        {
+          "equipo": "Tunisia",
+          "puntos": 0,
+          "gf": 0,
+          "ga": 5,
+          "dg": -5
+        }
+      ]
+    },
+    "grupo_G": {
+      "partidos": [
+        {
+          "fixture_id": "GG-014",
+          "equipo_a": "Belgium",
+          "equipo_b": "Egypt",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.5849,
+          "pE": 0.1255,
+          "pB": 0.2896
+        },
+        {
+          "fixture_id": "GG-016",
+          "equipo_a": "Iran",
+          "equipo_b": "New Zealand",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.7209,
+          "pE": 0.0471,
+          "pB": 0.232
+        },
+        {
+          "fixture_id": "GG-038",
+          "equipo_a": "Belgium",
+          "equipo_b": "Iran",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.5186,
+          "pE": 0.1059,
+          "pB": 0.3755
+        },
+        {
+          "fixture_id": "GG-040",
+          "equipo_a": "New Zealand",
+          "equipo_b": "Egypt",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.255,
+          "pE": 0.073,
+          "pB": 0.672
+        },
+        {
+          "fixture_id": "GG-065",
+          "equipo_a": "New Zealand",
+          "equipo_b": "Belgium",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2391,
+          "pE": 0.0462,
+          "pB": 0.7147
+        },
+        {
+          "fixture_id": "GG-066",
+          "equipo_a": "Egypt",
+          "equipo_b": "Iran",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.3372,
+          "pE": 0.1503,
+          "pB": 0.5125
+        }
+      ],
+      "clasificados": [
+        "Belgium",
+        "Iran"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Belgium",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 1,
+          "dg": 4
+        },
+        {
+          "equipo": "Iran",
+          "puntos": 6,
+          "gf": 3,
+          "ga": 1,
+          "dg": 2
+        },
+        {
+          "equipo": "Egypt",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 3,
+          "dg": 0
+        },
+        {
+          "equipo": "New Zealand",
+          "puntos": 0,
+          "gf": 0,
+          "ga": 6,
+          "dg": -6
+        }
+      ]
+    },
+    "grupo_H": {
+      "partidos": [
+        {
+          "fixture_id": "GH-013",
+          "equipo_a": "Spain",
+          "equipo_b": "Cape Verde",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.7333,
+          "pE": 0.0933,
+          "pB": 0.1734
+        },
+        {
+          "fixture_id": "GH-015",
+          "equipo_a": "Saudi Arabia",
+          "equipo_b": "Uruguay",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2211,
+          "pE": 0.1236,
+          "pB": 0.6553
+        },
+        {
+          "fixture_id": "GH-037",
+          "equipo_a": "Spain",
+          "equipo_b": "Saudi Arabia",
+          "resultado_probable": "A",
+          "marcador": "3-0",
+          "goles_local": 3,
+          "goles_visitante": 0,
+          "pA": 0.7623,
+          "pE": 0.0732,
+          "pB": 0.1645
+        },
+        {
+          "fixture_id": "GH-039",
+          "equipo_a": "Uruguay",
+          "equipo_b": "Cape Verde",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6354,
+          "pE": 0.1411,
+          "pB": 0.2235
+        },
+        {
+          "fixture_id": "GH-063",
+          "equipo_a": "Cape Verde",
+          "equipo_b": "Saudi Arabia",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.3734,
+          "pE": 0.1848,
+          "pB": 0.4418
+        },
+        {
+          "fixture_id": "GH-064",
+          "equipo_a": "Uruguay",
+          "equipo_b": "Spain",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2778,
+          "pE": 0.15,
+          "pB": 0.5722
+        }
+      ],
+      "clasificados": [
+        "Spain",
+        "Uruguay"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Spain",
+          "puntos": 9,
+          "gf": 7,
+          "ga": 1,
+          "dg": 6
+        },
+        {
+          "equipo": "Uruguay",
+          "puntos": 6,
+          "gf": 5,
+          "ga": 3,
+          "dg": 2
+        },
+        {
+          "equipo": "Saudi Arabia",
+          "puntos": 3,
+          "gf": 1,
+          "ga": 5,
+          "dg": -4
+        },
+        {
+          "equipo": "Cape Verde",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 5,
+          "dg": -4
+        }
+      ]
+    },
+    "grupo_I": {
+      "partidos": [
+        {
+          "fixture_id": "GI-017",
+          "equipo_a": "France",
+          "equipo_b": "Senegal",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.5453,
+          "pE": 0.1049,
+          "pB": 0.3498
+        },
+        {
+          "fixture_id": "GI-018",
+          "equipo_a": "Iraq",
+          "equipo_b": "Norway",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2175,
+          "pE": 0.1459,
+          "pB": 0.6366
+        },
+        {
+          "fixture_id": "GI-042",
+          "equipo_a": "France",
+          "equipo_b": "Iraq",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.7425,
+          "pE": 0.0946,
+          "pB": 0.1629
+        },
+        {
+          "fixture_id": "GI-043",
+          "equipo_a": "Norway",
+          "equipo_b": "Senegal",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.3339,
+          "pE": 0.1453,
+          "pB": 0.5207
+        },
+        {
+          "fixture_id": "GI-061",
+          "equipo_a": "Norway",
+          "equipo_b": "France",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2709,
+          "pE": 0.1087,
+          "pB": 0.6204
+        },
+        {
+          "fixture_id": "GI-062",
+          "equipo_a": "Senegal",
+          "equipo_b": "Iraq",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.699,
+          "pE": 0.1115,
+          "pB": 0.1895
+        }
+      ],
+      "clasificados": [
+        "France",
+        "Senegal"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "France",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 1,
+          "dg": 4
+        },
+        {
+          "equipo": "Senegal",
+          "puntos": 6,
+          "gf": 3,
+          "ga": 1,
+          "dg": 2
+        },
+        {
+          "equipo": "Norway",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 4,
+          "dg": -1
+        },
+        {
+          "equipo": "Iraq",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 6,
+          "dg": -5
+        }
+      ]
+    },
+    "grupo_J": {
+      "partidos": [
+        {
+          "fixture_id": "GJ-019",
+          "equipo_a": "Argentina",
+          "equipo_b": "Algeria",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6291,
+          "pE": 0.0899,
+          "pB": 0.281
+        },
+        {
+          "fixture_id": "GJ-020",
+          "equipo_a": "Austria",
+          "equipo_b": "Jordan",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.6716,
+          "pE": 0.1267,
+          "pB": 0.2017
+        },
+        {
+          "fixture_id": "GJ-041",
+          "equipo_a": "Argentina",
+          "equipo_b": "Austria",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.6025,
+          "pE": 0.1131,
+          "pB": 0.2843
+        },
+        {
+          "fixture_id": "GJ-044",
+          "equipo_a": "Jordan",
+          "equipo_b": "Algeria",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2022,
+          "pE": 0.1186,
+          "pB": 0.6792
+        },
+        {
+          "fixture_id": "GJ-069",
+          "equipo_a": "Algeria",
+          "equipo_b": "Austria",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.3934,
+          "pE": 0.1679,
+          "pB": 0.4387
+        },
+        {
+          "fixture_id": "GJ-070",
+          "equipo_a": "Jordan",
+          "equipo_b": "Argentina",
+          "resultado_probable": "B",
+          "marcador": "0-3",
+          "goles_local": 0,
+          "goles_visitante": 3,
+          "pA": 0.1596,
+          "pE": 0.0896,
+          "pB": 0.7509
+        }
+      ],
+      "clasificados": [
+        "Argentina",
+        "Austria"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Argentina",
+          "puntos": 9,
+          "gf": 7,
+          "ga": 2,
+          "dg": 5
+        },
+        {
+          "equipo": "Austria",
+          "puntos": 6,
+          "gf": 4,
+          "ga": 2,
+          "dg": 2
+        },
+        {
+          "equipo": "Algeria",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 3,
+          "dg": 0
+        },
+        {
+          "equipo": "Jordan",
+          "puntos": 0,
+          "gf": 0,
+          "ga": 7,
+          "dg": -7
+        }
+      ]
+    },
+    "grupo_K": {
+      "partidos": [
+        {
+          "fixture_id": "GK-021",
+          "equipo_a": "Portugal",
+          "equipo_b": "DR Congo",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.6701,
+          "pE": 0.1155,
+          "pB": 0.2145
+        },
+        {
+          "fixture_id": "GK-024",
+          "equipo_a": "Uzbekistan",
+          "equipo_b": "Colombia",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2528,
+          "pE": 0.1594,
+          "pB": 0.5878
+        },
+        {
+          "fixture_id": "GK-045",
+          "equipo_a": "Portugal",
+          "equipo_b": "Uzbekistan",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.6894,
+          "pE": 0.0973,
+          "pB": 0.2132
+        },
+        {
+          "fixture_id": "GK-048",
+          "equipo_a": "Colombia",
+          "equipo_b": "DR Congo",
+          "resultado_probable": "A",
+          "marcador": "2-1",
+          "goles_local": 2,
+          "goles_visitante": 1,
+          "pA": 0.5626,
+          "pE": 0.1825,
+          "pB": 0.2549
+        },
+        {
+          "fixture_id": "GK-071",
+          "equipo_a": "DR Congo",
+          "equipo_b": "Uzbekistan",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.4244,
+          "pE": 0.1999,
+          "pB": 0.3757
+        },
+        {
+          "fixture_id": "GK-072",
+          "equipo_a": "Colombia",
+          "equipo_b": "Portugal",
+          "resultado_probable": "B",
+          "marcador": "0-1",
+          "goles_local": 0,
+          "goles_visitante": 1,
+          "pA": 0.2944,
+          "pE": 0.2208,
+          "pB": 0.4848
+        }
+      ],
+      "clasificados": [
+        "Portugal",
+        "Colombia"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "Portugal",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 0,
+          "dg": 5
+        },
+        {
+          "equipo": "Colombia",
+          "puntos": 6,
+          "gf": 4,
+          "ga": 3,
+          "dg": 1
+        },
+        {
+          "equipo": "DR Congo",
+          "puntos": 3,
+          "gf": 2,
+          "ga": 4,
+          "dg": -2
+        },
+        {
+          "equipo": "Uzbekistan",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 5,
+          "dg": -4
+        }
+      ]
+    },
+    "grupo_L": {
+      "partidos": [
+        {
+          "fixture_id": "GL-022",
+          "equipo_a": "England",
+          "equipo_b": "Croatia",
+          "resultado_probable": "A",
+          "marcador": "1-0",
+          "goles_local": 1,
+          "goles_visitante": 0,
+          "pA": 0.4971,
+          "pE": 0.1687,
+          "pB": 0.3342
+        },
+        {
+          "fixture_id": "GL-023",
+          "equipo_a": "Ghana",
+          "equipo_b": "Panama",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2166,
+          "pE": 0.146,
+          "pB": 0.6374
+        },
+        {
+          "fixture_id": "GL-046",
+          "equipo_a": "England",
+          "equipo_b": "Ghana",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.7497,
+          "pE": 0.1104,
+          "pB": 0.1399
+        },
+        {
+          "fixture_id": "GL-047",
+          "equipo_a": "Panama",
+          "equipo_b": "Croatia",
+          "resultado_probable": "B",
+          "marcador": "1-2",
+          "goles_local": 1,
+          "goles_visitante": 2,
+          "pA": 0.2662,
+          "pE": 0.1583,
+          "pB": 0.5754
+        },
+        {
+          "fixture_id": "GL-067",
+          "equipo_a": "Panama",
+          "equipo_b": "England",
+          "resultado_probable": "B",
+          "marcador": "0-2",
+          "goles_local": 0,
+          "goles_visitante": 2,
+          "pA": 0.2158,
+          "pE": 0.115,
+          "pB": 0.6692
+        },
+        {
+          "fixture_id": "GL-068",
+          "equipo_a": "Croatia",
+          "equipo_b": "Ghana",
+          "resultado_probable": "A",
+          "marcador": "2-0",
+          "goles_local": 2,
+          "goles_visitante": 0,
+          "pA": 0.692,
+          "pE": 0.1361,
+          "pB": 0.1719
+        }
+      ],
+      "clasificados": [
+        "England",
+        "Croatia"
+      ],
+      "tabla_final": [
+        {
+          "equipo": "England",
+          "puntos": 9,
+          "gf": 5,
+          "ga": 0,
+          "dg": 5
+        },
+        {
+          "equipo": "Croatia",
+          "puntos": 6,
+          "gf": 4,
+          "ga": 2,
+          "dg": 2
+        },
+        {
+          "equipo": "Panama",
+          "puntos": 3,
+          "gf": 3,
+          "ga": 5,
+          "dg": -2
+        },
+        {
+          "equipo": "Ghana",
+          "puntos": 0,
+          "gf": 1,
+          "ga": 6,
+          "dg": -5
+        }
+      ]
+    }
+  },
+  "eliminatorias": {
+    "round_of_32": [
+      {
+        "partido": 1,
+        "equipo_a": "Mexico",
+        "equipo_b": "Brazil",
+        "goles_local": 1,
+        "goles_visitante": 2,
+        "marcador": "1-2",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Brazil",
+        "probabilidad_clasificacion": 63.7
+      },
+      {
+        "partido": 2,
+        "equipo_a": "Switzerland",
+        "equipo_b": "Turkiye",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Switzerland",
+        "probabilidad_clasificacion": 55.0
+      },
+      {
+        "partido": 3,
+        "equipo_a": "Morocco",
+        "equipo_b": "South Korea",
+        "goles_local": 3,
+        "goles_visitante": 0,
+        "marcador": "3-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Morocco",
+        "probabilidad_clasificacion": 76.5
+      },
+      {
+        "partido": 4,
+        "equipo_a": "United States",
+        "equipo_b": "Canada",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "United States",
+        "probabilidad_clasificacion": 69.1
+      },
+      {
+        "partido": 5,
+        "equipo_a": "Germany",
+        "equipo_b": "Iran",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Germany",
+        "probabilidad_clasificacion": 70.3
+      },
+      {
+        "partido": 6,
+        "equipo_a": "Netherlands",
+        "equipo_b": "Uruguay",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Netherlands",
+        "probabilidad_clasificacion": 66.0
+      },
+      {
+        "partido": 7,
+        "equipo_a": "Belgium",
+        "equipo_b": "Ivory Coast",
+        "goles_local": 3,
+        "goles_visitante": 0,
+        "marcador": "3-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Belgium",
+        "probabilidad_clasificacion": 79.5
+      },
+      {
+        "partido": 8,
+        "equipo_a": "Spain",
+        "equipo_b": "Japan",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Spain",
+        "probabilidad_clasificacion": 72.7
+      },
+      {
+        "partido": 9,
+        "equipo_a": "France",
+        "equipo_b": "Colombia",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "France",
+        "probabilidad_clasificacion": 67.9
+      },
+      {
+        "partido": 10,
+        "equipo_a": "Argentina",
+        "equipo_b": "Croatia",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Argentina",
+        "probabilidad_clasificacion": 65.3
+      },
+      {
+        "partido": 11,
+        "equipo_a": "Portugal",
+        "equipo_b": "Senegal",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Portugal",
+        "probabilidad_clasificacion": 63.3
+      },
+      {
+        "partido": 12,
+        "equipo_a": "England",
+        "equipo_b": "Austria",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "England",
+        "probabilidad_clasificacion": 73.8
+      },
+      {
+        "partido": 13,
+        "equipo_a": "Algeria",
+        "equipo_b": "Ecuador",
+        "goles_local": 0,
+        "goles_visitante": 1,
+        "marcador": "0-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Ecuador",
+        "probabilidad_clasificacion": 54.3
+      },
+      {
+        "partido": 14,
+        "equipo_a": "Egypt",
+        "equipo_b": "Norway",
+        "goles_local": 1,
+        "goles_visitante": 2,
+        "marcador": "1-2",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Norway",
+        "probabilidad_clasificacion": 57.1
+      },
+      {
+        "partido": 15,
+        "equipo_a": "Australia",
+        "equipo_b": "Czechia",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Australia",
+        "probabilidad_clasificacion": 64.0
+      },
+      {
+        "partido": 16,
+        "equipo_a": "Panama",
+        "equipo_b": "Scotland",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Panama",
+        "probabilidad_clasificacion": 58.5
+      }
+    ],
+    "round_of_16": [
+      {
+        "partido": 1,
+        "equipo_a": "Brazil",
+        "equipo_b": "Switzerland",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Brazil",
+        "probabilidad_clasificacion": 64.4
+      },
+      {
+        "partido": 2,
+        "equipo_a": "Morocco",
+        "equipo_b": "United States",
+        "goles_local": 2,
+        "goles_visitante": 0,
+        "marcador": "2-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Morocco",
+        "probabilidad_clasificacion": 66.6
+      },
+      {
+        "partido": 3,
+        "equipo_a": "Germany",
+        "equipo_b": "Netherlands",
+        "goles_local": 1,
+        "goles_visitante": 1,
+        "marcador": "1-1",
+        "penales_local": 3,
+        "penales_visitante": 4,
+        "tiempo_extra": true,
+        "penales": true,
+        "ganador": "Netherlands",
+        "probabilidad_clasificacion": 51.4
+      },
+      {
+        "partido": 4,
+        "equipo_a": "Belgium",
+        "equipo_b": "Spain",
+        "goles_local": 1,
+        "goles_visitante": 2,
+        "marcador": "1-2",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Spain",
+        "probabilidad_clasificacion": 62.0
+      },
+      {
+        "partido": 5,
+        "equipo_a": "France",
+        "equipo_b": "Argentina",
+        "goles_local": 1,
+        "goles_visitante": 1,
+        "marcador": "1-1",
+        "penales_local": 4,
+        "penales_visitante": 3,
+        "tiempo_extra": true,
+        "penales": true,
+        "ganador": "France",
+        "probabilidad_clasificacion": 50.0
+      },
+      {
+        "partido": 6,
+        "equipo_a": "Portugal",
+        "equipo_b": "England",
+        "goles_local": 1,
+        "goles_visitante": 1,
+        "marcador": "1-1",
+        "penales_local": 4,
+        "penales_visitante": 3,
+        "tiempo_extra": true,
+        "penales": true,
+        "ganador": "Portugal",
+        "probabilidad_clasificacion": 51.4
+      },
+      {
+        "partido": 7,
+        "equipo_a": "Ecuador",
+        "equipo_b": "Norway",
+        "goles_local": 1,
+        "goles_visitante": 1,
+        "marcador": "1-1",
+        "penales_local": 4,
+        "penales_visitante": 3,
+        "tiempo_extra": true,
+        "penales": true,
+        "ganador": "Ecuador",
+        "probabilidad_clasificacion": 52.9
+      },
+      {
+        "partido": 8,
+        "equipo_a": "Australia",
+        "equipo_b": "Panama",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Australia",
+        "probabilidad_clasificacion": 58.5
+      }
+    ],
+    "cuartos": [
+      {
+        "partido": 1,
+        "equipo_a": "Brazil",
+        "equipo_b": "Morocco",
+        "goles_local": 1,
+        "goles_visitante": 1,
+        "marcador": "1-1",
+        "penales_local": 3,
+        "penales_visitante": 4,
+        "tiempo_extra": true,
+        "penales": true,
+        "ganador": "Morocco",
+        "probabilidad_clasificacion": 51.7
+      },
+      {
+        "partido": 2,
+        "equipo_a": "Netherlands",
+        "equipo_b": "Spain",
+        "goles_local": 1,
+        "goles_visitante": 2,
+        "marcador": "1-2",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Spain",
+        "probabilidad_clasificacion": 56.4
+      },
+      {
+        "partido": 3,
+        "equipo_a": "France",
+        "equipo_b": "Portugal",
+        "goles_local": 1,
+        "goles_visitante": 0,
+        "marcador": "1-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "France",
+        "probabilidad_clasificacion": 53.6
+      },
+      {
+        "partido": 4,
+        "equipo_a": "Ecuador",
+        "equipo_b": "Australia",
+        "goles_local": 2,
+        "goles_visitante": 1,
+        "marcador": "2-1",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Ecuador",
+        "probabilidad_clasificacion": 56.4
+      }
+    ],
+    "semifinal": [
+      {
+        "partido": 1,
+        "equipo_a": "Morocco",
+        "equipo_b": "Spain",
+        "goles_local": 1,
+        "goles_visitante": 2,
+        "marcador": "1-2",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "Spain",
+        "probabilidad_clasificacion": 55.7
+      },
+      {
+        "partido": 2,
+        "equipo_a": "France",
+        "equipo_b": "Ecuador",
+        "goles_local": 3,
+        "goles_visitante": 0,
+        "marcador": "3-0",
+        "penales_local": null,
+        "penales_visitante": null,
+        "tiempo_extra": false,
+        "penales": false,
+        "ganador": "France",
+        "probabilidad_clasificacion": 79.9
+      }
+    ],
+    "tercer_lugar": {
+      "partido": 1,
+      "equipo_a": "Morocco",
+      "equipo_b": "Ecuador",
+      "goles_local": 3,
+      "goles_visitante": 0,
+      "marcador": "3-0",
+      "penales_local": null,
+      "penales_visitante": null,
+      "tiempo_extra": false,
+      "penales": false,
+      "ganador": "Morocco",
+      "probabilidad_clasificacion": 75.4,
+      "tercer_lugar": "Morocco"
+    },
+    "final": {
+      "partido": 1,
+      "equipo_a": "Spain",
+      "equipo_b": "France",
+      "goles_local": 1,
+      "goles_visitante": 1,
+      "marcador": "1-1",
+      "penales_local": 3,
+      "penales_visitante": 4,
+      "tiempo_extra": true,
+      "penales": true,
+      "ganador": "France",
+      "probabilidad_clasificacion": 50.7,
+      "campeon": "France"
+    }
+  },
+  "resumen": {
+    "campeon": "France",
+    "subcampeon": "Spain",
+    "tercer_lugar": "Morocco",
+    "cuarto_lugar": "Ecuador",
+    "semifinalistas": [
+      "Morocco",
+      "Spain",
+      "France",
+      "Ecuador"
+    ],
+    "prob_campeon_pct": 9.002
+  }
+}
