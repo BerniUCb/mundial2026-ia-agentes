@@ -186,7 +186,16 @@ INFORME_MUNDIAL_2026.md                ← Informe academico completo en Markdow
 
 ## Simulador interactivo Python
 
-El simulador lee los archivos JSON del proyecto y permite explorar la simulacion sin instalar nada extra.
+Se incluye `simulador.py` como **herramienta de experimentacion externa**: permite modificar parametros del modelo, re-ejecutar simulaciones con distintas configuraciones y explorar los datos — todo sin tocar el pipeline de agentes ni instalar dependencias externas.
+
+**Lo que se puede modificar directamente:**
+
+| Parametro | Rango | Efecto |
+|-----------|-------|--------|
+| `N` (numero de torneos) | 1,000 – 500,000 | Controla precision vs velocidad |
+| `seed` | cualquier entero | Cambia la secuencia aleatoria (reproducible) |
+| Pesos del modelo | ELO / Historial / Forma | Ver impacto de cada componente |
+| Par de equipos a comparar | cualquiera de los 48 | Calcula P(A gana), P(empate), P(B gana) |
 
 ```bash
 cd mundial2026
@@ -207,31 +216,34 @@ python -X utf8 simulador.py
 7. Salir
 ```
 
-### Ejemplos de uso tipicos
+### Ejemplos de experimentacion
 
-**Ver resultados inmediatamente (sin simular):**
+**Ver resultados oficiales inmediatamente (sin simular):**
 ```
 opcion: 1  →  ranking de 48 equipos cargado desde JSON en <1 segundo
 ```
 
-**Simular con N propio y verificar convergencia:**
+**Re-simular con N distinto y comparar con el modelo oficial:**
 ```
-opcion: 2  →  N=50000, seed=2026  →  ~15 segundos  →  resultados identicos al modelo oficial
+opcion: 2  →  N=5000,  seed=42   →  ~1.5 segundos  →  resultados ligeramente distintos
+opcion: 2  →  N=50000, seed=2026 →  ~15 segundos   →  converge al modelo oficial
 ```
 
-**Consultar probabilidades de un partido:**
+**Consultar probabilidades de cualquier partido:**
 ```
 opcion: 3  →  elegir Argentina vs France
-           →  P(ARG) / P(empate) / P(FRA) con barra visual
-           →  muestra valor pre-calculado del JSON si el partido existe
+           →  P(ARG) = 54.7% / P(empate) = 22.1% / P(FRA) = 23.2%
+           →  desglose: P_elo, P_historial, P_forma por separado
 ```
 
-**Comparar equipos con justificacion de ajuste ELO:**
+**Comparar dos equipos con todos los indicadores:**
 ```
 opcion: 5  →  elegir Morocco vs Brazil
            →  ELO v2, ranking FIFA, win rate, forma, P(campeon)
            →  justificacion del ajuste ELO desde elos_ajustados.json
 ```
+
+> **Nota:** Este simulador es una herramienta de demostracion independiente. Lee los JSON generados por el pipeline de agentes pero no los modifica ni ejecuta agentes en tiempo real. Ver `GUIA_COLAB.md` para usarlo en Google Colab sin instalar nada.
 
 ### Archivos JSON que usa el simulador
 
