@@ -58,9 +58,9 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
 
       {/* Navigation */}
       <nav className="sidebar-nav">
-        {sections.map((sec) => (
+        {sections.map((sec, secIdx) => (
           <div key={sec.title}>
-            {open && <div className="nav-section-label">{sec.title}</div>}
+            {open && <div className="nav-section-label" style={secIdx === 0 ? { borderTop: 'none', marginTop: 0, paddingTop: 10 } : {}}>{sec.title}</div>}
             {sec.items.map((item) => (
               <NavLink
                 key={item.path}
