@@ -6,30 +6,24 @@
 
 ---
 
-## DEMO EN VIVO — Sin instalar nada
+## Demo en vivo
 
-> **La directora de carrera y cualquier evaluador pueden ver el proyecto completo aqui:**
+**https://mundial2026-frontend.vercel.app**
 
-### https://mundial2026-frontend.vercel.app
+Aplicacion web desplegada en Vercel. Accesible desde cualquier navegador sin instalar software adicional.
 
-El sitio esta desplegado en Vercel y funciona desde cualquier navegador. No requiere instalar Python, Node ni ningun software adicional.
+### Contenido del sitio
 
----
-
-## Recorrido guiado para evaluadores (5 minutos)
-
-Siga este orden en el sidebar izquierdo del sitio:
-
-| Paso | Pagina | Que ver |
-|------|--------|---------|
-| 1 | **Inicio** | Estadisticas clave: 10.3M simulaciones, top 3 favoritos, verificacion de convergencia |
-| 2 | **Metodologia** | Formula del modelo, pipeline de 5 fases, distribucion de pesos ELO/Historial/Forma |
-| 3 | **Agentes IA** | Los 7 agentes en cadena: que hace cada uno, sus inputs y outputs |
-| 4 | **Favoritos** | Resultado principal: probabilidades de campeonato de los 48 equipos con IC95% |
-| 5 | **Grupos A-L** | Los 12 grupos del torneo con sus 48 clasificados |
-| 6 | **v1 vs v2** | Comparativa antes/despues de corregir sesgos — Morocco +87.9% |
-| 7 | **Ajustes ELO** | Los 26 ajustes justificados con evidencia triple (estadistica + contexto + futbolistico) |
-| 8 | **Glosario** | Explicacion de cada modelo probabilistico usado |
+| Seccion | Descripcion |
+|---------|-------------|
+| **Inicio** | Resumen ejecutivo: 10.3M simulaciones, top favoritos, convergencia verificada |
+| **Metodologia** | Formula del modelo combinado, pipeline de 5 fases, distribucion de pesos |
+| **Agentes IA** | Los 7 agentes en cadena: inputs, outputs y logica de cada uno |
+| **Favoritos** | Probabilidades de campeonato de los 48 equipos con IC95% |
+| **Grupos A-L** | Los 12 grupos del torneo con sus 48 clasificados |
+| **v1 vs v2** | Comparativa antes/despues de corregir sesgos — Morocco +87.9% |
+| **Ajustes ELO** | Los 26 ajustes justificados con evidencia triple |
+| **Glosario** | Definicion de cada modelo probabilistico utilizado |
 
 ---
 
