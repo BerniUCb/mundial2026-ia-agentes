@@ -36,12 +36,21 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [sidebarOpen, setSidebarOpen] = useState(() => {
+    const saved = localStorage.getItem('sidebar')
+    if (saved !== null) return saved === 'true'
+    return window.innerWidth >= 1024
+  })
+
+  const toggle = () => setSidebarOpen((prev) => {
+    localStorage.setItem('sidebar', String(!prev))
+    return !prev
+  })
 
   return (
     <BrowserRouter>
       <div className={`app-layout${sidebarOpen ? '' : ' sidebar-collapsed'}`}>
-        <Sidebar open={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+        <Sidebar open={sidebarOpen} onToggle={toggle} />
         <main className="main-content">
           <AnimatedRoutes />
         </main>
