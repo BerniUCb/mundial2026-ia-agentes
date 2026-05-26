@@ -24,12 +24,12 @@ const sections: { title: string; items: NavItem[] }[] = [
   {
     title: '3 · Resultados',
     items: [
-      { path: '/favoritos',    label: 'Favoritos',            icon: '🏆' },
-      { path: '/comparativa',  label: 'v1 vs v2',             icon: '⚡' },
-      { path: '/elo',          label: 'Ajustes ELO',          icon: '📈' },
-      { path: '/histograma',   label: 'Histogramas',          icon: '📊' },
-      { path: '/limitaciones', label: 'Resultados & Límites', icon: '⚠️' },
-      { path: '/glosario',     label: 'Glosario',             icon: '📖' },
+      { path: '/favoritos',    label: 'Favoritos',     icon: '🏆' },
+      { path: '/comparativa',  label: 'v1 vs v2',      icon: '⚡' },
+      { path: '/elo',          label: 'Ajustes ELO',   icon: '📈' },
+      { path: '/histograma',   label: 'Histogramas',   icon: '📊' },
+      { path: '/limitaciones', label: 'Limitaciones',  icon: '⚠️' },
+      { path: '/glosario',     label: 'Glosario',      icon: '📖' },
     ],
   },
 ]
@@ -80,48 +80,12 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
       {/* Footer */}
       {open && (
         <div className="sidebar-footer">
-          <div>N = <strong>50,000</strong> simulaciones</div>
-          <div>Seed: <strong>2026</strong> · Modelo: <strong>v2.0</strong></div>
-          <div>Convergencia: <strong>✓ 0.38%</strong></div>
-          <div style={{ marginTop: 8, borderTop: '1px solid var(--border)', paddingTop: 8 }}>
-            <span style={{ color: 'var(--accent)' }}>7 Agentes</span> · Monte Carlo
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span><strong>50K</strong> sims · seed <strong>2026</strong></span>
+            <span style={{ color: 'var(--accent)', fontWeight: 700 }}>v2.0</span>
           </div>
-          <div style={{
-            marginTop: 10,
-            borderTop: '1px solid var(--border)',
-            paddingTop: 10,
-            fontSize: '0.68rem',
-            color: 'var(--text-muted)',
-            lineHeight: 1.6,
-          }}>
-            <div style={{ fontWeight: 700, color: 'var(--text-secondary)', marginBottom: 2 }}>
-              Desarrollado por
-            </div>
-            <div style={{ color: 'var(--accent)', fontWeight: 600 }}>
-              Bernardo Rios Tapia
-            </div>
-            <div style={{ fontSize: '0.63rem', color: 'var(--text-muted)', marginTop: 2 }}>
-              UCB · Inteligencia Artificial · 2026
-            </div>
-            <div style={{ marginTop: 8 }}>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: 'var(--text-muted)',
-                  textDecoration: 'none',
-                  fontSize: '0.63rem',
-                  display: 'block',
-                  marginBottom: 3,
-                }}
-              >
-                📁 Código fuente en GitHub
-              </a>
-            </div>
-            <div style={{ marginTop: 4, fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '0.65rem' }}>
-              "Los modelos no predicen el futuro —<br />cuantifican su incertidumbre."
-            </div>
+          <div style={{ marginTop: 6, color: '#6B85A0', fontSize: '0.67rem' }}>
+            Bernardo Rios Tapia · UCB 2026
           </div>
         </div>
       )}
