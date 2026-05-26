@@ -5,17 +5,31 @@ Autor  : Bernardo Rios Tapia
 Materia: Inteligencia Artificial con Agentes — UCB, 5to Semestre 2026
 Python : 3.12+
 
-Descripcion:
-    Programa interactivo que carga los datos del proyecto desde los archivos
-    JSON generados por el pipeline de agentes y permite explorar y re-ejecutar
-    la simulacion Monte Carlo del Mundial 2026.
+PROPOSITO Y ALCANCE
+-------------------
+Este programa es una herramienta de DEMOSTRACION INDEPENDIENTE.
+Permite explorar y re-ejecutar la simulacion Monte Carlo del Mundial 2026
+usando los archivos JSON que el pipeline de agentes genero previamente.
 
-    Los resultados pre-calculados (N=50,000, seed=2026) se cargan de forma
-    instantanea desde outputs/simulation_results_v2.json. Tambien es posible
-    lanzar una nueva simulacion con N y seed personalizados.
+NO es un agente ni esta vinculado al pipeline de agentes en tiempo real.
+El pipeline de 7 agentes (Agentes 01-07) ya se ejecuto y sus resultados
+estan guardados en la carpeta outputs/. Este simulador simplemente los
+lee, los visualiza, y permite experimentar con nuevas configuraciones.
 
-Uso:
+Flujo de datos:
+    Pipeline de agentes (ya ejecutado)
+        → outputs/simulation_results_v2.json
+        → data/probabilidades_partidos_v2.json
+        → data/elos_ajustados.json
+    Este simulador lee esos archivos y los presenta de forma interactiva.
+
+COMO EJECUTAR
+-------------
+Local (Python 3.12+):
     python -X utf8 simulador.py
+
+Google Colab:
+    Ver instrucciones en GUIA_COLAB.md
 
 Sin dependencias externas — solo biblioteca estandar de Python.
 """
@@ -291,7 +305,11 @@ def calcular_prob_partido(
     total = p_a + p_e + p_b
     if total == 0:
         return 1 / 3, 1 / 3, 1 / 3
-    return round(p_a / total, 4), round(p_e / total, 4), round(p_b / total, 4)
+
+    p_a_norm = round(p_a / total, 4)
+    p_e_norm = round(p_e / total, 4)
+    p_b_norm = round(1.0 - p_a_norm - p_e_norm, 4)  # derivado para garantizar suma=1
+    return p_a_norm, p_e_norm, p_b_norm
 
 
 # =============================================================================
