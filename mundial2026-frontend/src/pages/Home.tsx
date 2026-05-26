@@ -54,14 +54,52 @@ const FEATURES = [
   { icon: '📐', title: 'Modelo Ponderado', desc: 'ELO × 0.55 + Historial × 0.35 + Forma × 0.10. Ajustes de confederacion calibrados para cada zona FIFA.' },
   { icon: '🔍', title: 'Correccion de Sesgos', desc: '26 equipos con ELO ajustado. Se detectaron 3 tipos de sesgo: confederacion, reputacion historica y factor anfitrion.' },
   { icon: '📊', title: 'IC95% por equipo', desc: 'Intervalos de confianza del 95% calculados con distribucion binomial para los 48 equipos clasificados.' },
-  { icon: '🤖', title: '6 Agentes en cadena', desc: 'Pipeline de agentes especializados: recoleccion, calculo, simulacion, analisis ELO, reporte estadistico y extraccion de resultados del bracket.' },
+  { icon: '🤖', title: '7 Agentes en cadena', desc: 'Pipeline de agentes especializados: recoleccion, calculo, simulacion, analisis ELO, actualizacion ELO, simulacion v2 y prediccion de marcadores Poisson.' },
   { icon: '🌍', title: 'Datos reales', desc: '2,540 partidos oficiales 2018-2026 de 49,330 totales. Dataset martj42 con licencia Open Data Commons PDDL.' },
+]
+
+const TOUR = [
+  { step: 1, path: '/metodologia',  icon: '🔬', label: 'Metodología',   desc: 'Cómo funciona el modelo: fórmulas, pipeline y pesos' },
+  { step: 2, path: '/agentes',      icon: '🤖', label: 'Agentes IA',    desc: 'Los 7 agentes en cadena: inputs, outputs y lógica' },
+  { step: 3, path: '/favoritos',    icon: '🏆', label: 'Favoritos',      desc: 'Resultado principal: probabilidades de campeonato' },
+  { step: 4, path: '/grupos',       icon: '⚽', label: 'Grupos A–L',     desc: '48 equipos clasificados en 12 grupos' },
+  { step: 5, path: '/comparativa',  icon: '⚡', label: 'v1 vs v2',       desc: 'Impacto de corregir sesgos: Morocco +87.9%' },
+  { step: 6, path: '/elo',          icon: '📈', label: 'Ajustes ELO',    desc: '26 correcciones justificadas con evidencia triple' },
 ]
 
 export default function Home() {
   const nav = useNavigate()
   return (
     <PageWrapper>
+      {/* BANNER UCB */}
+      <div style={{
+        background: 'linear-gradient(90deg, rgba(200,241,53,0.12), rgba(200,241,53,0.06), transparent)',
+        borderBottom: '1px solid rgba(200,241,53,0.25)',
+        padding: '10px 52px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        flexWrap: 'wrap', gap: 8,
+      }}>
+        <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ color: 'var(--accent)', fontWeight: 700 }}>UCB</span>
+          <span style={{ color: 'var(--border-strong)' }}>·</span>
+          <span>Inteligencia Artificial con Agentes — 5to Semestre 2026</span>
+          <span style={{ color: 'var(--border-strong)' }}>·</span>
+          <span style={{ color: 'var(--text-muted)' }}>Bernardo Rios Tapia</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.78rem' }}>
+          <span style={{
+            background: 'rgba(200,241,53,0.2)', color: 'var(--accent)',
+            border: '1px solid rgba(200,241,53,0.4)', borderRadius: 20,
+            padding: '2px 10px', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.05em',
+          }}>
+            ● LIVE
+          </span>
+          <span style={{ color: 'var(--text-muted)', fontFamily: 'JetBrains Mono, monospace' }}>
+            mundial2026-frontend.vercel.app
+          </span>
+        </div>
+      </div>
+
       {/* HERO */}
       <section className="hero-section">
         <div className="hero-grid-bg" />
@@ -223,6 +261,62 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      {/* TOUR GUIADO */}
+      <section style={{ padding: '52px', borderBottom: '1px solid var(--border)', background: 'var(--bg-secondary)' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+        >
+          <div style={{ marginBottom: 8 }}>
+            <div className="page-tag">Recorrido sugerido</div>
+            <h2 style={{ fontSize: '1.6rem', fontWeight: 800, marginTop: 10, marginBottom: 6 }}>
+              ¿Por dónde empezar?
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: 28 }}>
+              Usa el sidebar izquierdo para navegar. Este orden te lleva del "cómo" al "qué encontramos":
+            </p>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {TOUR.map((item, i) => (
+              <motion.button
+                key={item.path}
+                onClick={() => nav(item.path)}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06, duration: 0.35 }}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 16,
+                  background: 'var(--bg-card)', border: '1px solid var(--border)',
+                  borderRadius: 12, padding: '14px 20px', cursor: 'pointer',
+                  textAlign: 'left', fontFamily: 'inherit', width: '100%',
+                  transition: 'border-color 0.15s',
+                }}
+                whileHover={{ borderColor: 'var(--accent)' }}
+              >
+                <div style={{
+                  width: 32, height: 32, borderRadius: '50%', flexShrink: 0,
+                  background: 'var(--bg-secondary)', border: '1px solid var(--border-strong)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '0.8rem', fontWeight: 800, color: 'var(--accent)',
+                  fontFamily: 'JetBrains Mono, monospace',
+                }}>
+                  {item.step}
+                </div>
+                <div style={{ fontSize: '1.2rem', flexShrink: 0 }}>{item.icon}</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: 2 }}>{item.label}</div>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{item.desc}</div>
+                </div>
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', flexShrink: 0 }}>→</div>
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* CONVERGENCE */}

@@ -4,29 +4,32 @@ interface NavItem { path: string; label: string; icon: string }
 
 const sections: { title: string; items: NavItem[] }[] = [
   {
-    title: 'Proyecto',
+    title: '1 · Proyecto',
     items: [
-      { path: '/',            label: 'Inicio',           icon: '🏠' },
-      { path: '/metodologia', label: 'Metodologia',      icon: '🔬' },
-      { path: '/agentes',     label: 'Agentes IA',       icon: '🤖' },
-      { path: '/fuentes',     label: 'Fuentes de Datos', icon: '📊' },
+      { path: '/',             label: 'Inicio',           icon: '🏠' },
+      { path: '/metodologia',  label: 'Metodología',      icon: '🔬' },
+      { path: '/agentes',      label: 'Agentes IA',       icon: '🤖' },
+      { path: '/fuentes',      label: 'Fuentes de Datos', icon: '📊' },
     ],
   },
   {
-    title: 'Torneo',
+    title: '2 · Torneo',
     items: [
-      { path: '/grupos',   label: 'Grupos A – L',      icon: '⚽' },
-      { path: '/partidos', label: 'Partidos',          icon: '🏟️' },
-      { path: '/matrices', label: 'Matrices de Prob.', icon: '📋' },
+      { path: '/grupos',   label: 'Grupos A – L',         icon: '⚽' },
+      { path: '/partidos', label: 'Partidos',             icon: '🏟️' },
+      { path: '/matrices', label: 'Matrices de Prob.',    icon: '📋' },
       { path: '/bracket',  label: 'Bracket / Resultados', icon: '🗂️' },
     ],
   },
   {
-    title: 'Resultados',
+    title: '3 · Resultados',
     items: [
-      { path: '/favoritos',   label: 'Favoritos',    icon: '🏆' },
-      { path: '/comparativa', label: 'v1 vs v2',     icon: '⚡' },
-      { path: '/elo',         label: 'Ajustes ELO',  icon: '📈' },
+      { path: '/favoritos',    label: 'Favoritos',            icon: '🏆' },
+      { path: '/comparativa',  label: 'v1 vs v2',             icon: '⚡' },
+      { path: '/elo',          label: 'Ajustes ELO',          icon: '📈' },
+      { path: '/histograma',   label: 'Histogramas',          icon: '📊' },
+      { path: '/limitaciones', label: 'Resultados & Límites', icon: '⚠️' },
+      { path: '/glosario',     label: 'Glosario',             icon: '📖' },
     ],
   },
 ]
@@ -39,7 +42,7 @@ interface SidebarProps {
 export default function Sidebar({ open, onToggle }: SidebarProps) {
   return (
     <aside className={`sidebar${open ? '' : ' sidebar-collapsed'}`}>
-      {/* Header with toggle */}
+      {/* Header */}
       <div className="sidebar-logo">
         <button className="sidebar-toggle" onClick={onToggle} title={open ? 'Ocultar sidebar' : 'Mostrar sidebar'}>
           <span className="toggle-bar" /><span className="toggle-bar" /><span className="toggle-bar" />
@@ -81,7 +84,44 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
           <div>Seed: <strong>2026</strong> · Modelo: <strong>v2.0</strong></div>
           <div>Convergencia: <strong>✓ 0.38%</strong></div>
           <div style={{ marginTop: 8, borderTop: '1px solid var(--border)', paddingTop: 8 }}>
-            <span style={{ color: 'var(--accent)' }}>6 Agentes</span> · Monte Carlo
+            <span style={{ color: 'var(--accent)' }}>7 Agentes</span> · Monte Carlo
+          </div>
+          <div style={{
+            marginTop: 10,
+            borderTop: '1px solid var(--border)',
+            paddingTop: 10,
+            fontSize: '0.68rem',
+            color: 'var(--text-muted)',
+            lineHeight: 1.6,
+          }}>
+            <div style={{ fontWeight: 700, color: 'var(--text-secondary)', marginBottom: 2 }}>
+              Desarrollado por
+            </div>
+            <div style={{ color: 'var(--accent)', fontWeight: 600 }}>
+              Bernardo Rios Tapia
+            </div>
+            <div style={{ fontSize: '0.63rem', color: 'var(--text-muted)', marginTop: 2 }}>
+              UCB · Inteligencia Artificial · 2026
+            </div>
+            <div style={{ marginTop: 8 }}>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: 'var(--text-muted)',
+                  textDecoration: 'none',
+                  fontSize: '0.63rem',
+                  display: 'block',
+                  marginBottom: 3,
+                }}
+              >
+                📁 Código fuente en GitHub
+              </a>
+            </div>
+            <div style={{ marginTop: 4, fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '0.65rem' }}>
+              "Los modelos no predicen el futuro —<br />cuantifican su incertidumbre."
+            </div>
           </div>
         </div>
       )}
