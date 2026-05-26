@@ -13,23 +13,29 @@ import Favoritos from './pages/Favoritos'
 import Comparativa from './pages/Comparativa'
 import ELOAjustes from './pages/ELOAjustes'
 import Bracket from './pages/Bracket'
+import Histograma from './pages/Histograma'
+import Limitaciones from './pages/Limitaciones'
+import Glosario from './pages/Glosario'
 
 function AnimatedRoutes() {
   const location = useLocation()
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/"            element={<Home />} />
-        <Route path="/metodologia" element={<Metodologia />} />
-        <Route path="/agentes"     element={<Agentes />} />
-        <Route path="/fuentes"     element={<Fuentes />} />
-        <Route path="/grupos"      element={<Grupos />} />
-        <Route path="/partidos"    element={<Partidos />} />
-        <Route path="/matrices"    element={<Matrices />} />
-        <Route path="/bracket"     element={<Bracket />} />
-        <Route path="/favoritos"   element={<Favoritos />} />
-        <Route path="/comparativa" element={<Comparativa />} />
-        <Route path="/elo"         element={<ELOAjustes />} />
+        <Route path="/"             element={<Home />} />
+        <Route path="/metodologia"  element={<Metodologia />} />
+        <Route path="/agentes"      element={<Agentes />} />
+        <Route path="/fuentes"      element={<Fuentes />} />
+        <Route path="/grupos"       element={<Grupos />} />
+        <Route path="/partidos"     element={<Partidos />} />
+        <Route path="/matrices"     element={<Matrices />} />
+        <Route path="/bracket"      element={<Bracket />} />
+        <Route path="/favoritos"    element={<Favoritos />} />
+        <Route path="/comparativa"  element={<Comparativa />} />
+        <Route path="/elo"          element={<ELOAjustes />} />
+        <Route path="/histograma"   element={<Histograma />} />
+        <Route path="/limitaciones" element={<Limitaciones />} />
+        <Route path="/glosario"     element={<Glosario />} />
       </Routes>
     </AnimatePresence>
   )
@@ -39,7 +45,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(() => {
     const saved = localStorage.getItem('sidebar')
     if (saved !== null) return saved === 'true'
-    return window.innerWidth >= 1024
+    return false
   })
 
   const toggle = () => setSidebarOpen((prev) => {

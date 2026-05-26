@@ -42,7 +42,7 @@
   /* ── Text ── */
   --text-primary:  #F8FAFC;
   --text-secondary:#8B9DB5;
-  --text-muted:    #3D4F66;
+  --text-muted:    #516070;
 
   /* ── Borders ── */
   --border:        rgba(255,255,255,0.055);
@@ -243,7 +243,7 @@ body {
    PAGE
 ═══════════════════════════════════════════ */
 .page {
-  padding: 48px 52px;
+  padding: 40px 44px;
   max-width: 1240px;
 }
 
@@ -986,11 +986,11 @@ tr:hover td { background: rgba(255,255,255,0.02); }
    HERO
 ═══════════════════════════════════════════ */
 .hero-section {
-  min-height: 100vh;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 52px;
+  padding: 0 44px;
   /* Stadium atmosphere */
   background:
     radial-gradient(ellipse 80% 60% at 70% 30%, rgba(200,241,53,0.07) 0%, transparent 60%),
