@@ -1,7 +1,7 @@
 # FIFA World Cup 2026 — Prediccion Multi-Agente + Monte Carlo
 
 **Autor:** Bernardo Rios Tapia — Universidad Catolica Boliviana "San Pablo"
-**Materia:** Inteligencia Artificial — Agentes | 5to Semestre 2026
+**Materia:** Investigacion De operaciones 2  | 5to Semestre 2026
 **Deploy:** https://mundial2026-frontend.vercel.app
 
 ---
